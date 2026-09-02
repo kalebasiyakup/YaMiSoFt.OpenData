@@ -14,6 +14,10 @@ yüklenir ve değişmez koleksiyonlardan sunulur: çalışma zamanında ne verit
 > Yol haritası için [docs/PLAN.md](docs/PLAN.md), iş gereksinimleri için
 > [acik-veri-api-brd.md](acik-veri-api-brd.md) (BRD) belgelerine bakın.
 
+> **Geçici erişim:** dağıtım doğrulanırken
+> [yamisoft-opendata.vercel.app/docs](https://yamisoft-opendata.vercel.app/docs/#türkçe/tag/turkey)
+> üzerinden denenebilir. Kalıcı bir adres değildir.
+
 ## Hızlı başlangıç
 
 ```bash
