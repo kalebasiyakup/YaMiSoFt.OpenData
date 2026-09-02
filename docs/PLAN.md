@@ -294,6 +294,7 @@ mimariye dokunan sonuçları:
 | A5 | `ProxyOptions` Vercel profili | Yapılmazsa tüm trafik tek IP görünür, anonim limit ilk gün kilitlenir | ✅ |
 | A6 | Gözlemlenebilirlik: Prometheus → Vercel OTel | Sıfıra inen serverless'ta kazınacak bir şey yok; her örnek kısmi veri tutar (NFR-16/17) | ⬜ |
 | A7 | NFR-10 hedefini "sıcak örnek P95" olarak düzelt | Vercel 5 dk trafiksizlikte sıfıra iniyor; soğuk başlangıç 100 ms'yi aşar | ⬜ |
+| A8 | Runtime imajı `-chiseled` → `-chiseled-extra` | İlk canlı istek `CultureNotFoundException` ile 500 verdi (bkz. aşağıda) | ✅ (2 Eylül 2026) |
 
 **Ölçüm:** süreç başlangıcı ~300 ms (ilk çalıştırma 5,8 sn ama o disk cache ısınması). Gerçek
 soğuk boot buna container açılışını ekler, arşivlenmiş fonksiyonda Vercel +1 sn diyor.
@@ -381,6 +382,22 @@ hiç gerekmiyor (Vercel dosyayı kökte kendisi bulup tüm trafiği yönlendiriy
 `memory` zaten Fluid compute açıkken vercel.json'dan ayarlanamıyor, proje panosundan
 (Functions bölümü) ayarlanması gerekiyor. **Karar:** `functions` bloğu tamamen kaldırıldı;
 bölge (`fra1`) dışında vercel.json'da fonksiyon ayarı yok.
+
+**A8 — chiseled imaj ICU'suz çıktı.** vercel.json düzeldikten sonraki ilk gerçek istekte
+`ReferenceOrdering`'in statik constructor'ı `CultureNotFoundException: Only the invariant
+culture is supported in globalization-invariant mode` ile patladı — `tr-TR` "geçersiz kültür
+tanımlayıcısı" oldu. Sebep: `mcr.microsoft.com/dotnet/aspnet:9.0-noble-chiseled` (hem
+`Dockerfile` hem `Dockerfile.vercel`'de kullanılan taban imaj) ICU/tzdata içermiyor ve
+`DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=true`'yu imajın içine gömülü getiriyor — "shell yok,
+küçük yüzey" seçimi (§2 madde 13) globalization'ı hiç hesaba katmadan yapılmıştı. Türkçe
+collation ise süsleme değil: FR-04/§3.7'nin ta kendisi, il/ilçe/semt listelerinin varsayılan
+sıralaması buna bağlı.
+
+**Karar:** her iki Dockerfile'da taban imaj `9.0-noble-chiseled-extra`'ya çevrildi — ICU ve
+tzdata içeren, "shell yok" özelliğini koruyan varyant. `9.0-noble-chiseled-extra` etiketi
+gerçek imajı barındırıyor, `DOTNET_SYSTEM_GLOBALIZATION_INVARIANT` da ayarlanmıyor. Not:
+Docker imajının build'i bu commit'e kadar hiç yerelde de doğrulanmamıştı (B3) — hata ancak
+canlıda, ilk istekte ortaya çıktı.
 
 ### B. Faz 1'den kalan yayın işleri
 

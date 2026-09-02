@@ -22,8 +22,11 @@ RUN dotnet publish src/YaMiSoFt.OpenData.Api/YaMiSoFt.OpenData.Api.csproj \
 
 # ---- runtime --------------------------------------------------------------
 # Chiseled: no shell, no package manager, runs as a non-root user by default.
-# The API has no native dependencies.
-FROM mcr.microsoft.com/dotnet/aspnet:9.0-noble-chiseled AS final
+# The "-extra" variant, not the plain tag: the plain chiseled image ships with no ICU and
+# DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=true baked in, and ReferenceOrdering needs real
+# tr-TR/en-US collation for every list endpoint's default sort (PLAN.md 3.7) — the plain tag
+# throws CultureNotFoundException on first request.
+FROM mcr.microsoft.com/dotnet/aspnet:9.0-noble-chiseled-extra AS final
 WORKDIR /app
 COPY --from=build /app .
 

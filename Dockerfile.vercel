@@ -28,7 +28,11 @@ RUN dotnet publish src/YaMiSoFt.OpenData.Api/YaMiSoFt.OpenData.Api.csproj \
     --output /app
 
 # ---- runtime --------------------------------------------------------------
-FROM mcr.microsoft.com/dotnet/aspnet:9.0-noble-chiseled AS final
+# "-extra", not the plain chiseled tag: the plain tag ships with no ICU and
+# DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=true baked in, and ReferenceOrdering needs real
+# tr-TR/en-US collation for every list endpoint's default sort (PLAN.md 3.7) — the plain tag
+# throws CultureNotFoundException on first request.
+FROM mcr.microsoft.com/dotnet/aspnet:9.0-noble-chiseled-extra AS final
 WORKDIR /app
 COPY --from=build /app .
 
