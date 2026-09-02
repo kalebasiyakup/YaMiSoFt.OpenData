@@ -1,0 +1,208 @@
+{
+  "name": "mobile-prefixes",
+  "version": "2026-09-02",
+  "source": "https://github.com/google/libphonenumber (Apache-2.0), TR mobile number pattern",
+  "license": "Apache-2.0",
+  "items": [
+    {
+      "prefix": "500",
+      "international": "90500"
+    },
+    {
+      "prefix": "501",
+      "international": "90501"
+    },
+    {
+      "prefix": "502",
+      "international": "90502"
+    },
+    {
+      "prefix": "503",
+      "international": "90503"
+    },
+    {
+      "prefix": "504",
+      "international": "90504"
+    },
+    {
+      "prefix": "505",
+      "international": "90505"
+    },
+    {
+      "prefix": "506",
+      "international": "90506"
+    },
+    {
+      "prefix": "507",
+      "international": "90507"
+    },
+    {
+      "prefix": "508",
+      "international": "90508"
+    },
+    {
+      "prefix": "509",
+      "international": "90509"
+    },
+    {
+      "prefix": "510",
+      "international": "90510"
+    },
+    {
+      "prefix": "516",
+      "international": "90516"
+    },
+    {
+      "prefix": "524",
+      "international": "90524"
+    },
+    {
+      "prefix": "530",
+      "international": "90530"
+    },
+    {
+      "prefix": "531",
+      "international": "90531"
+    },
+    {
+      "prefix": "532",
+      "international": "90532"
+    },
+    {
+      "prefix": "533",
+      "international": "90533"
+    },
+    {
+      "prefix": "534",
+      "international": "90534"
+    },
+    {
+      "prefix": "535",
+      "international": "90535"
+    },
+    {
+      "prefix": "536",
+      "international": "90536"
+    },
+    {
+      "prefix": "537",
+      "international": "90537"
+    },
+    {
+      "prefix": "538",
+      "international": "90538"
+    },
+    {
+      "prefix": "539",
+      "international": "90539"
+    },
+    {
+      "prefix": "540",
+      "international": "90540"
+    },
+    {
+      "prefix": "541",
+      "international": "90541"
+    },
+    {
+      "prefix": "542",
+      "international": "90542"
+    },
+    {
+      "prefix": "543",
+      "international": "90543"
+    },
+    {
+      "prefix": "544",
+      "international": "90544"
+    },
+    {
+      "prefix": "545",
+      "international": "90545"
+    },
+    {
+      "prefix": "546",
+      "international": "90546"
+    },
+    {
+      "prefix": "547",
+      "international": "90547"
+    },
+    {
+      "prefix": "548",
+      "international": "90548"
+    },
+    {
+      "prefix": "549",
+      "international": "90549"
+    },
+    {
+      "prefix": "550",
+      "international": "90550"
+    },
+    {
+      "prefix": "551",
+      "international": "90551"
+    },
+    {
+      "prefix": "552",
+      "international": "90552"
+    },
+    {
+      "prefix": "553",
+      "international": "90553"
+    },
+    {
+      "prefix": "554",
+      "international": "90554"
+    },
+    {
+      "prefix": "555",
+      "international": "90555"
+    },
+    {
+      "prefix": "556",
+      "international": "90556"
+    },
+    {
+      "prefix": "557",
+      "international": "90557"
+    },
+    {
+      "prefix": "558",
+      "international": "90558"
+    },
+    {
+      "prefix": "559",
+      "international": "90559"
+    },
+    {
+      "prefix": "562",
+      "international": "90562"
+    },
+    {
+      "prefix": "564",
+      "international": "90564"
+    },
+    {
+      "prefix": "572",
+      "international": "90572"
+    },
+    {
+      "prefix": "574",
+      "international": "90574"
+    },
+    {
+      "prefix": "575",
+      "international": "90575"
+    },
+    {
+      "prefix": "594",
+      "international": "90594"
+    },
+    {
+      "prefix": "596",
+      "international": "90596"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <UserSecretsId>yamisoft-opendata-api</UserSecretsId>
+    <!--
+      PLAN.md 3.9: the API stays AOT-*friendly* (source-generated JSON, no reflective
+      serialization on the request path) but the AOT analyzer is off here on purpose.
+      Turning it on fails the build on framework surface we are not ready to replace yet:
+      minimal-API handler delegates need the request delegate generator, and options binding
+      needs the configuration source generator. Faz 2 revisits both with measurements.
+    -->
+    <IsAotCompatible>false</IsAotCompatible>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../YaMiSoFt.OpenData.Data/YaMiSoFt.OpenData.Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.2" />
+    <PackageReference Include="Scalar.AspNetCore" Version="2.17.2" />
+    <PackageReference Include="OpenTelemetry.Extensions.Hosting" Version="1.18.0" />
+    <PackageReference Include="OpenTelemetry.Instrumentation.AspNetCore" Version="1.18.0" />
+    <PackageReference Include="OpenTelemetry.Instrumentation.Runtime" Version="1.18.0" />
+    <PackageReference Include="OpenTelemetry.Exporter.Prometheus.AspNetCore" Version="1.18.0-beta.1" />
+    <PackageReference Include="StackExchange.Redis" Version="3.1.31" />
+  </ItemGroup>
+
+  <!--
+    "Veri = kod" (BRD 7.2): the committed datasets ship inside the application output, so a
+    deployed container carries its own data and needs no database or network at startup. Paths
+    use forward slashes so the same project file behaves identically on Windows and in the
+    Linux container build.
+
+    data/source/ is excluded even though it is not committed: it is the conventional place to
+    drop the Turkish address export when running the data tool, and a local copy sitting there
+    must not end up as 16 MB of dead weight in the image.
+  -->
+  <ItemGroup>
+    <Content Include="../../data/**/*.json" Exclude="../../data/schemas/**;../../data/source/**" Link="data/%(RecursiveDir)%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

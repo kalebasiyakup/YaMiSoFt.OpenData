@@ -1,0 +1,656 @@
+{
+  "name": "provinces",
+  "version": "2026-09-02",
+  "source": "Compiled for this project (data/source)",
+  "license": "MIT",
+  "items": [
+    {
+      "id": 1,
+      "plateCode": "01",
+      "name": "Adana",
+      "nameUpper": "ADANA",
+      "slug": "adana",
+      "districtCount": 15
+    },
+    {
+      "id": 2,
+      "plateCode": "02",
+      "name": "Ad\u0131yaman",
+      "nameUpper": "ADIYAMAN",
+      "slug": "adiyaman",
+      "districtCount": 9
+    },
+    {
+      "id": 3,
+      "plateCode": "03",
+      "name": "Afyonkarahisar",
+      "nameUpper": "AFYONKARAH\u0130SAR",
+      "slug": "afyonkarahisar",
+      "districtCount": 18
+    },
+    {
+      "id": 4,
+      "plateCode": "04",
+      "name": "A\u011Fr\u0131",
+      "nameUpper": "A\u011ERI",
+      "slug": "agri",
+      "districtCount": 8
+    },
+    {
+      "id": 5,
+      "plateCode": "05",
+      "name": "Amasya",
+      "nameUpper": "AMASYA",
+      "slug": "amasya",
+      "districtCount": 7
+    },
+    {
+      "id": 6,
+      "plateCode": "06",
+      "name": "Ankara",
+      "nameUpper": "ANKARA",
+      "slug": "ankara",
+      "districtCount": 25
+    },
+    {
+      "id": 7,
+      "plateCode": "07",
+      "name": "Antalya",
+      "nameUpper": "ANTALYA",
+      "slug": "antalya",
+      "districtCount": 19
+    },
+    {
+      "id": 8,
+      "plateCode": "08",
+      "name": "Artvin",
+      "nameUpper": "ARTV\u0130N",
+      "slug": "artvin",
+      "districtCount": 9
+    },
+    {
+      "id": 9,
+      "plateCode": "09",
+      "name": "Ayd\u0131n",
+      "nameUpper": "AYDIN",
+      "slug": "aydin",
+      "districtCount": 17
+    },
+    {
+      "id": 10,
+      "plateCode": "10",
+      "name": "Bal\u0131kesir",
+      "nameUpper": "BALIKES\u0130R",
+      "slug": "balikesir",
+      "districtCount": 20
+    },
+    {
+      "id": 11,
+      "plateCode": "11",
+      "name": "Bilecik",
+      "nameUpper": "B\u0130LEC\u0130K",
+      "slug": "bilecik",
+      "districtCount": 8
+    },
+    {
+      "id": 12,
+      "plateCode": "12",
+      "name": "Bing\u00F6l",
+      "nameUpper": "B\u0130NG\u00D6L",
+      "slug": "bingol",
+      "districtCount": 8
+    },
+    {
+      "id": 13,
+      "plateCode": "13",
+      "name": "Bitlis",
+      "nameUpper": "B\u0130TL\u0130S",
+      "slug": "bitlis",
+      "districtCount": 7
+    },
+    {
+      "id": 14,
+      "plateCode": "14",
+      "name": "Bolu",
+      "nameUpper": "BOLU",
+      "slug": "bolu",
+      "districtCount": 9
+    },
+    {
+      "id": 15,
+      "plateCode": "15",
+      "name": "Burdur",
+      "nameUpper": "BURDUR",
+      "slug": "burdur",
+      "districtCount": 11
+    },
+    {
+      "id": 16,
+      "plateCode": "16",
+      "name": "Bursa",
+      "nameUpper": "BURSA",
+      "slug": "bursa",
+      "districtCount": 17
+    },
+    {
+      "id": 17,
+      "plateCode": "17",
+      "name": "\u00C7anakkale",
+      "nameUpper": "\u00C7ANAKKALE",
+      "slug": "canakkale",
+      "districtCount": 12
+    },
+    {
+      "id": 18,
+      "plateCode": "18",
+      "name": "\u00C7ank\u0131r\u0131",
+      "nameUpper": "\u00C7ANKIRI",
+      "slug": "cankiri",
+      "districtCount": 12
+    },
+    {
+      "id": 19,
+      "plateCode": "19",
+      "name": "\u00C7orum",
+      "nameUpper": "\u00C7ORUM",
+      "slug": "corum",
+      "districtCount": 14
+    },
+    {
+      "id": 20,
+      "plateCode": "20",
+      "name": "Denizli",
+      "nameUpper": "DEN\u0130ZL\u0130",
+      "slug": "denizli",
+      "districtCount": 19
+    },
+    {
+      "id": 21,
+      "plateCode": "21",
+      "name": "Diyarbak\u0131r",
+      "nameUpper": "D\u0130YARBAKIR",
+      "slug": "diyarbakir",
+      "districtCount": 17
+    },
+    {
+      "id": 22,
+      "plateCode": "22",
+      "name": "Edirne",
+      "nameUpper": "ED\u0130RNE",
+      "slug": "edirne",
+      "districtCount": 9
+    },
+    {
+      "id": 23,
+      "plateCode": "23",
+      "name": "Elaz\u0131\u011F",
+      "nameUpper": "ELAZI\u011E",
+      "slug": "elazig",
+      "districtCount": 11
+    },
+    {
+      "id": 24,
+      "plateCode": "24",
+      "name": "Erzincan",
+      "nameUpper": "ERZ\u0130NCAN",
+      "slug": "erzincan",
+      "districtCount": 9
+    },
+    {
+      "id": 25,
+      "plateCode": "25",
+      "name": "Erzurum",
+      "nameUpper": "ERZURUM",
+      "slug": "erzurum",
+      "districtCount": 20
+    },
+    {
+      "id": 26,
+      "plateCode": "26",
+      "name": "Eski\u015Fehir",
+      "nameUpper": "ESK\u0130\u015EEH\u0130R",
+      "slug": "eskisehir",
+      "districtCount": 14
+    },
+    {
+      "id": 27,
+      "plateCode": "27",
+      "name": "Gaziantep",
+      "nameUpper": "GAZ\u0130ANTEP",
+      "slug": "gaziantep",
+      "districtCount": 9
+    },
+    {
+      "id": 28,
+      "plateCode": "28",
+      "name": "Giresun",
+      "nameUpper": "G\u0130RESUN",
+      "slug": "giresun",
+      "districtCount": 16
+    },
+    {
+      "id": 29,
+      "plateCode": "29",
+      "name": "G\u00FCm\u00FC\u015Fhane",
+      "nameUpper": "G\u00DCM\u00DC\u015EHANE",
+      "slug": "gumushane",
+      "districtCount": 6
+    },
+    {
+      "id": 30,
+      "plateCode": "30",
+      "name": "Hakkari",
+      "nameUpper": "HAKKAR\u0130",
+      "slug": "hakkari",
+      "districtCount": 4
+    },
+    {
+      "id": 31,
+      "plateCode": "31",
+      "name": "Hatay",
+      "nameUpper": "HATAY",
+      "slug": "hatay",
+      "districtCount": 15
+    },
+    {
+      "id": 32,
+      "plateCode": "32",
+      "name": "Isparta",
+      "nameUpper": "ISPARTA",
+      "slug": "isparta",
+      "districtCount": 13
+    },
+    {
+      "id": 33,
+      "plateCode": "33",
+      "name": "Mersin",
+      "nameUpper": "MERS\u0130N",
+      "slug": "mersin",
+      "districtCount": 13
+    },
+    {
+      "id": 34,
+      "plateCode": "34",
+      "name": "\u0130stanbul",
+      "nameUpper": "\u0130STANBUL",
+      "slug": "istanbul",
+      "districtCount": 39
+    },
+    {
+      "id": 35,
+      "plateCode": "35",
+      "name": "\u0130zmir",
+      "nameUpper": "\u0130ZM\u0130R",
+      "slug": "izmir",
+      "districtCount": 30
+    },
+    {
+      "id": 36,
+      "plateCode": "36",
+      "name": "Kars",
+      "nameUpper": "KARS",
+      "slug": "kars",
+      "districtCount": 8
+    },
+    {
+      "id": 37,
+      "plateCode": "37",
+      "name": "Kastamonu",
+      "nameUpper": "KASTAMONU",
+      "slug": "kastamonu",
+      "districtCount": 20
+    },
+    {
+      "id": 38,
+      "plateCode": "38",
+      "name": "Kayseri",
+      "nameUpper": "KAYSER\u0130",
+      "slug": "kayseri",
+      "districtCount": 16
+    },
+    {
+      "id": 39,
+      "plateCode": "39",
+      "name": "K\u0131rklareli",
+      "nameUpper": "KIRKLAREL\u0130",
+      "slug": "kirklareli",
+      "districtCount": 8
+    },
+    {
+      "id": 40,
+      "plateCode": "40",
+      "name": "K\u0131r\u015Fehir",
+      "nameUpper": "KIR\u015EEH\u0130R",
+      "slug": "kirsehir",
+      "districtCount": 7
+    },
+    {
+      "id": 41,
+      "plateCode": "41",
+      "name": "Kocaeli",
+      "nameUpper": "KOCAEL\u0130",
+      "slug": "kocaeli",
+      "districtCount": 12
+    },
+    {
+      "id": 42,
+      "plateCode": "42",
+      "name": "Konya",
+      "nameUpper": "KONYA",
+      "slug": "konya",
+      "districtCount": 31
+    },
+    {
+      "id": 43,
+      "plateCode": "43",
+      "name": "K\u00FCtahya",
+      "nameUpper": "K\u00DCTAHYA",
+      "slug": "kutahya",
+      "districtCount": 13
+    },
+    {
+      "id": 44,
+      "plateCode": "44",
+      "name": "Malatya",
+      "nameUpper": "MALATYA",
+      "slug": "malatya",
+      "districtCount": 13
+    },
+    {
+      "id": 45,
+      "plateCode": "45",
+      "name": "Manisa",
+      "nameUpper": "MAN\u0130SA",
+      "slug": "manisa",
+      "districtCount": 17
+    },
+    {
+      "id": 46,
+      "plateCode": "46",
+      "name": "Kahramanmara\u015F",
+      "nameUpper": "KAHRAMANMARA\u015E",
+      "slug": "kahramanmaras",
+      "districtCount": 11
+    },
+    {
+      "id": 47,
+      "plateCode": "47",
+      "name": "Mardin",
+      "nameUpper": "MARD\u0130N",
+      "slug": "mardin",
+      "districtCount": 10
+    },
+    {
+      "id": 48,
+      "plateCode": "48",
+      "name": "Mu\u011Fla",
+      "nameUpper": "MU\u011ELA",
+      "slug": "mugla",
+      "districtCount": 13
+    },
+    {
+      "id": 49,
+      "plateCode": "49",
+      "name": "Mu\u015F",
+      "nameUpper": "MU\u015E",
+      "slug": "mus",
+      "districtCount": 6
+    },
+    {
+      "id": 50,
+      "plateCode": "50",
+      "name": "Nev\u015Fehir",
+      "nameUpper": "NEV\u015EEH\u0130R",
+      "slug": "nevsehir",
+      "districtCount": 8
+    },
+    {
+      "id": 51,
+      "plateCode": "51",
+      "name": "Ni\u011Fde",
+      "nameUpper": "N\u0130\u011EDE",
+      "slug": "nigde",
+      "districtCount": 6
+    },
+    {
+      "id": 52,
+      "plateCode": "52",
+      "name": "Ordu",
+      "nameUpper": "ORDU",
+      "slug": "ordu",
+      "districtCount": 19
+    },
+    {
+      "id": 53,
+      "plateCode": "53",
+      "name": "Rize",
+      "nameUpper": "R\u0130ZE",
+      "slug": "rize",
+      "districtCount": 12
+    },
+    {
+      "id": 54,
+      "plateCode": "54",
+      "name": "Sakarya",
+      "nameUpper": "SAKARYA",
+      "slug": "sakarya",
+      "districtCount": 16
+    },
+    {
+      "id": 55,
+      "plateCode": "55",
+      "name": "Samsun",
+      "nameUpper": "SAMSUN",
+      "slug": "samsun",
+      "districtCount": 17
+    },
+    {
+      "id": 56,
+      "plateCode": "56",
+      "name": "Siirt",
+      "nameUpper": "S\u0130\u0130RT",
+      "slug": "siirt",
+      "districtCount": 7
+    },
+    {
+      "id": 57,
+      "plateCode": "57",
+      "name": "Sinop",
+      "nameUpper": "S\u0130NOP",
+      "slug": "sinop",
+      "districtCount": 9
+    },
+    {
+      "id": 58,
+      "plateCode": "58",
+      "name": "Sivas",
+      "nameUpper": "S\u0130VAS",
+      "slug": "sivas",
+      "districtCount": 17
+    },
+    {
+      "id": 59,
+      "plateCode": "59",
+      "name": "Tekirda\u011F",
+      "nameUpper": "TEK\u0130RDA\u011E",
+      "slug": "tekirdag",
+      "districtCount": 11
+    },
+    {
+      "id": 60,
+      "plateCode": "60",
+      "name": "Tokat",
+      "nameUpper": "TOKAT",
+      "slug": "tokat",
+      "districtCount": 12
+    },
+    {
+      "id": 61,
+      "plateCode": "61",
+      "name": "Trabzon",
+      "nameUpper": "TRABZON",
+      "slug": "trabzon",
+      "districtCount": 18
+    },
+    {
+      "id": 62,
+      "plateCode": "62",
+      "name": "Tunceli",
+      "nameUpper": "TUNCEL\u0130",
+      "slug": "tunceli",
+      "districtCount": 8
+    },
+    {
+      "id": 63,
+      "plateCode": "63",
+      "name": "\u015Eanl\u0131urfa",
+      "nameUpper": "\u015EANLIURFA",
+      "slug": "sanliurfa",
+      "districtCount": 13
+    },
+    {
+      "id": 64,
+      "plateCode": "64",
+      "name": "U\u015Fak",
+      "nameUpper": "U\u015EAK",
+      "slug": "usak",
+      "districtCount": 6
+    },
+    {
+      "id": 65,
+      "plateCode": "65",
+      "name": "Van",
+      "nameUpper": "VAN",
+      "slug": "van",
+      "districtCount": 13
+    },
+    {
+      "id": 66,
+      "plateCode": "66",
+      "name": "Yozgat",
+      "nameUpper": "YOZGAT",
+      "slug": "yozgat",
+      "districtCount": 14
+    },
+    {
+      "id": 67,
+      "plateCode": "67",
+      "name": "Zonguldak",
+      "nameUpper": "ZONGULDAK",
+      "slug": "zonguldak",
+      "districtCount": 8
+    },
+    {
+      "id": 68,
+      "plateCode": "68",
+      "name": "Aksaray",
+      "nameUpper": "AKSARAY",
+      "slug": "aksaray",
+      "districtCount": 8
+    },
+    {
+      "id": 69,
+      "plateCode": "69",
+      "name": "Bayburt",
+      "nameUpper": "BAYBURT",
+      "slug": "bayburt",
+      "districtCount": 3
+    },
+    {
+      "id": 70,
+      "plateCode": "70",
+      "name": "Karaman",
+      "nameUpper": "KARAMAN",
+      "slug": "karaman",
+      "districtCount": 6
+    },
+    {
+      "id": 71,
+      "plateCode": "71",
+      "name": "K\u0131r\u0131kkale",
+      "nameUpper": "KIRIKKALE",
+      "slug": "kirikkale",
+      "districtCount": 9
+    },
+    {
+      "id": 72,
+      "plateCode": "72",
+      "name": "Batman",
+      "nameUpper": "BATMAN",
+      "slug": "batman",
+      "districtCount": 6
+    },
+    {
+      "id": 73,
+      "plateCode": "73",
+      "name": "\u015E\u0131rnak",
+      "nameUpper": "\u015EIRNAK",
+      "slug": "sirnak",
+      "districtCount": 7
+    },
+    {
+      "id": 74,
+      "plateCode": "74",
+      "name": "Bart\u0131n",
+      "nameUpper": "BARTIN",
+      "slug": "bartin",
+      "districtCount": 4
+    },
+    {
+      "id": 75,
+      "plateCode": "75",
+      "name": "Ardahan",
+      "nameUpper": "ARDAHAN",
+      "slug": "ardahan",
+      "districtCount": 6
+    },
+    {
+      "id": 76,
+      "plateCode": "76",
+      "name": "I\u011Fd\u0131r",
+      "nameUpper": "I\u011EDIR",
+      "slug": "igdir",
+      "districtCount": 4
+    },
+    {
+      "id": 77,
+      "plateCode": "77",
+      "name": "Yalova",
+      "nameUpper": "YALOVA",
+      "slug": "yalova",
+      "districtCount": 6
+    },
+    {
+      "id": 78,
+      "plateCode": "78",
+      "name": "Karab\u00FCk",
+      "nameUpper": "KARAB\u00DCK",
+      "slug": "karabuk",
+      "districtCount": 6
+    },
+    {
+      "id": 79,
+      "plateCode": "79",
+      "name": "Kilis",
+      "nameUpper": "K\u0130L\u0130S",
+      "slug": "kilis",
+      "districtCount": 4
+    },
+    {
+      "id": 80,
+      "plateCode": "80",
+      "name": "Osmaniye",
+      "nameUpper": "OSMAN\u0130YE",
+      "slug": "osmaniye",
+      "districtCount": 7
+    },
+    {
+      "id": 81,
+      "plateCode": "81",
+      "name": "D\u00FCzce",
+      "nameUpper": "D\u00DCZCE",
+      "slug": "duzce",
+      "districtCount": 8
+    }
+  ]
+}

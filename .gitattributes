@@ -1,0 +1,20 @@
+# Normalize line endings. The repository is authored on Windows and built in Linux
+# containers and CI, so text is stored LF and checked out per platform.
+* text=auto eol=lf
+
+# Windows-only tooling that expects CRLF.
+*.sln       text eol=crlf
+*.bat       text eol=crlf
+*.cmd       text eol=crlf
+
+# Shell scripts and container files must keep LF even on Windows checkouts.
+*.sh        text eol=lf
+Dockerfile  text eol=lf
+
+# Data files are diffed in review; keep them text with stable endings.
+*.json      text eol=lf
+*.svg       text eol=lf
+
+# Binary assets.
+*.png       binary
+*.ico       binary

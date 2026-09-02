@@ -1,0 +1,4976 @@
+{
+  "name": "holidays",
+  "version": "2026-09-02",
+  "source": "Computed: fixed national dates plus Umm al-Qura religious dates, 2015-2050",
+  "license": "MIT",
+  "items": [
+    {
+      "date": "2015-01-01",
+      "nameTr": "Y\u0131lba\u015F\u0131",
+      "nameEn": "New Year\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2015
+    },
+    {
+      "date": "2015-04-23",
+      "nameTr": "Ulusal Egemenlik ve \u00C7ocuk Bayram\u0131",
+      "nameEn": "National Sovereignty and Children\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2015
+    },
+    {
+      "date": "2015-05-01",
+      "nameTr": "Emek ve Dayan\u0131\u015Fma G\u00FCn\u00FC",
+      "nameEn": "Labour and Solidarity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2015
+    },
+    {
+      "date": "2015-05-19",
+      "nameTr": "Atat\u00FCrk\u0027\u00FC Anma, Gen\u00E7lik ve Spor Bayram\u0131",
+      "nameEn": "Commemoration of Atat\u00FCrk, Youth and Sports Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2015
+    },
+    {
+      "date": "2015-07-15",
+      "nameTr": "Demokrasi ve Mill\u00EE Birlik G\u00FCn\u00FC",
+      "nameEn": "Democracy and National Unity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2015
+    },
+    {
+      "date": "2015-07-16",
+      "nameTr": "Ramazan Bayram\u0131 Arifesi",
+      "nameEn": "Ramadan Feast Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2015
+    },
+    {
+      "date": "2015-07-17",
+      "nameTr": "Ramazan Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2015
+    },
+    {
+      "date": "2015-07-18",
+      "nameTr": "Ramazan Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2015
+    },
+    {
+      "date": "2015-07-19",
+      "nameTr": "Ramazan Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2015
+    },
+    {
+      "date": "2015-08-30",
+      "nameTr": "Zafer Bayram\u0131",
+      "nameEn": "Victory Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2015
+    },
+    {
+      "date": "2015-09-22",
+      "nameTr": "Kurban Bayram\u0131 Arifesi",
+      "nameEn": "Feast of Sacrifice Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2015
+    },
+    {
+      "date": "2015-09-23",
+      "nameTr": "Kurban Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2015
+    },
+    {
+      "date": "2015-09-24",
+      "nameTr": "Kurban Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2015
+    },
+    {
+      "date": "2015-09-25",
+      "nameTr": "Kurban Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2015
+    },
+    {
+      "date": "2015-09-26",
+      "nameTr": "Kurban Bayram\u0131 4. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 4",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2015
+    },
+    {
+      "date": "2015-10-28",
+      "nameTr": "Cumhuriyet Bayram\u0131 Arifesi",
+      "nameEn": "Republic Day Eve",
+      "kind": "National",
+      "isHalfDay": true,
+      "year": 2015
+    },
+    {
+      "date": "2015-10-29",
+      "nameTr": "Cumhuriyet Bayram\u0131",
+      "nameEn": "Republic Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2015
+    },
+    {
+      "date": "2016-01-01",
+      "nameTr": "Y\u0131lba\u015F\u0131",
+      "nameEn": "New Year\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2016
+    },
+    {
+      "date": "2016-04-23",
+      "nameTr": "Ulusal Egemenlik ve \u00C7ocuk Bayram\u0131",
+      "nameEn": "National Sovereignty and Children\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2016
+    },
+    {
+      "date": "2016-05-01",
+      "nameTr": "Emek ve Dayan\u0131\u015Fma G\u00FCn\u00FC",
+      "nameEn": "Labour and Solidarity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2016
+    },
+    {
+      "date": "2016-05-19",
+      "nameTr": "Atat\u00FCrk\u0027\u00FC Anma, Gen\u00E7lik ve Spor Bayram\u0131",
+      "nameEn": "Commemoration of Atat\u00FCrk, Youth and Sports Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2016
+    },
+    {
+      "date": "2016-07-05",
+      "nameTr": "Ramazan Bayram\u0131 Arifesi",
+      "nameEn": "Ramadan Feast Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2016
+    },
+    {
+      "date": "2016-07-06",
+      "nameTr": "Ramazan Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2016
+    },
+    {
+      "date": "2016-07-07",
+      "nameTr": "Ramazan Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2016
+    },
+    {
+      "date": "2016-07-08",
+      "nameTr": "Ramazan Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2016
+    },
+    {
+      "date": "2016-07-15",
+      "nameTr": "Demokrasi ve Mill\u00EE Birlik G\u00FCn\u00FC",
+      "nameEn": "Democracy and National Unity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2016
+    },
+    {
+      "date": "2016-08-30",
+      "nameTr": "Zafer Bayram\u0131",
+      "nameEn": "Victory Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2016
+    },
+    {
+      "date": "2016-09-10",
+      "nameTr": "Kurban Bayram\u0131 Arifesi",
+      "nameEn": "Feast of Sacrifice Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2016
+    },
+    {
+      "date": "2016-09-11",
+      "nameTr": "Kurban Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2016
+    },
+    {
+      "date": "2016-09-12",
+      "nameTr": "Kurban Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2016
+    },
+    {
+      "date": "2016-09-13",
+      "nameTr": "Kurban Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2016
+    },
+    {
+      "date": "2016-09-14",
+      "nameTr": "Kurban Bayram\u0131 4. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 4",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2016
+    },
+    {
+      "date": "2016-10-28",
+      "nameTr": "Cumhuriyet Bayram\u0131 Arifesi",
+      "nameEn": "Republic Day Eve",
+      "kind": "National",
+      "isHalfDay": true,
+      "year": 2016
+    },
+    {
+      "date": "2016-10-29",
+      "nameTr": "Cumhuriyet Bayram\u0131",
+      "nameEn": "Republic Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2016
+    },
+    {
+      "date": "2017-01-01",
+      "nameTr": "Y\u0131lba\u015F\u0131",
+      "nameEn": "New Year\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2017
+    },
+    {
+      "date": "2017-04-23",
+      "nameTr": "Ulusal Egemenlik ve \u00C7ocuk Bayram\u0131",
+      "nameEn": "National Sovereignty and Children\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2017
+    },
+    {
+      "date": "2017-05-01",
+      "nameTr": "Emek ve Dayan\u0131\u015Fma G\u00FCn\u00FC",
+      "nameEn": "Labour and Solidarity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2017
+    },
+    {
+      "date": "2017-05-19",
+      "nameTr": "Atat\u00FCrk\u0027\u00FC Anma, Gen\u00E7lik ve Spor Bayram\u0131",
+      "nameEn": "Commemoration of Atat\u00FCrk, Youth and Sports Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2017
+    },
+    {
+      "date": "2017-06-24",
+      "nameTr": "Ramazan Bayram\u0131 Arifesi",
+      "nameEn": "Ramadan Feast Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2017
+    },
+    {
+      "date": "2017-06-25",
+      "nameTr": "Ramazan Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2017
+    },
+    {
+      "date": "2017-06-26",
+      "nameTr": "Ramazan Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2017
+    },
+    {
+      "date": "2017-06-27",
+      "nameTr": "Ramazan Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2017
+    },
+    {
+      "date": "2017-07-15",
+      "nameTr": "Demokrasi ve Mill\u00EE Birlik G\u00FCn\u00FC",
+      "nameEn": "Democracy and National Unity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2017
+    },
+    {
+      "date": "2017-08-30",
+      "nameTr": "Zafer Bayram\u0131",
+      "nameEn": "Victory Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2017
+    },
+    {
+      "date": "2017-08-31",
+      "nameTr": "Kurban Bayram\u0131 Arifesi",
+      "nameEn": "Feast of Sacrifice Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2017
+    },
+    {
+      "date": "2017-09-01",
+      "nameTr": "Kurban Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2017
+    },
+    {
+      "date": "2017-09-02",
+      "nameTr": "Kurban Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2017
+    },
+    {
+      "date": "2017-09-03",
+      "nameTr": "Kurban Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2017
+    },
+    {
+      "date": "2017-09-04",
+      "nameTr": "Kurban Bayram\u0131 4. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 4",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2017
+    },
+    {
+      "date": "2017-10-28",
+      "nameTr": "Cumhuriyet Bayram\u0131 Arifesi",
+      "nameEn": "Republic Day Eve",
+      "kind": "National",
+      "isHalfDay": true,
+      "year": 2017
+    },
+    {
+      "date": "2017-10-29",
+      "nameTr": "Cumhuriyet Bayram\u0131",
+      "nameEn": "Republic Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2017
+    },
+    {
+      "date": "2018-01-01",
+      "nameTr": "Y\u0131lba\u015F\u0131",
+      "nameEn": "New Year\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2018
+    },
+    {
+      "date": "2018-04-23",
+      "nameTr": "Ulusal Egemenlik ve \u00C7ocuk Bayram\u0131",
+      "nameEn": "National Sovereignty and Children\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2018
+    },
+    {
+      "date": "2018-05-01",
+      "nameTr": "Emek ve Dayan\u0131\u015Fma G\u00FCn\u00FC",
+      "nameEn": "Labour and Solidarity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2018
+    },
+    {
+      "date": "2018-05-19",
+      "nameTr": "Atat\u00FCrk\u0027\u00FC Anma, Gen\u00E7lik ve Spor Bayram\u0131",
+      "nameEn": "Commemoration of Atat\u00FCrk, Youth and Sports Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2018
+    },
+    {
+      "date": "2018-06-14",
+      "nameTr": "Ramazan Bayram\u0131 Arifesi",
+      "nameEn": "Ramadan Feast Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2018
+    },
+    {
+      "date": "2018-06-15",
+      "nameTr": "Ramazan Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2018
+    },
+    {
+      "date": "2018-06-16",
+      "nameTr": "Ramazan Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2018
+    },
+    {
+      "date": "2018-06-17",
+      "nameTr": "Ramazan Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2018
+    },
+    {
+      "date": "2018-07-15",
+      "nameTr": "Demokrasi ve Mill\u00EE Birlik G\u00FCn\u00FC",
+      "nameEn": "Democracy and National Unity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2018
+    },
+    {
+      "date": "2018-08-20",
+      "nameTr": "Kurban Bayram\u0131 Arifesi",
+      "nameEn": "Feast of Sacrifice Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2018
+    },
+    {
+      "date": "2018-08-21",
+      "nameTr": "Kurban Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2018
+    },
+    {
+      "date": "2018-08-22",
+      "nameTr": "Kurban Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2018
+    },
+    {
+      "date": "2018-08-23",
+      "nameTr": "Kurban Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2018
+    },
+    {
+      "date": "2018-08-24",
+      "nameTr": "Kurban Bayram\u0131 4. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 4",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2018
+    },
+    {
+      "date": "2018-08-30",
+      "nameTr": "Zafer Bayram\u0131",
+      "nameEn": "Victory Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2018
+    },
+    {
+      "date": "2018-10-28",
+      "nameTr": "Cumhuriyet Bayram\u0131 Arifesi",
+      "nameEn": "Republic Day Eve",
+      "kind": "National",
+      "isHalfDay": true,
+      "year": 2018
+    },
+    {
+      "date": "2018-10-29",
+      "nameTr": "Cumhuriyet Bayram\u0131",
+      "nameEn": "Republic Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2018
+    },
+    {
+      "date": "2019-01-01",
+      "nameTr": "Y\u0131lba\u015F\u0131",
+      "nameEn": "New Year\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2019
+    },
+    {
+      "date": "2019-04-23",
+      "nameTr": "Ulusal Egemenlik ve \u00C7ocuk Bayram\u0131",
+      "nameEn": "National Sovereignty and Children\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2019
+    },
+    {
+      "date": "2019-05-01",
+      "nameTr": "Emek ve Dayan\u0131\u015Fma G\u00FCn\u00FC",
+      "nameEn": "Labour and Solidarity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2019
+    },
+    {
+      "date": "2019-05-19",
+      "nameTr": "Atat\u00FCrk\u0027\u00FC Anma, Gen\u00E7lik ve Spor Bayram\u0131",
+      "nameEn": "Commemoration of Atat\u00FCrk, Youth and Sports Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2019
+    },
+    {
+      "date": "2019-06-03",
+      "nameTr": "Ramazan Bayram\u0131 Arifesi",
+      "nameEn": "Ramadan Feast Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2019
+    },
+    {
+      "date": "2019-06-04",
+      "nameTr": "Ramazan Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2019
+    },
+    {
+      "date": "2019-06-05",
+      "nameTr": "Ramazan Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2019
+    },
+    {
+      "date": "2019-06-06",
+      "nameTr": "Ramazan Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2019
+    },
+    {
+      "date": "2019-07-15",
+      "nameTr": "Demokrasi ve Mill\u00EE Birlik G\u00FCn\u00FC",
+      "nameEn": "Democracy and National Unity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2019
+    },
+    {
+      "date": "2019-08-10",
+      "nameTr": "Kurban Bayram\u0131 Arifesi",
+      "nameEn": "Feast of Sacrifice Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2019
+    },
+    {
+      "date": "2019-08-11",
+      "nameTr": "Kurban Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2019
+    },
+    {
+      "date": "2019-08-12",
+      "nameTr": "Kurban Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2019
+    },
+    {
+      "date": "2019-08-13",
+      "nameTr": "Kurban Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2019
+    },
+    {
+      "date": "2019-08-14",
+      "nameTr": "Kurban Bayram\u0131 4. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 4",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2019
+    },
+    {
+      "date": "2019-08-30",
+      "nameTr": "Zafer Bayram\u0131",
+      "nameEn": "Victory Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2019
+    },
+    {
+      "date": "2019-10-28",
+      "nameTr": "Cumhuriyet Bayram\u0131 Arifesi",
+      "nameEn": "Republic Day Eve",
+      "kind": "National",
+      "isHalfDay": true,
+      "year": 2019
+    },
+    {
+      "date": "2019-10-29",
+      "nameTr": "Cumhuriyet Bayram\u0131",
+      "nameEn": "Republic Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2019
+    },
+    {
+      "date": "2020-01-01",
+      "nameTr": "Y\u0131lba\u015F\u0131",
+      "nameEn": "New Year\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2020
+    },
+    {
+      "date": "2020-04-23",
+      "nameTr": "Ulusal Egemenlik ve \u00C7ocuk Bayram\u0131",
+      "nameEn": "National Sovereignty and Children\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2020
+    },
+    {
+      "date": "2020-05-01",
+      "nameTr": "Emek ve Dayan\u0131\u015Fma G\u00FCn\u00FC",
+      "nameEn": "Labour and Solidarity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2020
+    },
+    {
+      "date": "2020-05-19",
+      "nameTr": "Atat\u00FCrk\u0027\u00FC Anma, Gen\u00E7lik ve Spor Bayram\u0131",
+      "nameEn": "Commemoration of Atat\u00FCrk, Youth and Sports Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2020
+    },
+    {
+      "date": "2020-05-23",
+      "nameTr": "Ramazan Bayram\u0131 Arifesi",
+      "nameEn": "Ramadan Feast Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2020
+    },
+    {
+      "date": "2020-05-24",
+      "nameTr": "Ramazan Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2020
+    },
+    {
+      "date": "2020-05-25",
+      "nameTr": "Ramazan Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2020
+    },
+    {
+      "date": "2020-05-26",
+      "nameTr": "Ramazan Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2020
+    },
+    {
+      "date": "2020-07-15",
+      "nameTr": "Demokrasi ve Mill\u00EE Birlik G\u00FCn\u00FC",
+      "nameEn": "Democracy and National Unity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2020
+    },
+    {
+      "date": "2020-07-30",
+      "nameTr": "Kurban Bayram\u0131 Arifesi",
+      "nameEn": "Feast of Sacrifice Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2020
+    },
+    {
+      "date": "2020-07-31",
+      "nameTr": "Kurban Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2020
+    },
+    {
+      "date": "2020-08-01",
+      "nameTr": "Kurban Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2020
+    },
+    {
+      "date": "2020-08-02",
+      "nameTr": "Kurban Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2020
+    },
+    {
+      "date": "2020-08-03",
+      "nameTr": "Kurban Bayram\u0131 4. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 4",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2020
+    },
+    {
+      "date": "2020-08-30",
+      "nameTr": "Zafer Bayram\u0131",
+      "nameEn": "Victory Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2020
+    },
+    {
+      "date": "2020-10-28",
+      "nameTr": "Cumhuriyet Bayram\u0131 Arifesi",
+      "nameEn": "Republic Day Eve",
+      "kind": "National",
+      "isHalfDay": true,
+      "year": 2020
+    },
+    {
+      "date": "2020-10-29",
+      "nameTr": "Cumhuriyet Bayram\u0131",
+      "nameEn": "Republic Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2020
+    },
+    {
+      "date": "2021-01-01",
+      "nameTr": "Y\u0131lba\u015F\u0131",
+      "nameEn": "New Year\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2021
+    },
+    {
+      "date": "2021-04-23",
+      "nameTr": "Ulusal Egemenlik ve \u00C7ocuk Bayram\u0131",
+      "nameEn": "National Sovereignty and Children\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2021
+    },
+    {
+      "date": "2021-05-01",
+      "nameTr": "Emek ve Dayan\u0131\u015Fma G\u00FCn\u00FC",
+      "nameEn": "Labour and Solidarity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2021
+    },
+    {
+      "date": "2021-05-12",
+      "nameTr": "Ramazan Bayram\u0131 Arifesi",
+      "nameEn": "Ramadan Feast Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2021
+    },
+    {
+      "date": "2021-05-13",
+      "nameTr": "Ramazan Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2021
+    },
+    {
+      "date": "2021-05-14",
+      "nameTr": "Ramazan Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2021
+    },
+    {
+      "date": "2021-05-15",
+      "nameTr": "Ramazan Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2021
+    },
+    {
+      "date": "2021-05-19",
+      "nameTr": "Atat\u00FCrk\u0027\u00FC Anma, Gen\u00E7lik ve Spor Bayram\u0131",
+      "nameEn": "Commemoration of Atat\u00FCrk, Youth and Sports Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2021
+    },
+    {
+      "date": "2021-07-15",
+      "nameTr": "Demokrasi ve Mill\u00EE Birlik G\u00FCn\u00FC",
+      "nameEn": "Democracy and National Unity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2021
+    },
+    {
+      "date": "2021-07-19",
+      "nameTr": "Kurban Bayram\u0131 Arifesi",
+      "nameEn": "Feast of Sacrifice Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2021
+    },
+    {
+      "date": "2021-07-20",
+      "nameTr": "Kurban Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2021
+    },
+    {
+      "date": "2021-07-21",
+      "nameTr": "Kurban Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2021
+    },
+    {
+      "date": "2021-07-22",
+      "nameTr": "Kurban Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2021
+    },
+    {
+      "date": "2021-07-23",
+      "nameTr": "Kurban Bayram\u0131 4. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 4",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2021
+    },
+    {
+      "date": "2021-08-30",
+      "nameTr": "Zafer Bayram\u0131",
+      "nameEn": "Victory Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2021
+    },
+    {
+      "date": "2021-10-28",
+      "nameTr": "Cumhuriyet Bayram\u0131 Arifesi",
+      "nameEn": "Republic Day Eve",
+      "kind": "National",
+      "isHalfDay": true,
+      "year": 2021
+    },
+    {
+      "date": "2021-10-29",
+      "nameTr": "Cumhuriyet Bayram\u0131",
+      "nameEn": "Republic Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2021
+    },
+    {
+      "date": "2022-01-01",
+      "nameTr": "Y\u0131lba\u015F\u0131",
+      "nameEn": "New Year\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2022
+    },
+    {
+      "date": "2022-04-23",
+      "nameTr": "Ulusal Egemenlik ve \u00C7ocuk Bayram\u0131",
+      "nameEn": "National Sovereignty and Children\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2022
+    },
+    {
+      "date": "2022-05-01",
+      "nameTr": "Ramazan Bayram\u0131 Arifesi",
+      "nameEn": "Ramadan Feast Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2022
+    },
+    {
+      "date": "2022-05-01",
+      "nameTr": "Emek ve Dayan\u0131\u015Fma G\u00FCn\u00FC",
+      "nameEn": "Labour and Solidarity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2022
+    },
+    {
+      "date": "2022-05-02",
+      "nameTr": "Ramazan Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2022
+    },
+    {
+      "date": "2022-05-03",
+      "nameTr": "Ramazan Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2022
+    },
+    {
+      "date": "2022-05-04",
+      "nameTr": "Ramazan Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2022
+    },
+    {
+      "date": "2022-05-19",
+      "nameTr": "Atat\u00FCrk\u0027\u00FC Anma, Gen\u00E7lik ve Spor Bayram\u0131",
+      "nameEn": "Commemoration of Atat\u00FCrk, Youth and Sports Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2022
+    },
+    {
+      "date": "2022-07-08",
+      "nameTr": "Kurban Bayram\u0131 Arifesi",
+      "nameEn": "Feast of Sacrifice Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2022
+    },
+    {
+      "date": "2022-07-09",
+      "nameTr": "Kurban Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2022
+    },
+    {
+      "date": "2022-07-10",
+      "nameTr": "Kurban Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2022
+    },
+    {
+      "date": "2022-07-11",
+      "nameTr": "Kurban Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2022
+    },
+    {
+      "date": "2022-07-12",
+      "nameTr": "Kurban Bayram\u0131 4. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 4",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2022
+    },
+    {
+      "date": "2022-07-15",
+      "nameTr": "Demokrasi ve Mill\u00EE Birlik G\u00FCn\u00FC",
+      "nameEn": "Democracy and National Unity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2022
+    },
+    {
+      "date": "2022-08-30",
+      "nameTr": "Zafer Bayram\u0131",
+      "nameEn": "Victory Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2022
+    },
+    {
+      "date": "2022-10-28",
+      "nameTr": "Cumhuriyet Bayram\u0131 Arifesi",
+      "nameEn": "Republic Day Eve",
+      "kind": "National",
+      "isHalfDay": true,
+      "year": 2022
+    },
+    {
+      "date": "2022-10-29",
+      "nameTr": "Cumhuriyet Bayram\u0131",
+      "nameEn": "Republic Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2022
+    },
+    {
+      "date": "2023-01-01",
+      "nameTr": "Y\u0131lba\u015F\u0131",
+      "nameEn": "New Year\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2023
+    },
+    {
+      "date": "2023-04-20",
+      "nameTr": "Ramazan Bayram\u0131 Arifesi",
+      "nameEn": "Ramadan Feast Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2023
+    },
+    {
+      "date": "2023-04-21",
+      "nameTr": "Ramazan Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2023
+    },
+    {
+      "date": "2023-04-22",
+      "nameTr": "Ramazan Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2023
+    },
+    {
+      "date": "2023-04-23",
+      "nameTr": "Ulusal Egemenlik ve \u00C7ocuk Bayram\u0131",
+      "nameEn": "National Sovereignty and Children\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2023
+    },
+    {
+      "date": "2023-04-23",
+      "nameTr": "Ramazan Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2023
+    },
+    {
+      "date": "2023-05-01",
+      "nameTr": "Emek ve Dayan\u0131\u015Fma G\u00FCn\u00FC",
+      "nameEn": "Labour and Solidarity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2023
+    },
+    {
+      "date": "2023-05-19",
+      "nameTr": "Atat\u00FCrk\u0027\u00FC Anma, Gen\u00E7lik ve Spor Bayram\u0131",
+      "nameEn": "Commemoration of Atat\u00FCrk, Youth and Sports Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2023
+    },
+    {
+      "date": "2023-06-27",
+      "nameTr": "Kurban Bayram\u0131 Arifesi",
+      "nameEn": "Feast of Sacrifice Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2023
+    },
+    {
+      "date": "2023-06-28",
+      "nameTr": "Kurban Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2023
+    },
+    {
+      "date": "2023-06-29",
+      "nameTr": "Kurban Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2023
+    },
+    {
+      "date": "2023-06-30",
+      "nameTr": "Kurban Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2023
+    },
+    {
+      "date": "2023-07-01",
+      "nameTr": "Kurban Bayram\u0131 4. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 4",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2023
+    },
+    {
+      "date": "2023-07-15",
+      "nameTr": "Demokrasi ve Mill\u00EE Birlik G\u00FCn\u00FC",
+      "nameEn": "Democracy and National Unity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2023
+    },
+    {
+      "date": "2023-08-30",
+      "nameTr": "Zafer Bayram\u0131",
+      "nameEn": "Victory Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2023
+    },
+    {
+      "date": "2023-10-28",
+      "nameTr": "Cumhuriyet Bayram\u0131 Arifesi",
+      "nameEn": "Republic Day Eve",
+      "kind": "National",
+      "isHalfDay": true,
+      "year": 2023
+    },
+    {
+      "date": "2023-10-29",
+      "nameTr": "Cumhuriyet Bayram\u0131",
+      "nameEn": "Republic Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2023
+    },
+    {
+      "date": "2024-01-01",
+      "nameTr": "Y\u0131lba\u015F\u0131",
+      "nameEn": "New Year\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2024
+    },
+    {
+      "date": "2024-04-09",
+      "nameTr": "Ramazan Bayram\u0131 Arifesi",
+      "nameEn": "Ramadan Feast Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2024
+    },
+    {
+      "date": "2024-04-10",
+      "nameTr": "Ramazan Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2024
+    },
+    {
+      "date": "2024-04-11",
+      "nameTr": "Ramazan Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2024
+    },
+    {
+      "date": "2024-04-12",
+      "nameTr": "Ramazan Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2024
+    },
+    {
+      "date": "2024-04-23",
+      "nameTr": "Ulusal Egemenlik ve \u00C7ocuk Bayram\u0131",
+      "nameEn": "National Sovereignty and Children\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2024
+    },
+    {
+      "date": "2024-05-01",
+      "nameTr": "Emek ve Dayan\u0131\u015Fma G\u00FCn\u00FC",
+      "nameEn": "Labour and Solidarity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2024
+    },
+    {
+      "date": "2024-05-19",
+      "nameTr": "Atat\u00FCrk\u0027\u00FC Anma, Gen\u00E7lik ve Spor Bayram\u0131",
+      "nameEn": "Commemoration of Atat\u00FCrk, Youth and Sports Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2024
+    },
+    {
+      "date": "2024-06-15",
+      "nameTr": "Kurban Bayram\u0131 Arifesi",
+      "nameEn": "Feast of Sacrifice Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2024
+    },
+    {
+      "date": "2024-06-16",
+      "nameTr": "Kurban Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2024
+    },
+    {
+      "date": "2024-06-17",
+      "nameTr": "Kurban Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2024
+    },
+    {
+      "date": "2024-06-18",
+      "nameTr": "Kurban Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2024
+    },
+    {
+      "date": "2024-06-19",
+      "nameTr": "Kurban Bayram\u0131 4. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 4",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2024
+    },
+    {
+      "date": "2024-07-15",
+      "nameTr": "Demokrasi ve Mill\u00EE Birlik G\u00FCn\u00FC",
+      "nameEn": "Democracy and National Unity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2024
+    },
+    {
+      "date": "2024-08-30",
+      "nameTr": "Zafer Bayram\u0131",
+      "nameEn": "Victory Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2024
+    },
+    {
+      "date": "2024-10-28",
+      "nameTr": "Cumhuriyet Bayram\u0131 Arifesi",
+      "nameEn": "Republic Day Eve",
+      "kind": "National",
+      "isHalfDay": true,
+      "year": 2024
+    },
+    {
+      "date": "2024-10-29",
+      "nameTr": "Cumhuriyet Bayram\u0131",
+      "nameEn": "Republic Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2024
+    },
+    {
+      "date": "2025-01-01",
+      "nameTr": "Y\u0131lba\u015F\u0131",
+      "nameEn": "New Year\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2025
+    },
+    {
+      "date": "2025-03-29",
+      "nameTr": "Ramazan Bayram\u0131 Arifesi",
+      "nameEn": "Ramadan Feast Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2025
+    },
+    {
+      "date": "2025-03-30",
+      "nameTr": "Ramazan Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2025
+    },
+    {
+      "date": "2025-03-31",
+      "nameTr": "Ramazan Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2025
+    },
+    {
+      "date": "2025-04-01",
+      "nameTr": "Ramazan Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2025
+    },
+    {
+      "date": "2025-04-23",
+      "nameTr": "Ulusal Egemenlik ve \u00C7ocuk Bayram\u0131",
+      "nameEn": "National Sovereignty and Children\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2025
+    },
+    {
+      "date": "2025-05-01",
+      "nameTr": "Emek ve Dayan\u0131\u015Fma G\u00FCn\u00FC",
+      "nameEn": "Labour and Solidarity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2025
+    },
+    {
+      "date": "2025-05-19",
+      "nameTr": "Atat\u00FCrk\u0027\u00FC Anma, Gen\u00E7lik ve Spor Bayram\u0131",
+      "nameEn": "Commemoration of Atat\u00FCrk, Youth and Sports Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2025
+    },
+    {
+      "date": "2025-06-05",
+      "nameTr": "Kurban Bayram\u0131 Arifesi",
+      "nameEn": "Feast of Sacrifice Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2025
+    },
+    {
+      "date": "2025-06-06",
+      "nameTr": "Kurban Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2025
+    },
+    {
+      "date": "2025-06-07",
+      "nameTr": "Kurban Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2025
+    },
+    {
+      "date": "2025-06-08",
+      "nameTr": "Kurban Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2025
+    },
+    {
+      "date": "2025-06-09",
+      "nameTr": "Kurban Bayram\u0131 4. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 4",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2025
+    },
+    {
+      "date": "2025-07-15",
+      "nameTr": "Demokrasi ve Mill\u00EE Birlik G\u00FCn\u00FC",
+      "nameEn": "Democracy and National Unity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2025
+    },
+    {
+      "date": "2025-08-30",
+      "nameTr": "Zafer Bayram\u0131",
+      "nameEn": "Victory Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2025
+    },
+    {
+      "date": "2025-10-28",
+      "nameTr": "Cumhuriyet Bayram\u0131 Arifesi",
+      "nameEn": "Republic Day Eve",
+      "kind": "National",
+      "isHalfDay": true,
+      "year": 2025
+    },
+    {
+      "date": "2025-10-29",
+      "nameTr": "Cumhuriyet Bayram\u0131",
+      "nameEn": "Republic Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2025
+    },
+    {
+      "date": "2026-01-01",
+      "nameTr": "Y\u0131lba\u015F\u0131",
+      "nameEn": "New Year\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2026
+    },
+    {
+      "date": "2026-03-19",
+      "nameTr": "Ramazan Bayram\u0131 Arifesi",
+      "nameEn": "Ramadan Feast Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2026
+    },
+    {
+      "date": "2026-03-20",
+      "nameTr": "Ramazan Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2026
+    },
+    {
+      "date": "2026-03-21",
+      "nameTr": "Ramazan Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2026
+    },
+    {
+      "date": "2026-03-22",
+      "nameTr": "Ramazan Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2026
+    },
+    {
+      "date": "2026-04-23",
+      "nameTr": "Ulusal Egemenlik ve \u00C7ocuk Bayram\u0131",
+      "nameEn": "National Sovereignty and Children\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2026
+    },
+    {
+      "date": "2026-05-01",
+      "nameTr": "Emek ve Dayan\u0131\u015Fma G\u00FCn\u00FC",
+      "nameEn": "Labour and Solidarity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2026
+    },
+    {
+      "date": "2026-05-19",
+      "nameTr": "Atat\u00FCrk\u0027\u00FC Anma, Gen\u00E7lik ve Spor Bayram\u0131",
+      "nameEn": "Commemoration of Atat\u00FCrk, Youth and Sports Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2026
+    },
+    {
+      "date": "2026-05-26",
+      "nameTr": "Kurban Bayram\u0131 Arifesi",
+      "nameEn": "Feast of Sacrifice Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2026
+    },
+    {
+      "date": "2026-05-27",
+      "nameTr": "Kurban Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2026
+    },
+    {
+      "date": "2026-05-28",
+      "nameTr": "Kurban Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2026
+    },
+    {
+      "date": "2026-05-29",
+      "nameTr": "Kurban Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2026
+    },
+    {
+      "date": "2026-05-30",
+      "nameTr": "Kurban Bayram\u0131 4. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 4",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2026
+    },
+    {
+      "date": "2026-07-15",
+      "nameTr": "Demokrasi ve Mill\u00EE Birlik G\u00FCn\u00FC",
+      "nameEn": "Democracy and National Unity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2026
+    },
+    {
+      "date": "2026-08-30",
+      "nameTr": "Zafer Bayram\u0131",
+      "nameEn": "Victory Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2026
+    },
+    {
+      "date": "2026-10-28",
+      "nameTr": "Cumhuriyet Bayram\u0131 Arifesi",
+      "nameEn": "Republic Day Eve",
+      "kind": "National",
+      "isHalfDay": true,
+      "year": 2026
+    },
+    {
+      "date": "2026-10-29",
+      "nameTr": "Cumhuriyet Bayram\u0131",
+      "nameEn": "Republic Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2026
+    },
+    {
+      "date": "2027-01-01",
+      "nameTr": "Y\u0131lba\u015F\u0131",
+      "nameEn": "New Year\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2027
+    },
+    {
+      "date": "2027-03-08",
+      "nameTr": "Ramazan Bayram\u0131 Arifesi",
+      "nameEn": "Ramadan Feast Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2027
+    },
+    {
+      "date": "2027-03-09",
+      "nameTr": "Ramazan Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2027
+    },
+    {
+      "date": "2027-03-10",
+      "nameTr": "Ramazan Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2027
+    },
+    {
+      "date": "2027-03-11",
+      "nameTr": "Ramazan Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2027
+    },
+    {
+      "date": "2027-04-23",
+      "nameTr": "Ulusal Egemenlik ve \u00C7ocuk Bayram\u0131",
+      "nameEn": "National Sovereignty and Children\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2027
+    },
+    {
+      "date": "2027-05-01",
+      "nameTr": "Emek ve Dayan\u0131\u015Fma G\u00FCn\u00FC",
+      "nameEn": "Labour and Solidarity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2027
+    },
+    {
+      "date": "2027-05-15",
+      "nameTr": "Kurban Bayram\u0131 Arifesi",
+      "nameEn": "Feast of Sacrifice Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2027
+    },
+    {
+      "date": "2027-05-16",
+      "nameTr": "Kurban Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2027
+    },
+    {
+      "date": "2027-05-17",
+      "nameTr": "Kurban Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2027
+    },
+    {
+      "date": "2027-05-18",
+      "nameTr": "Kurban Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2027
+    },
+    {
+      "date": "2027-05-19",
+      "nameTr": "Atat\u00FCrk\u0027\u00FC Anma, Gen\u00E7lik ve Spor Bayram\u0131",
+      "nameEn": "Commemoration of Atat\u00FCrk, Youth and Sports Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2027
+    },
+    {
+      "date": "2027-05-19",
+      "nameTr": "Kurban Bayram\u0131 4. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 4",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2027
+    },
+    {
+      "date": "2027-07-15",
+      "nameTr": "Demokrasi ve Mill\u00EE Birlik G\u00FCn\u00FC",
+      "nameEn": "Democracy and National Unity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2027
+    },
+    {
+      "date": "2027-08-30",
+      "nameTr": "Zafer Bayram\u0131",
+      "nameEn": "Victory Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2027
+    },
+    {
+      "date": "2027-10-28",
+      "nameTr": "Cumhuriyet Bayram\u0131 Arifesi",
+      "nameEn": "Republic Day Eve",
+      "kind": "National",
+      "isHalfDay": true,
+      "year": 2027
+    },
+    {
+      "date": "2027-10-29",
+      "nameTr": "Cumhuriyet Bayram\u0131",
+      "nameEn": "Republic Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2027
+    },
+    {
+      "date": "2028-01-01",
+      "nameTr": "Y\u0131lba\u015F\u0131",
+      "nameEn": "New Year\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2028
+    },
+    {
+      "date": "2028-02-25",
+      "nameTr": "Ramazan Bayram\u0131 Arifesi",
+      "nameEn": "Ramadan Feast Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2028
+    },
+    {
+      "date": "2028-02-26",
+      "nameTr": "Ramazan Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2028
+    },
+    {
+      "date": "2028-02-27",
+      "nameTr": "Ramazan Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2028
+    },
+    {
+      "date": "2028-02-28",
+      "nameTr": "Ramazan Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2028
+    },
+    {
+      "date": "2028-04-23",
+      "nameTr": "Ulusal Egemenlik ve \u00C7ocuk Bayram\u0131",
+      "nameEn": "National Sovereignty and Children\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2028
+    },
+    {
+      "date": "2028-05-01",
+      "nameTr": "Emek ve Dayan\u0131\u015Fma G\u00FCn\u00FC",
+      "nameEn": "Labour and Solidarity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2028
+    },
+    {
+      "date": "2028-05-04",
+      "nameTr": "Kurban Bayram\u0131 Arifesi",
+      "nameEn": "Feast of Sacrifice Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2028
+    },
+    {
+      "date": "2028-05-05",
+      "nameTr": "Kurban Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2028
+    },
+    {
+      "date": "2028-05-06",
+      "nameTr": "Kurban Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2028
+    },
+    {
+      "date": "2028-05-07",
+      "nameTr": "Kurban Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2028
+    },
+    {
+      "date": "2028-05-08",
+      "nameTr": "Kurban Bayram\u0131 4. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 4",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2028
+    },
+    {
+      "date": "2028-05-19",
+      "nameTr": "Atat\u00FCrk\u0027\u00FC Anma, Gen\u00E7lik ve Spor Bayram\u0131",
+      "nameEn": "Commemoration of Atat\u00FCrk, Youth and Sports Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2028
+    },
+    {
+      "date": "2028-07-15",
+      "nameTr": "Demokrasi ve Mill\u00EE Birlik G\u00FCn\u00FC",
+      "nameEn": "Democracy and National Unity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2028
+    },
+    {
+      "date": "2028-08-30",
+      "nameTr": "Zafer Bayram\u0131",
+      "nameEn": "Victory Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2028
+    },
+    {
+      "date": "2028-10-28",
+      "nameTr": "Cumhuriyet Bayram\u0131 Arifesi",
+      "nameEn": "Republic Day Eve",
+      "kind": "National",
+      "isHalfDay": true,
+      "year": 2028
+    },
+    {
+      "date": "2028-10-29",
+      "nameTr": "Cumhuriyet Bayram\u0131",
+      "nameEn": "Republic Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2028
+    },
+    {
+      "date": "2029-01-01",
+      "nameTr": "Y\u0131lba\u015F\u0131",
+      "nameEn": "New Year\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2029
+    },
+    {
+      "date": "2029-02-13",
+      "nameTr": "Ramazan Bayram\u0131 Arifesi",
+      "nameEn": "Ramadan Feast Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2029
+    },
+    {
+      "date": "2029-02-14",
+      "nameTr": "Ramazan Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2029
+    },
+    {
+      "date": "2029-02-15",
+      "nameTr": "Ramazan Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2029
+    },
+    {
+      "date": "2029-02-16",
+      "nameTr": "Ramazan Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2029
+    },
+    {
+      "date": "2029-04-23",
+      "nameTr": "Kurban Bayram\u0131 Arifesi",
+      "nameEn": "Feast of Sacrifice Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2029
+    },
+    {
+      "date": "2029-04-23",
+      "nameTr": "Ulusal Egemenlik ve \u00C7ocuk Bayram\u0131",
+      "nameEn": "National Sovereignty and Children\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2029
+    },
+    {
+      "date": "2029-04-24",
+      "nameTr": "Kurban Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2029
+    },
+    {
+      "date": "2029-04-25",
+      "nameTr": "Kurban Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2029
+    },
+    {
+      "date": "2029-04-26",
+      "nameTr": "Kurban Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2029
+    },
+    {
+      "date": "2029-04-27",
+      "nameTr": "Kurban Bayram\u0131 4. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 4",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2029
+    },
+    {
+      "date": "2029-05-01",
+      "nameTr": "Emek ve Dayan\u0131\u015Fma G\u00FCn\u00FC",
+      "nameEn": "Labour and Solidarity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2029
+    },
+    {
+      "date": "2029-05-19",
+      "nameTr": "Atat\u00FCrk\u0027\u00FC Anma, Gen\u00E7lik ve Spor Bayram\u0131",
+      "nameEn": "Commemoration of Atat\u00FCrk, Youth and Sports Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2029
+    },
+    {
+      "date": "2029-07-15",
+      "nameTr": "Demokrasi ve Mill\u00EE Birlik G\u00FCn\u00FC",
+      "nameEn": "Democracy and National Unity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2029
+    },
+    {
+      "date": "2029-08-30",
+      "nameTr": "Zafer Bayram\u0131",
+      "nameEn": "Victory Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2029
+    },
+    {
+      "date": "2029-10-28",
+      "nameTr": "Cumhuriyet Bayram\u0131 Arifesi",
+      "nameEn": "Republic Day Eve",
+      "kind": "National",
+      "isHalfDay": true,
+      "year": 2029
+    },
+    {
+      "date": "2029-10-29",
+      "nameTr": "Cumhuriyet Bayram\u0131",
+      "nameEn": "Republic Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2029
+    },
+    {
+      "date": "2030-01-01",
+      "nameTr": "Y\u0131lba\u015F\u0131",
+      "nameEn": "New Year\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2030
+    },
+    {
+      "date": "2030-02-03",
+      "nameTr": "Ramazan Bayram\u0131 Arifesi",
+      "nameEn": "Ramadan Feast Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2030
+    },
+    {
+      "date": "2030-02-04",
+      "nameTr": "Ramazan Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2030
+    },
+    {
+      "date": "2030-02-05",
+      "nameTr": "Ramazan Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2030
+    },
+    {
+      "date": "2030-02-06",
+      "nameTr": "Ramazan Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2030
+    },
+    {
+      "date": "2030-04-12",
+      "nameTr": "Kurban Bayram\u0131 Arifesi",
+      "nameEn": "Feast of Sacrifice Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2030
+    },
+    {
+      "date": "2030-04-13",
+      "nameTr": "Kurban Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2030
+    },
+    {
+      "date": "2030-04-14",
+      "nameTr": "Kurban Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2030
+    },
+    {
+      "date": "2030-04-15",
+      "nameTr": "Kurban Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2030
+    },
+    {
+      "date": "2030-04-16",
+      "nameTr": "Kurban Bayram\u0131 4. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 4",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2030
+    },
+    {
+      "date": "2030-04-23",
+      "nameTr": "Ulusal Egemenlik ve \u00C7ocuk Bayram\u0131",
+      "nameEn": "National Sovereignty and Children\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2030
+    },
+    {
+      "date": "2030-05-01",
+      "nameTr": "Emek ve Dayan\u0131\u015Fma G\u00FCn\u00FC",
+      "nameEn": "Labour and Solidarity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2030
+    },
+    {
+      "date": "2030-05-19",
+      "nameTr": "Atat\u00FCrk\u0027\u00FC Anma, Gen\u00E7lik ve Spor Bayram\u0131",
+      "nameEn": "Commemoration of Atat\u00FCrk, Youth and Sports Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2030
+    },
+    {
+      "date": "2030-07-15",
+      "nameTr": "Demokrasi ve Mill\u00EE Birlik G\u00FCn\u00FC",
+      "nameEn": "Democracy and National Unity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2030
+    },
+    {
+      "date": "2030-08-30",
+      "nameTr": "Zafer Bayram\u0131",
+      "nameEn": "Victory Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2030
+    },
+    {
+      "date": "2030-10-28",
+      "nameTr": "Cumhuriyet Bayram\u0131 Arifesi",
+      "nameEn": "Republic Day Eve",
+      "kind": "National",
+      "isHalfDay": true,
+      "year": 2030
+    },
+    {
+      "date": "2030-10-29",
+      "nameTr": "Cumhuriyet Bayram\u0131",
+      "nameEn": "Republic Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2030
+    },
+    {
+      "date": "2031-01-01",
+      "nameTr": "Y\u0131lba\u015F\u0131",
+      "nameEn": "New Year\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2031
+    },
+    {
+      "date": "2031-01-23",
+      "nameTr": "Ramazan Bayram\u0131 Arifesi",
+      "nameEn": "Ramadan Feast Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2031
+    },
+    {
+      "date": "2031-01-24",
+      "nameTr": "Ramazan Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2031
+    },
+    {
+      "date": "2031-01-25",
+      "nameTr": "Ramazan Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2031
+    },
+    {
+      "date": "2031-01-26",
+      "nameTr": "Ramazan Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2031
+    },
+    {
+      "date": "2031-04-01",
+      "nameTr": "Kurban Bayram\u0131 Arifesi",
+      "nameEn": "Feast of Sacrifice Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2031
+    },
+    {
+      "date": "2031-04-02",
+      "nameTr": "Kurban Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2031
+    },
+    {
+      "date": "2031-04-03",
+      "nameTr": "Kurban Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2031
+    },
+    {
+      "date": "2031-04-04",
+      "nameTr": "Kurban Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2031
+    },
+    {
+      "date": "2031-04-05",
+      "nameTr": "Kurban Bayram\u0131 4. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 4",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2031
+    },
+    {
+      "date": "2031-04-23",
+      "nameTr": "Ulusal Egemenlik ve \u00C7ocuk Bayram\u0131",
+      "nameEn": "National Sovereignty and Children\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2031
+    },
+    {
+      "date": "2031-05-01",
+      "nameTr": "Emek ve Dayan\u0131\u015Fma G\u00FCn\u00FC",
+      "nameEn": "Labour and Solidarity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2031
+    },
+    {
+      "date": "2031-05-19",
+      "nameTr": "Atat\u00FCrk\u0027\u00FC Anma, Gen\u00E7lik ve Spor Bayram\u0131",
+      "nameEn": "Commemoration of Atat\u00FCrk, Youth and Sports Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2031
+    },
+    {
+      "date": "2031-07-15",
+      "nameTr": "Demokrasi ve Mill\u00EE Birlik G\u00FCn\u00FC",
+      "nameEn": "Democracy and National Unity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2031
+    },
+    {
+      "date": "2031-08-30",
+      "nameTr": "Zafer Bayram\u0131",
+      "nameEn": "Victory Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2031
+    },
+    {
+      "date": "2031-10-28",
+      "nameTr": "Cumhuriyet Bayram\u0131 Arifesi",
+      "nameEn": "Republic Day Eve",
+      "kind": "National",
+      "isHalfDay": true,
+      "year": 2031
+    },
+    {
+      "date": "2031-10-29",
+      "nameTr": "Cumhuriyet Bayram\u0131",
+      "nameEn": "Republic Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2031
+    },
+    {
+      "date": "2032-01-01",
+      "nameTr": "Y\u0131lba\u015F\u0131",
+      "nameEn": "New Year\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2032
+    },
+    {
+      "date": "2032-01-13",
+      "nameTr": "Ramazan Bayram\u0131 Arifesi",
+      "nameEn": "Ramadan Feast Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2032
+    },
+    {
+      "date": "2032-01-14",
+      "nameTr": "Ramazan Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2032
+    },
+    {
+      "date": "2032-01-15",
+      "nameTr": "Ramazan Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2032
+    },
+    {
+      "date": "2032-01-16",
+      "nameTr": "Ramazan Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2032
+    },
+    {
+      "date": "2032-03-21",
+      "nameTr": "Kurban Bayram\u0131 Arifesi",
+      "nameEn": "Feast of Sacrifice Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2032
+    },
+    {
+      "date": "2032-03-22",
+      "nameTr": "Kurban Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2032
+    },
+    {
+      "date": "2032-03-23",
+      "nameTr": "Kurban Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2032
+    },
+    {
+      "date": "2032-03-24",
+      "nameTr": "Kurban Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2032
+    },
+    {
+      "date": "2032-03-25",
+      "nameTr": "Kurban Bayram\u0131 4. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 4",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2032
+    },
+    {
+      "date": "2032-04-23",
+      "nameTr": "Ulusal Egemenlik ve \u00C7ocuk Bayram\u0131",
+      "nameEn": "National Sovereignty and Children\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2032
+    },
+    {
+      "date": "2032-05-01",
+      "nameTr": "Emek ve Dayan\u0131\u015Fma G\u00FCn\u00FC",
+      "nameEn": "Labour and Solidarity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2032
+    },
+    {
+      "date": "2032-05-19",
+      "nameTr": "Atat\u00FCrk\u0027\u00FC Anma, Gen\u00E7lik ve Spor Bayram\u0131",
+      "nameEn": "Commemoration of Atat\u00FCrk, Youth and Sports Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2032
+    },
+    {
+      "date": "2032-07-15",
+      "nameTr": "Demokrasi ve Mill\u00EE Birlik G\u00FCn\u00FC",
+      "nameEn": "Democracy and National Unity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2032
+    },
+    {
+      "date": "2032-08-30",
+      "nameTr": "Zafer Bayram\u0131",
+      "nameEn": "Victory Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2032
+    },
+    {
+      "date": "2032-10-28",
+      "nameTr": "Cumhuriyet Bayram\u0131 Arifesi",
+      "nameEn": "Republic Day Eve",
+      "kind": "National",
+      "isHalfDay": true,
+      "year": 2032
+    },
+    {
+      "date": "2032-10-29",
+      "nameTr": "Cumhuriyet Bayram\u0131",
+      "nameEn": "Republic Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2032
+    },
+    {
+      "date": "2033-01-01",
+      "nameTr": "Ramazan Bayram\u0131 Arifesi",
+      "nameEn": "Ramadan Feast Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2033
+    },
+    {
+      "date": "2033-01-01",
+      "nameTr": "Y\u0131lba\u015F\u0131",
+      "nameEn": "New Year\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2033
+    },
+    {
+      "date": "2033-01-02",
+      "nameTr": "Ramazan Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2033
+    },
+    {
+      "date": "2033-01-03",
+      "nameTr": "Ramazan Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2033
+    },
+    {
+      "date": "2033-01-04",
+      "nameTr": "Ramazan Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2033
+    },
+    {
+      "date": "2033-03-10",
+      "nameTr": "Kurban Bayram\u0131 Arifesi",
+      "nameEn": "Feast of Sacrifice Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2033
+    },
+    {
+      "date": "2033-03-11",
+      "nameTr": "Kurban Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2033
+    },
+    {
+      "date": "2033-03-12",
+      "nameTr": "Kurban Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2033
+    },
+    {
+      "date": "2033-03-13",
+      "nameTr": "Kurban Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2033
+    },
+    {
+      "date": "2033-03-14",
+      "nameTr": "Kurban Bayram\u0131 4. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 4",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2033
+    },
+    {
+      "date": "2033-04-23",
+      "nameTr": "Ulusal Egemenlik ve \u00C7ocuk Bayram\u0131",
+      "nameEn": "National Sovereignty and Children\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2033
+    },
+    {
+      "date": "2033-05-01",
+      "nameTr": "Emek ve Dayan\u0131\u015Fma G\u00FCn\u00FC",
+      "nameEn": "Labour and Solidarity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2033
+    },
+    {
+      "date": "2033-05-19",
+      "nameTr": "Atat\u00FCrk\u0027\u00FC Anma, Gen\u00E7lik ve Spor Bayram\u0131",
+      "nameEn": "Commemoration of Atat\u00FCrk, Youth and Sports Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2033
+    },
+    {
+      "date": "2033-07-15",
+      "nameTr": "Demokrasi ve Mill\u00EE Birlik G\u00FCn\u00FC",
+      "nameEn": "Democracy and National Unity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2033
+    },
+    {
+      "date": "2033-08-30",
+      "nameTr": "Zafer Bayram\u0131",
+      "nameEn": "Victory Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2033
+    },
+    {
+      "date": "2033-10-28",
+      "nameTr": "Cumhuriyet Bayram\u0131 Arifesi",
+      "nameEn": "Republic Day Eve",
+      "kind": "National",
+      "isHalfDay": true,
+      "year": 2033
+    },
+    {
+      "date": "2033-10-29",
+      "nameTr": "Cumhuriyet Bayram\u0131",
+      "nameEn": "Republic Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2033
+    },
+    {
+      "date": "2033-12-22",
+      "nameTr": "Ramazan Bayram\u0131 Arifesi",
+      "nameEn": "Ramadan Feast Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2033
+    },
+    {
+      "date": "2033-12-23",
+      "nameTr": "Ramazan Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2033
+    },
+    {
+      "date": "2033-12-24",
+      "nameTr": "Ramazan Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2033
+    },
+    {
+      "date": "2033-12-25",
+      "nameTr": "Ramazan Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2033
+    },
+    {
+      "date": "2034-01-01",
+      "nameTr": "Y\u0131lba\u015F\u0131",
+      "nameEn": "New Year\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2034
+    },
+    {
+      "date": "2034-02-28",
+      "nameTr": "Kurban Bayram\u0131 Arifesi",
+      "nameEn": "Feast of Sacrifice Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2034
+    },
+    {
+      "date": "2034-03-01",
+      "nameTr": "Kurban Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2034
+    },
+    {
+      "date": "2034-03-02",
+      "nameTr": "Kurban Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2034
+    },
+    {
+      "date": "2034-03-03",
+      "nameTr": "Kurban Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2034
+    },
+    {
+      "date": "2034-03-04",
+      "nameTr": "Kurban Bayram\u0131 4. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 4",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2034
+    },
+    {
+      "date": "2034-04-23",
+      "nameTr": "Ulusal Egemenlik ve \u00C7ocuk Bayram\u0131",
+      "nameEn": "National Sovereignty and Children\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2034
+    },
+    {
+      "date": "2034-05-01",
+      "nameTr": "Emek ve Dayan\u0131\u015Fma G\u00FCn\u00FC",
+      "nameEn": "Labour and Solidarity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2034
+    },
+    {
+      "date": "2034-05-19",
+      "nameTr": "Atat\u00FCrk\u0027\u00FC Anma, Gen\u00E7lik ve Spor Bayram\u0131",
+      "nameEn": "Commemoration of Atat\u00FCrk, Youth and Sports Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2034
+    },
+    {
+      "date": "2034-07-15",
+      "nameTr": "Demokrasi ve Mill\u00EE Birlik G\u00FCn\u00FC",
+      "nameEn": "Democracy and National Unity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2034
+    },
+    {
+      "date": "2034-08-30",
+      "nameTr": "Zafer Bayram\u0131",
+      "nameEn": "Victory Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2034
+    },
+    {
+      "date": "2034-10-28",
+      "nameTr": "Cumhuriyet Bayram\u0131 Arifesi",
+      "nameEn": "Republic Day Eve",
+      "kind": "National",
+      "isHalfDay": true,
+      "year": 2034
+    },
+    {
+      "date": "2034-10-29",
+      "nameTr": "Cumhuriyet Bayram\u0131",
+      "nameEn": "Republic Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2034
+    },
+    {
+      "date": "2034-12-11",
+      "nameTr": "Ramazan Bayram\u0131 Arifesi",
+      "nameEn": "Ramadan Feast Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2034
+    },
+    {
+      "date": "2034-12-12",
+      "nameTr": "Ramazan Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2034
+    },
+    {
+      "date": "2034-12-13",
+      "nameTr": "Ramazan Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2034
+    },
+    {
+      "date": "2034-12-14",
+      "nameTr": "Ramazan Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2034
+    },
+    {
+      "date": "2035-01-01",
+      "nameTr": "Y\u0131lba\u015F\u0131",
+      "nameEn": "New Year\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2035
+    },
+    {
+      "date": "2035-02-17",
+      "nameTr": "Kurban Bayram\u0131 Arifesi",
+      "nameEn": "Feast of Sacrifice Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2035
+    },
+    {
+      "date": "2035-02-18",
+      "nameTr": "Kurban Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2035
+    },
+    {
+      "date": "2035-02-19",
+      "nameTr": "Kurban Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2035
+    },
+    {
+      "date": "2035-02-20",
+      "nameTr": "Kurban Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2035
+    },
+    {
+      "date": "2035-02-21",
+      "nameTr": "Kurban Bayram\u0131 4. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 4",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2035
+    },
+    {
+      "date": "2035-04-23",
+      "nameTr": "Ulusal Egemenlik ve \u00C7ocuk Bayram\u0131",
+      "nameEn": "National Sovereignty and Children\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2035
+    },
+    {
+      "date": "2035-05-01",
+      "nameTr": "Emek ve Dayan\u0131\u015Fma G\u00FCn\u00FC",
+      "nameEn": "Labour and Solidarity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2035
+    },
+    {
+      "date": "2035-05-19",
+      "nameTr": "Atat\u00FCrk\u0027\u00FC Anma, Gen\u00E7lik ve Spor Bayram\u0131",
+      "nameEn": "Commemoration of Atat\u00FCrk, Youth and Sports Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2035
+    },
+    {
+      "date": "2035-07-15",
+      "nameTr": "Demokrasi ve Mill\u00EE Birlik G\u00FCn\u00FC",
+      "nameEn": "Democracy and National Unity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2035
+    },
+    {
+      "date": "2035-08-30",
+      "nameTr": "Zafer Bayram\u0131",
+      "nameEn": "Victory Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2035
+    },
+    {
+      "date": "2035-10-28",
+      "nameTr": "Cumhuriyet Bayram\u0131 Arifesi",
+      "nameEn": "Republic Day Eve",
+      "kind": "National",
+      "isHalfDay": true,
+      "year": 2035
+    },
+    {
+      "date": "2035-10-29",
+      "nameTr": "Cumhuriyet Bayram\u0131",
+      "nameEn": "Republic Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2035
+    },
+    {
+      "date": "2035-11-30",
+      "nameTr": "Ramazan Bayram\u0131 Arifesi",
+      "nameEn": "Ramadan Feast Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2035
+    },
+    {
+      "date": "2035-12-01",
+      "nameTr": "Ramazan Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2035
+    },
+    {
+      "date": "2035-12-02",
+      "nameTr": "Ramazan Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2035
+    },
+    {
+      "date": "2035-12-03",
+      "nameTr": "Ramazan Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2035
+    },
+    {
+      "date": "2036-01-01",
+      "nameTr": "Y\u0131lba\u015F\u0131",
+      "nameEn": "New Year\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2036
+    },
+    {
+      "date": "2036-02-06",
+      "nameTr": "Kurban Bayram\u0131 Arifesi",
+      "nameEn": "Feast of Sacrifice Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2036
+    },
+    {
+      "date": "2036-02-07",
+      "nameTr": "Kurban Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2036
+    },
+    {
+      "date": "2036-02-08",
+      "nameTr": "Kurban Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2036
+    },
+    {
+      "date": "2036-02-09",
+      "nameTr": "Kurban Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2036
+    },
+    {
+      "date": "2036-02-10",
+      "nameTr": "Kurban Bayram\u0131 4. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 4",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2036
+    },
+    {
+      "date": "2036-04-23",
+      "nameTr": "Ulusal Egemenlik ve \u00C7ocuk Bayram\u0131",
+      "nameEn": "National Sovereignty and Children\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2036
+    },
+    {
+      "date": "2036-05-01",
+      "nameTr": "Emek ve Dayan\u0131\u015Fma G\u00FCn\u00FC",
+      "nameEn": "Labour and Solidarity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2036
+    },
+    {
+      "date": "2036-05-19",
+      "nameTr": "Atat\u00FCrk\u0027\u00FC Anma, Gen\u00E7lik ve Spor Bayram\u0131",
+      "nameEn": "Commemoration of Atat\u00FCrk, Youth and Sports Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2036
+    },
+    {
+      "date": "2036-07-15",
+      "nameTr": "Demokrasi ve Mill\u00EE Birlik G\u00FCn\u00FC",
+      "nameEn": "Democracy and National Unity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2036
+    },
+    {
+      "date": "2036-08-30",
+      "nameTr": "Zafer Bayram\u0131",
+      "nameEn": "Victory Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2036
+    },
+    {
+      "date": "2036-10-28",
+      "nameTr": "Cumhuriyet Bayram\u0131 Arifesi",
+      "nameEn": "Republic Day Eve",
+      "kind": "National",
+      "isHalfDay": true,
+      "year": 2036
+    },
+    {
+      "date": "2036-10-29",
+      "nameTr": "Cumhuriyet Bayram\u0131",
+      "nameEn": "Republic Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2036
+    },
+    {
+      "date": "2036-11-18",
+      "nameTr": "Ramazan Bayram\u0131 Arifesi",
+      "nameEn": "Ramadan Feast Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2036
+    },
+    {
+      "date": "2036-11-19",
+      "nameTr": "Ramazan Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2036
+    },
+    {
+      "date": "2036-11-20",
+      "nameTr": "Ramazan Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2036
+    },
+    {
+      "date": "2036-11-21",
+      "nameTr": "Ramazan Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2036
+    },
+    {
+      "date": "2037-01-01",
+      "nameTr": "Y\u0131lba\u015F\u0131",
+      "nameEn": "New Year\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2037
+    },
+    {
+      "date": "2037-01-25",
+      "nameTr": "Kurban Bayram\u0131 Arifesi",
+      "nameEn": "Feast of Sacrifice Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2037
+    },
+    {
+      "date": "2037-01-26",
+      "nameTr": "Kurban Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2037
+    },
+    {
+      "date": "2037-01-27",
+      "nameTr": "Kurban Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2037
+    },
+    {
+      "date": "2037-01-28",
+      "nameTr": "Kurban Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2037
+    },
+    {
+      "date": "2037-01-29",
+      "nameTr": "Kurban Bayram\u0131 4. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 4",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2037
+    },
+    {
+      "date": "2037-04-23",
+      "nameTr": "Ulusal Egemenlik ve \u00C7ocuk Bayram\u0131",
+      "nameEn": "National Sovereignty and Children\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2037
+    },
+    {
+      "date": "2037-05-01",
+      "nameTr": "Emek ve Dayan\u0131\u015Fma G\u00FCn\u00FC",
+      "nameEn": "Labour and Solidarity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2037
+    },
+    {
+      "date": "2037-05-19",
+      "nameTr": "Atat\u00FCrk\u0027\u00FC Anma, Gen\u00E7lik ve Spor Bayram\u0131",
+      "nameEn": "Commemoration of Atat\u00FCrk, Youth and Sports Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2037
+    },
+    {
+      "date": "2037-07-15",
+      "nameTr": "Demokrasi ve Mill\u00EE Birlik G\u00FCn\u00FC",
+      "nameEn": "Democracy and National Unity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2037
+    },
+    {
+      "date": "2037-08-30",
+      "nameTr": "Zafer Bayram\u0131",
+      "nameEn": "Victory Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2037
+    },
+    {
+      "date": "2037-10-28",
+      "nameTr": "Cumhuriyet Bayram\u0131 Arifesi",
+      "nameEn": "Republic Day Eve",
+      "kind": "National",
+      "isHalfDay": true,
+      "year": 2037
+    },
+    {
+      "date": "2037-10-29",
+      "nameTr": "Cumhuriyet Bayram\u0131",
+      "nameEn": "Republic Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2037
+    },
+    {
+      "date": "2037-11-07",
+      "nameTr": "Ramazan Bayram\u0131 Arifesi",
+      "nameEn": "Ramadan Feast Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2037
+    },
+    {
+      "date": "2037-11-08",
+      "nameTr": "Ramazan Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2037
+    },
+    {
+      "date": "2037-11-09",
+      "nameTr": "Ramazan Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2037
+    },
+    {
+      "date": "2037-11-10",
+      "nameTr": "Ramazan Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2037
+    },
+    {
+      "date": "2038-01-01",
+      "nameTr": "Y\u0131lba\u015F\u0131",
+      "nameEn": "New Year\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2038
+    },
+    {
+      "date": "2038-01-15",
+      "nameTr": "Kurban Bayram\u0131 Arifesi",
+      "nameEn": "Feast of Sacrifice Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2038
+    },
+    {
+      "date": "2038-01-16",
+      "nameTr": "Kurban Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2038
+    },
+    {
+      "date": "2038-01-17",
+      "nameTr": "Kurban Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2038
+    },
+    {
+      "date": "2038-01-18",
+      "nameTr": "Kurban Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2038
+    },
+    {
+      "date": "2038-01-19",
+      "nameTr": "Kurban Bayram\u0131 4. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 4",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2038
+    },
+    {
+      "date": "2038-04-23",
+      "nameTr": "Ulusal Egemenlik ve \u00C7ocuk Bayram\u0131",
+      "nameEn": "National Sovereignty and Children\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2038
+    },
+    {
+      "date": "2038-05-01",
+      "nameTr": "Emek ve Dayan\u0131\u015Fma G\u00FCn\u00FC",
+      "nameEn": "Labour and Solidarity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2038
+    },
+    {
+      "date": "2038-05-19",
+      "nameTr": "Atat\u00FCrk\u0027\u00FC Anma, Gen\u00E7lik ve Spor Bayram\u0131",
+      "nameEn": "Commemoration of Atat\u00FCrk, Youth and Sports Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2038
+    },
+    {
+      "date": "2038-07-15",
+      "nameTr": "Demokrasi ve Mill\u00EE Birlik G\u00FCn\u00FC",
+      "nameEn": "Democracy and National Unity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2038
+    },
+    {
+      "date": "2038-08-30",
+      "nameTr": "Zafer Bayram\u0131",
+      "nameEn": "Victory Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2038
+    },
+    {
+      "date": "2038-10-28",
+      "nameTr": "Ramazan Bayram\u0131 Arifesi",
+      "nameEn": "Ramadan Feast Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2038
+    },
+    {
+      "date": "2038-10-28",
+      "nameTr": "Cumhuriyet Bayram\u0131 Arifesi",
+      "nameEn": "Republic Day Eve",
+      "kind": "National",
+      "isHalfDay": true,
+      "year": 2038
+    },
+    {
+      "date": "2038-10-29",
+      "nameTr": "Ramazan Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2038
+    },
+    {
+      "date": "2038-10-29",
+      "nameTr": "Cumhuriyet Bayram\u0131",
+      "nameEn": "Republic Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2038
+    },
+    {
+      "date": "2038-10-30",
+      "nameTr": "Ramazan Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2038
+    },
+    {
+      "date": "2038-10-31",
+      "nameTr": "Ramazan Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2038
+    },
+    {
+      "date": "2039-01-01",
+      "nameTr": "Y\u0131lba\u015F\u0131",
+      "nameEn": "New Year\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2039
+    },
+    {
+      "date": "2039-01-04",
+      "nameTr": "Kurban Bayram\u0131 Arifesi",
+      "nameEn": "Feast of Sacrifice Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2039
+    },
+    {
+      "date": "2039-01-05",
+      "nameTr": "Kurban Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2039
+    },
+    {
+      "date": "2039-01-06",
+      "nameTr": "Kurban Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2039
+    },
+    {
+      "date": "2039-01-07",
+      "nameTr": "Kurban Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2039
+    },
+    {
+      "date": "2039-01-08",
+      "nameTr": "Kurban Bayram\u0131 4. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 4",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2039
+    },
+    {
+      "date": "2039-04-23",
+      "nameTr": "Ulusal Egemenlik ve \u00C7ocuk Bayram\u0131",
+      "nameEn": "National Sovereignty and Children\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2039
+    },
+    {
+      "date": "2039-05-01",
+      "nameTr": "Emek ve Dayan\u0131\u015Fma G\u00FCn\u00FC",
+      "nameEn": "Labour and Solidarity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2039
+    },
+    {
+      "date": "2039-05-19",
+      "nameTr": "Atat\u00FCrk\u0027\u00FC Anma, Gen\u00E7lik ve Spor Bayram\u0131",
+      "nameEn": "Commemoration of Atat\u00FCrk, Youth and Sports Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2039
+    },
+    {
+      "date": "2039-07-15",
+      "nameTr": "Demokrasi ve Mill\u00EE Birlik G\u00FCn\u00FC",
+      "nameEn": "Democracy and National Unity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2039
+    },
+    {
+      "date": "2039-08-30",
+      "nameTr": "Zafer Bayram\u0131",
+      "nameEn": "Victory Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2039
+    },
+    {
+      "date": "2039-10-18",
+      "nameTr": "Ramazan Bayram\u0131 Arifesi",
+      "nameEn": "Ramadan Feast Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2039
+    },
+    {
+      "date": "2039-10-19",
+      "nameTr": "Ramazan Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2039
+    },
+    {
+      "date": "2039-10-20",
+      "nameTr": "Ramazan Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2039
+    },
+    {
+      "date": "2039-10-21",
+      "nameTr": "Ramazan Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2039
+    },
+    {
+      "date": "2039-10-28",
+      "nameTr": "Cumhuriyet Bayram\u0131 Arifesi",
+      "nameEn": "Republic Day Eve",
+      "kind": "National",
+      "isHalfDay": true,
+      "year": 2039
+    },
+    {
+      "date": "2039-10-29",
+      "nameTr": "Cumhuriyet Bayram\u0131",
+      "nameEn": "Republic Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2039
+    },
+    {
+      "date": "2039-12-25",
+      "nameTr": "Kurban Bayram\u0131 Arifesi",
+      "nameEn": "Feast of Sacrifice Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2039
+    },
+    {
+      "date": "2039-12-26",
+      "nameTr": "Kurban Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2039
+    },
+    {
+      "date": "2039-12-27",
+      "nameTr": "Kurban Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2039
+    },
+    {
+      "date": "2039-12-28",
+      "nameTr": "Kurban Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2039
+    },
+    {
+      "date": "2039-12-29",
+      "nameTr": "Kurban Bayram\u0131 4. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 4",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2039
+    },
+    {
+      "date": "2040-01-01",
+      "nameTr": "Y\u0131lba\u015F\u0131",
+      "nameEn": "New Year\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2040
+    },
+    {
+      "date": "2040-04-23",
+      "nameTr": "Ulusal Egemenlik ve \u00C7ocuk Bayram\u0131",
+      "nameEn": "National Sovereignty and Children\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2040
+    },
+    {
+      "date": "2040-05-01",
+      "nameTr": "Emek ve Dayan\u0131\u015Fma G\u00FCn\u00FC",
+      "nameEn": "Labour and Solidarity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2040
+    },
+    {
+      "date": "2040-05-19",
+      "nameTr": "Atat\u00FCrk\u0027\u00FC Anma, Gen\u00E7lik ve Spor Bayram\u0131",
+      "nameEn": "Commemoration of Atat\u00FCrk, Youth and Sports Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2040
+    },
+    {
+      "date": "2040-07-15",
+      "nameTr": "Demokrasi ve Mill\u00EE Birlik G\u00FCn\u00FC",
+      "nameEn": "Democracy and National Unity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2040
+    },
+    {
+      "date": "2040-08-30",
+      "nameTr": "Zafer Bayram\u0131",
+      "nameEn": "Victory Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2040
+    },
+    {
+      "date": "2040-10-06",
+      "nameTr": "Ramazan Bayram\u0131 Arifesi",
+      "nameEn": "Ramadan Feast Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2040
+    },
+    {
+      "date": "2040-10-07",
+      "nameTr": "Ramazan Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2040
+    },
+    {
+      "date": "2040-10-08",
+      "nameTr": "Ramazan Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2040
+    },
+    {
+      "date": "2040-10-09",
+      "nameTr": "Ramazan Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2040
+    },
+    {
+      "date": "2040-10-28",
+      "nameTr": "Cumhuriyet Bayram\u0131 Arifesi",
+      "nameEn": "Republic Day Eve",
+      "kind": "National",
+      "isHalfDay": true,
+      "year": 2040
+    },
+    {
+      "date": "2040-10-29",
+      "nameTr": "Cumhuriyet Bayram\u0131",
+      "nameEn": "Republic Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2040
+    },
+    {
+      "date": "2040-12-13",
+      "nameTr": "Kurban Bayram\u0131 Arifesi",
+      "nameEn": "Feast of Sacrifice Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2040
+    },
+    {
+      "date": "2040-12-14",
+      "nameTr": "Kurban Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2040
+    },
+    {
+      "date": "2040-12-15",
+      "nameTr": "Kurban Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2040
+    },
+    {
+      "date": "2040-12-16",
+      "nameTr": "Kurban Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2040
+    },
+    {
+      "date": "2040-12-17",
+      "nameTr": "Kurban Bayram\u0131 4. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 4",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2040
+    },
+    {
+      "date": "2041-01-01",
+      "nameTr": "Y\u0131lba\u015F\u0131",
+      "nameEn": "New Year\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2041
+    },
+    {
+      "date": "2041-04-23",
+      "nameTr": "Ulusal Egemenlik ve \u00C7ocuk Bayram\u0131",
+      "nameEn": "National Sovereignty and Children\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2041
+    },
+    {
+      "date": "2041-05-01",
+      "nameTr": "Emek ve Dayan\u0131\u015Fma G\u00FCn\u00FC",
+      "nameEn": "Labour and Solidarity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2041
+    },
+    {
+      "date": "2041-05-19",
+      "nameTr": "Atat\u00FCrk\u0027\u00FC Anma, Gen\u00E7lik ve Spor Bayram\u0131",
+      "nameEn": "Commemoration of Atat\u00FCrk, Youth and Sports Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2041
+    },
+    {
+      "date": "2041-07-15",
+      "nameTr": "Demokrasi ve Mill\u00EE Birlik G\u00FCn\u00FC",
+      "nameEn": "Democracy and National Unity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2041
+    },
+    {
+      "date": "2041-08-30",
+      "nameTr": "Zafer Bayram\u0131",
+      "nameEn": "Victory Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2041
+    },
+    {
+      "date": "2041-09-25",
+      "nameTr": "Ramazan Bayram\u0131 Arifesi",
+      "nameEn": "Ramadan Feast Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2041
+    },
+    {
+      "date": "2041-09-26",
+      "nameTr": "Ramazan Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2041
+    },
+    {
+      "date": "2041-09-27",
+      "nameTr": "Ramazan Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2041
+    },
+    {
+      "date": "2041-09-28",
+      "nameTr": "Ramazan Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2041
+    },
+    {
+      "date": "2041-10-28",
+      "nameTr": "Cumhuriyet Bayram\u0131 Arifesi",
+      "nameEn": "Republic Day Eve",
+      "kind": "National",
+      "isHalfDay": true,
+      "year": 2041
+    },
+    {
+      "date": "2041-10-29",
+      "nameTr": "Cumhuriyet Bayram\u0131",
+      "nameEn": "Republic Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2041
+    },
+    {
+      "date": "2041-12-03",
+      "nameTr": "Kurban Bayram\u0131 Arifesi",
+      "nameEn": "Feast of Sacrifice Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2041
+    },
+    {
+      "date": "2041-12-04",
+      "nameTr": "Kurban Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2041
+    },
+    {
+      "date": "2041-12-05",
+      "nameTr": "Kurban Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2041
+    },
+    {
+      "date": "2041-12-06",
+      "nameTr": "Kurban Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2041
+    },
+    {
+      "date": "2041-12-07",
+      "nameTr": "Kurban Bayram\u0131 4. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 4",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2041
+    },
+    {
+      "date": "2042-01-01",
+      "nameTr": "Y\u0131lba\u015F\u0131",
+      "nameEn": "New Year\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2042
+    },
+    {
+      "date": "2042-04-23",
+      "nameTr": "Ulusal Egemenlik ve \u00C7ocuk Bayram\u0131",
+      "nameEn": "National Sovereignty and Children\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2042
+    },
+    {
+      "date": "2042-05-01",
+      "nameTr": "Emek ve Dayan\u0131\u015Fma G\u00FCn\u00FC",
+      "nameEn": "Labour and Solidarity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2042
+    },
+    {
+      "date": "2042-05-19",
+      "nameTr": "Atat\u00FCrk\u0027\u00FC Anma, Gen\u00E7lik ve Spor Bayram\u0131",
+      "nameEn": "Commemoration of Atat\u00FCrk, Youth and Sports Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2042
+    },
+    {
+      "date": "2042-07-15",
+      "nameTr": "Demokrasi ve Mill\u00EE Birlik G\u00FCn\u00FC",
+      "nameEn": "Democracy and National Unity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2042
+    },
+    {
+      "date": "2042-08-30",
+      "nameTr": "Zafer Bayram\u0131",
+      "nameEn": "Victory Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2042
+    },
+    {
+      "date": "2042-09-14",
+      "nameTr": "Ramazan Bayram\u0131 Arifesi",
+      "nameEn": "Ramadan Feast Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2042
+    },
+    {
+      "date": "2042-09-15",
+      "nameTr": "Ramazan Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2042
+    },
+    {
+      "date": "2042-09-16",
+      "nameTr": "Ramazan Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2042
+    },
+    {
+      "date": "2042-09-17",
+      "nameTr": "Ramazan Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2042
+    },
+    {
+      "date": "2042-10-28",
+      "nameTr": "Cumhuriyet Bayram\u0131 Arifesi",
+      "nameEn": "Republic Day Eve",
+      "kind": "National",
+      "isHalfDay": true,
+      "year": 2042
+    },
+    {
+      "date": "2042-10-29",
+      "nameTr": "Cumhuriyet Bayram\u0131",
+      "nameEn": "Republic Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2042
+    },
+    {
+      "date": "2042-11-22",
+      "nameTr": "Kurban Bayram\u0131 Arifesi",
+      "nameEn": "Feast of Sacrifice Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2042
+    },
+    {
+      "date": "2042-11-23",
+      "nameTr": "Kurban Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2042
+    },
+    {
+      "date": "2042-11-24",
+      "nameTr": "Kurban Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2042
+    },
+    {
+      "date": "2042-11-25",
+      "nameTr": "Kurban Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2042
+    },
+    {
+      "date": "2042-11-26",
+      "nameTr": "Kurban Bayram\u0131 4. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 4",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2042
+    },
+    {
+      "date": "2043-01-01",
+      "nameTr": "Y\u0131lba\u015F\u0131",
+      "nameEn": "New Year\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2043
+    },
+    {
+      "date": "2043-04-23",
+      "nameTr": "Ulusal Egemenlik ve \u00C7ocuk Bayram\u0131",
+      "nameEn": "National Sovereignty and Children\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2043
+    },
+    {
+      "date": "2043-05-01",
+      "nameTr": "Emek ve Dayan\u0131\u015Fma G\u00FCn\u00FC",
+      "nameEn": "Labour and Solidarity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2043
+    },
+    {
+      "date": "2043-05-19",
+      "nameTr": "Atat\u00FCrk\u0027\u00FC Anma, Gen\u00E7lik ve Spor Bayram\u0131",
+      "nameEn": "Commemoration of Atat\u00FCrk, Youth and Sports Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2043
+    },
+    {
+      "date": "2043-07-15",
+      "nameTr": "Demokrasi ve Mill\u00EE Birlik G\u00FCn\u00FC",
+      "nameEn": "Democracy and National Unity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2043
+    },
+    {
+      "date": "2043-08-30",
+      "nameTr": "Zafer Bayram\u0131",
+      "nameEn": "Victory Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2043
+    },
+    {
+      "date": "2043-09-03",
+      "nameTr": "Ramazan Bayram\u0131 Arifesi",
+      "nameEn": "Ramadan Feast Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2043
+    },
+    {
+      "date": "2043-09-04",
+      "nameTr": "Ramazan Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2043
+    },
+    {
+      "date": "2043-09-05",
+      "nameTr": "Ramazan Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2043
+    },
+    {
+      "date": "2043-09-06",
+      "nameTr": "Ramazan Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2043
+    },
+    {
+      "date": "2043-10-28",
+      "nameTr": "Cumhuriyet Bayram\u0131 Arifesi",
+      "nameEn": "Republic Day Eve",
+      "kind": "National",
+      "isHalfDay": true,
+      "year": 2043
+    },
+    {
+      "date": "2043-10-29",
+      "nameTr": "Cumhuriyet Bayram\u0131",
+      "nameEn": "Republic Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2043
+    },
+    {
+      "date": "2043-11-11",
+      "nameTr": "Kurban Bayram\u0131 Arifesi",
+      "nameEn": "Feast of Sacrifice Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2043
+    },
+    {
+      "date": "2043-11-12",
+      "nameTr": "Kurban Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2043
+    },
+    {
+      "date": "2043-11-13",
+      "nameTr": "Kurban Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2043
+    },
+    {
+      "date": "2043-11-14",
+      "nameTr": "Kurban Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2043
+    },
+    {
+      "date": "2043-11-15",
+      "nameTr": "Kurban Bayram\u0131 4. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 4",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2043
+    },
+    {
+      "date": "2044-01-01",
+      "nameTr": "Y\u0131lba\u015F\u0131",
+      "nameEn": "New Year\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2044
+    },
+    {
+      "date": "2044-04-23",
+      "nameTr": "Ulusal Egemenlik ve \u00C7ocuk Bayram\u0131",
+      "nameEn": "National Sovereignty and Children\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2044
+    },
+    {
+      "date": "2044-05-01",
+      "nameTr": "Emek ve Dayan\u0131\u015Fma G\u00FCn\u00FC",
+      "nameEn": "Labour and Solidarity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2044
+    },
+    {
+      "date": "2044-05-19",
+      "nameTr": "Atat\u00FCrk\u0027\u00FC Anma, Gen\u00E7lik ve Spor Bayram\u0131",
+      "nameEn": "Commemoration of Atat\u00FCrk, Youth and Sports Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2044
+    },
+    {
+      "date": "2044-07-15",
+      "nameTr": "Demokrasi ve Mill\u00EE Birlik G\u00FCn\u00FC",
+      "nameEn": "Democracy and National Unity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2044
+    },
+    {
+      "date": "2044-08-23",
+      "nameTr": "Ramazan Bayram\u0131 Arifesi",
+      "nameEn": "Ramadan Feast Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2044
+    },
+    {
+      "date": "2044-08-24",
+      "nameTr": "Ramazan Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2044
+    },
+    {
+      "date": "2044-08-25",
+      "nameTr": "Ramazan Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2044
+    },
+    {
+      "date": "2044-08-26",
+      "nameTr": "Ramazan Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2044
+    },
+    {
+      "date": "2044-08-30",
+      "nameTr": "Zafer Bayram\u0131",
+      "nameEn": "Victory Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2044
+    },
+    {
+      "date": "2044-10-28",
+      "nameTr": "Cumhuriyet Bayram\u0131 Arifesi",
+      "nameEn": "Republic Day Eve",
+      "kind": "National",
+      "isHalfDay": true,
+      "year": 2044
+    },
+    {
+      "date": "2044-10-29",
+      "nameTr": "Cumhuriyet Bayram\u0131",
+      "nameEn": "Republic Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2044
+    },
+    {
+      "date": "2044-10-30",
+      "nameTr": "Kurban Bayram\u0131 Arifesi",
+      "nameEn": "Feast of Sacrifice Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2044
+    },
+    {
+      "date": "2044-10-31",
+      "nameTr": "Kurban Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2044
+    },
+    {
+      "date": "2044-11-01",
+      "nameTr": "Kurban Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2044
+    },
+    {
+      "date": "2044-11-02",
+      "nameTr": "Kurban Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2044
+    },
+    {
+      "date": "2044-11-03",
+      "nameTr": "Kurban Bayram\u0131 4. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 4",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2044
+    },
+    {
+      "date": "2045-01-01",
+      "nameTr": "Y\u0131lba\u015F\u0131",
+      "nameEn": "New Year\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2045
+    },
+    {
+      "date": "2045-04-23",
+      "nameTr": "Ulusal Egemenlik ve \u00C7ocuk Bayram\u0131",
+      "nameEn": "National Sovereignty and Children\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2045
+    },
+    {
+      "date": "2045-05-01",
+      "nameTr": "Emek ve Dayan\u0131\u015Fma G\u00FCn\u00FC",
+      "nameEn": "Labour and Solidarity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2045
+    },
+    {
+      "date": "2045-05-19",
+      "nameTr": "Atat\u00FCrk\u0027\u00FC Anma, Gen\u00E7lik ve Spor Bayram\u0131",
+      "nameEn": "Commemoration of Atat\u00FCrk, Youth and Sports Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2045
+    },
+    {
+      "date": "2045-07-15",
+      "nameTr": "Demokrasi ve Mill\u00EE Birlik G\u00FCn\u00FC",
+      "nameEn": "Democracy and National Unity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2045
+    },
+    {
+      "date": "2045-08-13",
+      "nameTr": "Ramazan Bayram\u0131 Arifesi",
+      "nameEn": "Ramadan Feast Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2045
+    },
+    {
+      "date": "2045-08-14",
+      "nameTr": "Ramazan Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2045
+    },
+    {
+      "date": "2045-08-15",
+      "nameTr": "Ramazan Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2045
+    },
+    {
+      "date": "2045-08-16",
+      "nameTr": "Ramazan Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2045
+    },
+    {
+      "date": "2045-08-30",
+      "nameTr": "Zafer Bayram\u0131",
+      "nameEn": "Victory Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2045
+    },
+    {
+      "date": "2045-10-20",
+      "nameTr": "Kurban Bayram\u0131 Arifesi",
+      "nameEn": "Feast of Sacrifice Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2045
+    },
+    {
+      "date": "2045-10-21",
+      "nameTr": "Kurban Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2045
+    },
+    {
+      "date": "2045-10-22",
+      "nameTr": "Kurban Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2045
+    },
+    {
+      "date": "2045-10-23",
+      "nameTr": "Kurban Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2045
+    },
+    {
+      "date": "2045-10-24",
+      "nameTr": "Kurban Bayram\u0131 4. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 4",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2045
+    },
+    {
+      "date": "2045-10-28",
+      "nameTr": "Cumhuriyet Bayram\u0131 Arifesi",
+      "nameEn": "Republic Day Eve",
+      "kind": "National",
+      "isHalfDay": true,
+      "year": 2045
+    },
+    {
+      "date": "2045-10-29",
+      "nameTr": "Cumhuriyet Bayram\u0131",
+      "nameEn": "Republic Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2045
+    },
+    {
+      "date": "2046-01-01",
+      "nameTr": "Y\u0131lba\u015F\u0131",
+      "nameEn": "New Year\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2046
+    },
+    {
+      "date": "2046-04-23",
+      "nameTr": "Ulusal Egemenlik ve \u00C7ocuk Bayram\u0131",
+      "nameEn": "National Sovereignty and Children\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2046
+    },
+    {
+      "date": "2046-05-01",
+      "nameTr": "Emek ve Dayan\u0131\u015Fma G\u00FCn\u00FC",
+      "nameEn": "Labour and Solidarity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2046
+    },
+    {
+      "date": "2046-05-19",
+      "nameTr": "Atat\u00FCrk\u0027\u00FC Anma, Gen\u00E7lik ve Spor Bayram\u0131",
+      "nameEn": "Commemoration of Atat\u00FCrk, Youth and Sports Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2046
+    },
+    {
+      "date": "2046-07-15",
+      "nameTr": "Demokrasi ve Mill\u00EE Birlik G\u00FCn\u00FC",
+      "nameEn": "Democracy and National Unity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2046
+    },
+    {
+      "date": "2046-08-02",
+      "nameTr": "Ramazan Bayram\u0131 Arifesi",
+      "nameEn": "Ramadan Feast Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2046
+    },
+    {
+      "date": "2046-08-03",
+      "nameTr": "Ramazan Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2046
+    },
+    {
+      "date": "2046-08-04",
+      "nameTr": "Ramazan Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2046
+    },
+    {
+      "date": "2046-08-05",
+      "nameTr": "Ramazan Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2046
+    },
+    {
+      "date": "2046-08-30",
+      "nameTr": "Zafer Bayram\u0131",
+      "nameEn": "Victory Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2046
+    },
+    {
+      "date": "2046-10-09",
+      "nameTr": "Kurban Bayram\u0131 Arifesi",
+      "nameEn": "Feast of Sacrifice Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2046
+    },
+    {
+      "date": "2046-10-10",
+      "nameTr": "Kurban Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2046
+    },
+    {
+      "date": "2046-10-11",
+      "nameTr": "Kurban Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2046
+    },
+    {
+      "date": "2046-10-12",
+      "nameTr": "Kurban Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2046
+    },
+    {
+      "date": "2046-10-13",
+      "nameTr": "Kurban Bayram\u0131 4. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 4",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2046
+    },
+    {
+      "date": "2046-10-28",
+      "nameTr": "Cumhuriyet Bayram\u0131 Arifesi",
+      "nameEn": "Republic Day Eve",
+      "kind": "National",
+      "isHalfDay": true,
+      "year": 2046
+    },
+    {
+      "date": "2046-10-29",
+      "nameTr": "Cumhuriyet Bayram\u0131",
+      "nameEn": "Republic Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2046
+    },
+    {
+      "date": "2047-01-01",
+      "nameTr": "Y\u0131lba\u015F\u0131",
+      "nameEn": "New Year\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2047
+    },
+    {
+      "date": "2047-04-23",
+      "nameTr": "Ulusal Egemenlik ve \u00C7ocuk Bayram\u0131",
+      "nameEn": "National Sovereignty and Children\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2047
+    },
+    {
+      "date": "2047-05-01",
+      "nameTr": "Emek ve Dayan\u0131\u015Fma G\u00FCn\u00FC",
+      "nameEn": "Labour and Solidarity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2047
+    },
+    {
+      "date": "2047-05-19",
+      "nameTr": "Atat\u00FCrk\u0027\u00FC Anma, Gen\u00E7lik ve Spor Bayram\u0131",
+      "nameEn": "Commemoration of Atat\u00FCrk, Youth and Sports Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2047
+    },
+    {
+      "date": "2047-07-15",
+      "nameTr": "Demokrasi ve Mill\u00EE Birlik G\u00FCn\u00FC",
+      "nameEn": "Democracy and National Unity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2047
+    },
+    {
+      "date": "2047-07-23",
+      "nameTr": "Ramazan Bayram\u0131 Arifesi",
+      "nameEn": "Ramadan Feast Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2047
+    },
+    {
+      "date": "2047-07-24",
+      "nameTr": "Ramazan Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2047
+    },
+    {
+      "date": "2047-07-25",
+      "nameTr": "Ramazan Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2047
+    },
+    {
+      "date": "2047-07-26",
+      "nameTr": "Ramazan Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2047
+    },
+    {
+      "date": "2047-08-30",
+      "nameTr": "Zafer Bayram\u0131",
+      "nameEn": "Victory Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2047
+    },
+    {
+      "date": "2047-09-29",
+      "nameTr": "Kurban Bayram\u0131 Arifesi",
+      "nameEn": "Feast of Sacrifice Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2047
+    },
+    {
+      "date": "2047-09-30",
+      "nameTr": "Kurban Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2047
+    },
+    {
+      "date": "2047-10-01",
+      "nameTr": "Kurban Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2047
+    },
+    {
+      "date": "2047-10-02",
+      "nameTr": "Kurban Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2047
+    },
+    {
+      "date": "2047-10-03",
+      "nameTr": "Kurban Bayram\u0131 4. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 4",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2047
+    },
+    {
+      "date": "2047-10-28",
+      "nameTr": "Cumhuriyet Bayram\u0131 Arifesi",
+      "nameEn": "Republic Day Eve",
+      "kind": "National",
+      "isHalfDay": true,
+      "year": 2047
+    },
+    {
+      "date": "2047-10-29",
+      "nameTr": "Cumhuriyet Bayram\u0131",
+      "nameEn": "Republic Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2047
+    },
+    {
+      "date": "2048-01-01",
+      "nameTr": "Y\u0131lba\u015F\u0131",
+      "nameEn": "New Year\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2048
+    },
+    {
+      "date": "2048-04-23",
+      "nameTr": "Ulusal Egemenlik ve \u00C7ocuk Bayram\u0131",
+      "nameEn": "National Sovereignty and Children\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2048
+    },
+    {
+      "date": "2048-05-01",
+      "nameTr": "Emek ve Dayan\u0131\u015Fma G\u00FCn\u00FC",
+      "nameEn": "Labour and Solidarity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2048
+    },
+    {
+      "date": "2048-05-19",
+      "nameTr": "Atat\u00FCrk\u0027\u00FC Anma, Gen\u00E7lik ve Spor Bayram\u0131",
+      "nameEn": "Commemoration of Atat\u00FCrk, Youth and Sports Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2048
+    },
+    {
+      "date": "2048-07-11",
+      "nameTr": "Ramazan Bayram\u0131 Arifesi",
+      "nameEn": "Ramadan Feast Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2048
+    },
+    {
+      "date": "2048-07-12",
+      "nameTr": "Ramazan Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2048
+    },
+    {
+      "date": "2048-07-13",
+      "nameTr": "Ramazan Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2048
+    },
+    {
+      "date": "2048-07-14",
+      "nameTr": "Ramazan Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2048
+    },
+    {
+      "date": "2048-07-15",
+      "nameTr": "Demokrasi ve Mill\u00EE Birlik G\u00FCn\u00FC",
+      "nameEn": "Democracy and National Unity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2048
+    },
+    {
+      "date": "2048-08-30",
+      "nameTr": "Zafer Bayram\u0131",
+      "nameEn": "Victory Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2048
+    },
+    {
+      "date": "2048-09-18",
+      "nameTr": "Kurban Bayram\u0131 Arifesi",
+      "nameEn": "Feast of Sacrifice Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2048
+    },
+    {
+      "date": "2048-09-19",
+      "nameTr": "Kurban Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2048
+    },
+    {
+      "date": "2048-09-20",
+      "nameTr": "Kurban Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2048
+    },
+    {
+      "date": "2048-09-21",
+      "nameTr": "Kurban Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2048
+    },
+    {
+      "date": "2048-09-22",
+      "nameTr": "Kurban Bayram\u0131 4. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 4",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2048
+    },
+    {
+      "date": "2048-10-28",
+      "nameTr": "Cumhuriyet Bayram\u0131 Arifesi",
+      "nameEn": "Republic Day Eve",
+      "kind": "National",
+      "isHalfDay": true,
+      "year": 2048
+    },
+    {
+      "date": "2048-10-29",
+      "nameTr": "Cumhuriyet Bayram\u0131",
+      "nameEn": "Republic Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2048
+    },
+    {
+      "date": "2049-01-01",
+      "nameTr": "Y\u0131lba\u015F\u0131",
+      "nameEn": "New Year\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2049
+    },
+    {
+      "date": "2049-04-23",
+      "nameTr": "Ulusal Egemenlik ve \u00C7ocuk Bayram\u0131",
+      "nameEn": "National Sovereignty and Children\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2049
+    },
+    {
+      "date": "2049-05-01",
+      "nameTr": "Emek ve Dayan\u0131\u015Fma G\u00FCn\u00FC",
+      "nameEn": "Labour and Solidarity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2049
+    },
+    {
+      "date": "2049-05-19",
+      "nameTr": "Atat\u00FCrk\u0027\u00FC Anma, Gen\u00E7lik ve Spor Bayram\u0131",
+      "nameEn": "Commemoration of Atat\u00FCrk, Youth and Sports Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2049
+    },
+    {
+      "date": "2049-06-30",
+      "nameTr": "Ramazan Bayram\u0131 Arifesi",
+      "nameEn": "Ramadan Feast Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2049
+    },
+    {
+      "date": "2049-07-01",
+      "nameTr": "Ramazan Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2049
+    },
+    {
+      "date": "2049-07-02",
+      "nameTr": "Ramazan Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2049
+    },
+    {
+      "date": "2049-07-03",
+      "nameTr": "Ramazan Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2049
+    },
+    {
+      "date": "2049-07-15",
+      "nameTr": "Demokrasi ve Mill\u00EE Birlik G\u00FCn\u00FC",
+      "nameEn": "Democracy and National Unity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2049
+    },
+    {
+      "date": "2049-08-30",
+      "nameTr": "Zafer Bayram\u0131",
+      "nameEn": "Victory Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2049
+    },
+    {
+      "date": "2049-09-07",
+      "nameTr": "Kurban Bayram\u0131 Arifesi",
+      "nameEn": "Feast of Sacrifice Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2049
+    },
+    {
+      "date": "2049-09-08",
+      "nameTr": "Kurban Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2049
+    },
+    {
+      "date": "2049-09-09",
+      "nameTr": "Kurban Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2049
+    },
+    {
+      "date": "2049-09-10",
+      "nameTr": "Kurban Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2049
+    },
+    {
+      "date": "2049-09-11",
+      "nameTr": "Kurban Bayram\u0131 4. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 4",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2049
+    },
+    {
+      "date": "2049-10-28",
+      "nameTr": "Cumhuriyet Bayram\u0131 Arifesi",
+      "nameEn": "Republic Day Eve",
+      "kind": "National",
+      "isHalfDay": true,
+      "year": 2049
+    },
+    {
+      "date": "2049-10-29",
+      "nameTr": "Cumhuriyet Bayram\u0131",
+      "nameEn": "Republic Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2049
+    },
+    {
+      "date": "2050-01-01",
+      "nameTr": "Y\u0131lba\u015F\u0131",
+      "nameEn": "New Year\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2050
+    },
+    {
+      "date": "2050-04-23",
+      "nameTr": "Ulusal Egemenlik ve \u00C7ocuk Bayram\u0131",
+      "nameEn": "National Sovereignty and Children\u0027s Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2050
+    },
+    {
+      "date": "2050-05-01",
+      "nameTr": "Emek ve Dayan\u0131\u015Fma G\u00FCn\u00FC",
+      "nameEn": "Labour and Solidarity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2050
+    },
+    {
+      "date": "2050-05-19",
+      "nameTr": "Atat\u00FCrk\u0027\u00FC Anma, Gen\u00E7lik ve Spor Bayram\u0131",
+      "nameEn": "Commemoration of Atat\u00FCrk, Youth and Sports Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2050
+    },
+    {
+      "date": "2050-06-19",
+      "nameTr": "Ramazan Bayram\u0131 Arifesi",
+      "nameEn": "Ramadan Feast Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2050
+    },
+    {
+      "date": "2050-06-20",
+      "nameTr": "Ramazan Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2050
+    },
+    {
+      "date": "2050-06-21",
+      "nameTr": "Ramazan Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2050
+    },
+    {
+      "date": "2050-06-22",
+      "nameTr": "Ramazan Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Ramadan Feast Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2050
+    },
+    {
+      "date": "2050-07-15",
+      "nameTr": "Demokrasi ve Mill\u00EE Birlik G\u00FCn\u00FC",
+      "nameEn": "Democracy and National Unity Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2050
+    },
+    {
+      "date": "2050-08-27",
+      "nameTr": "Kurban Bayram\u0131 Arifesi",
+      "nameEn": "Feast of Sacrifice Eve",
+      "kind": "Religious",
+      "isHalfDay": true,
+      "year": 2050
+    },
+    {
+      "date": "2050-08-28",
+      "nameTr": "Kurban Bayram\u0131 1. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 1",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2050
+    },
+    {
+      "date": "2050-08-29",
+      "nameTr": "Kurban Bayram\u0131 2. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 2",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2050
+    },
+    {
+      "date": "2050-08-30",
+      "nameTr": "Kurban Bayram\u0131 3. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 3",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2050
+    },
+    {
+      "date": "2050-08-30",
+      "nameTr": "Zafer Bayram\u0131",
+      "nameEn": "Victory Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2050
+    },
+    {
+      "date": "2050-08-31",
+      "nameTr": "Kurban Bayram\u0131 4. G\u00FCn",
+      "nameEn": "Feast of Sacrifice Day 4",
+      "kind": "Religious",
+      "isHalfDay": false,
+      "year": 2050
+    },
+    {
+      "date": "2050-10-28",
+      "nameTr": "Cumhuriyet Bayram\u0131 Arifesi",
+      "nameEn": "Republic Day Eve",
+      "kind": "National",
+      "isHalfDay": true,
+      "year": 2050
+    },
+    {
+      "date": "2050-10-29",
+      "nameTr": "Cumhuriyet Bayram\u0131",
+      "nameEn": "Republic Day",
+      "kind": "National",
+      "isHalfDay": false,
+      "year": 2050
+    }
+  ]
+}

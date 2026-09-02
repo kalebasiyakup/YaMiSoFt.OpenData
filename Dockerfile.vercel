@@ -1,0 +1,47 @@
+# syntax=docker/dockerfile:1
+#
+# Vercel entrypoint. Vercel Functions detect a Dockerfile.vercel at the project root and
+# route all traffic to the resulting container image.
+#
+# It differs from the plain Dockerfile in exactly one way that matters: Vercel decides the
+# listening port and passes it as $PORT (defaulting to 80), so the port cannot be baked in.
+# Everything else — the multi-stage build, the chiselled runtime, the datasets travelling
+# inside the image — is identical, and deliberately so: what runs on Vercel should be the
+# same artefact that runs anywhere else.
+
+# ---- build ----------------------------------------------------------------
+FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
+WORKDIR /src
+
+COPY Directory.Build.props ./
+COPY src/YaMiSoFt.OpenData.Core/YaMiSoFt.OpenData.Core.csproj src/YaMiSoFt.OpenData.Core/
+COPY src/YaMiSoFt.OpenData.Data/YaMiSoFt.OpenData.Data.csproj src/YaMiSoFt.OpenData.Data/
+COPY src/YaMiSoFt.OpenData.Api/YaMiSoFt.OpenData.Api.csproj src/YaMiSoFt.OpenData.Api/
+RUN dotnet restore src/YaMiSoFt.OpenData.Api/YaMiSoFt.OpenData.Api.csproj
+
+COPY src/ src/
+COPY data/ data/
+
+RUN dotnet publish src/YaMiSoFt.OpenData.Api/YaMiSoFt.OpenData.Api.csproj \
+    --configuration Release \
+    --no-restore \
+    --output /app
+
+# ---- runtime --------------------------------------------------------------
+FROM mcr.microsoft.com/dotnet/aspnet:9.0-noble-chiseled AS final
+WORKDIR /app
+COPY --from=build /app .
+
+# Vercel sets PORT; 80 is its default when it does not.
+ENV PORT=80 \
+    DOTNET_gcServer=0 \
+    DOTNET_TieredPMStubs=0 \
+    DOTNET_TieredCompilation=1
+
+# Workstation GC and tiered compilation are chosen for a scale-to-zero platform: the container
+# is short-lived and restarted often, so startup latency matters more than sustained
+# throughput, and each instance handles modest concurrency rather than a whole node's worth.
+
+# Vercel sends SIGTERM with a 30 second grace period when scaling an instance down. Kestrel
+# drains in-flight requests on SIGTERM by default, so no extra handling is needed.
+ENTRYPOINT ["dotnet", "YaMiSoFt.OpenData.Api.dll"]

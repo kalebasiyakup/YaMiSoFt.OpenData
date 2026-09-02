@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{58786838-1AB2-481E-BE2E-F1FAA527E7B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YaMiSoFt.OpenData.Core", "src\YaMiSoFt.OpenData.Core\YaMiSoFt.OpenData.Core.csproj", "{547F8EB7-00CB-4D88-B07A-19C7EF8E790F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YaMiSoFt.OpenData.Data", "src\YaMiSoFt.OpenData.Data\YaMiSoFt.OpenData.Data.csproj", "{D1423FDA-74F6-4BBD-A5D3-910F14533E5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YaMiSoFt.OpenData.Api", "src\YaMiSoFt.OpenData.Api\YaMiSoFt.OpenData.Api.csproj", "{1A88BE04-4FDF-4453-99DA-2B012B256772}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{055D7BDA-E928-4C18-BD57-9BB5EE935F79}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YaMiSoFt.OpenData.DataTool", "tools\YaMiSoFt.OpenData.DataTool\YaMiSoFt.OpenData.DataTool.csproj", "{52174E60-9828-49C5-9F76-1BC9C3688504}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{68E96539-1E9D-48A7-9ED5-D89549754191}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YaMiSoFt.OpenData.Data.Tests", "tests\YaMiSoFt.OpenData.Data.Tests\YaMiSoFt.OpenData.Data.Tests.csproj", "{83F78A64-97CE-4560-96D5-235B5B32CF42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YaMiSoFt.OpenData.Api.Tests", "tests\YaMiSoFt.OpenData.Api.Tests\YaMiSoFt.OpenData.Api.Tests.csproj", "{1629B520-3503-42C5-9EB4-BA9497D90362}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{547F8EB7-00CB-4D88-B07A-19C7EF8E790F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{547F8EB7-00CB-4D88-B07A-19C7EF8E790F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{547F8EB7-00CB-4D88-B07A-19C7EF8E790F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{547F8EB7-00CB-4D88-B07A-19C7EF8E790F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1423FDA-74F6-4BBD-A5D3-910F14533E5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1423FDA-74F6-4BBD-A5D3-910F14533E5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1423FDA-74F6-4BBD-A5D3-910F14533E5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1423FDA-74F6-4BBD-A5D3-910F14533E5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A88BE04-4FDF-4453-99DA-2B012B256772}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A88BE04-4FDF-4453-99DA-2B012B256772}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A88BE04-4FDF-4453-99DA-2B012B256772}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A88BE04-4FDF-4453-99DA-2B012B256772}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52174E60-9828-49C5-9F76-1BC9C3688504}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52174E60-9828-49C5-9F76-1BC9C3688504}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52174E60-9828-49C5-9F76-1BC9C3688504}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52174E60-9828-49C5-9F76-1BC9C3688504}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83F78A64-97CE-4560-96D5-235B5B32CF42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83F78A64-97CE-4560-96D5-235B5B32CF42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83F78A64-97CE-4560-96D5-235B5B32CF42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83F78A64-97CE-4560-96D5-235B5B32CF42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1629B520-3503-42C5-9EB4-BA9497D90362}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1629B520-3503-42C5-9EB4-BA9497D90362}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1629B520-3503-42C5-9EB4-BA9497D90362}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1629B520-3503-42C5-9EB4-BA9497D90362}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{547F8EB7-00CB-4D88-B07A-19C7EF8E790F} = {58786838-1AB2-481E-BE2E-F1FAA527E7B3}
+		{D1423FDA-74F6-4BBD-A5D3-910F14533E5E} = {58786838-1AB2-481E-BE2E-F1FAA527E7B3}
+		{1A88BE04-4FDF-4453-99DA-2B012B256772} = {58786838-1AB2-481E-BE2E-F1FAA527E7B3}
+		{52174E60-9828-49C5-9F76-1BC9C3688504} = {055D7BDA-E928-4C18-BD57-9BB5EE935F79}
+		{83F78A64-97CE-4560-96D5-235B5B32CF42} = {68E96539-1E9D-48A7-9ED5-D89549754191}
+		{1629B520-3503-42C5-9EB4-BA9497D90362} = {68E96539-1E9D-48A7-9ED5-D89549754191}
+	EndGlobalSection
+EndGlobal
