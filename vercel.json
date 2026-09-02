@@ -1,11 +1,5 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "functions": {
-    "Dockerfile.vercel": {
-      "memory": 1024,
-      "maxDuration": 30
-    }
-  },
   "regions": ["fra1"],
   "headers": [
     {

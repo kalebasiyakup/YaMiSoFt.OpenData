@@ -290,7 +290,7 @@ mimariye dokunan sonuçları:
 | A1 | Katmanlı rate limiting: kenarda WAF, uygulamada in-memory | Kötüye kullanım compute faturalanmadan kenarda durduruluyor; Redis opsiyonel yükseltme yolu olarak duruyor | ✅ |
 | A2 | Veri yanıtlarını CDN'e ittir | Fonksiyondan yanıt sunmak her istekte Active CPU faturası | ✅ |
 | A3 | `Dockerfile.vercel` + `$PORT` binding | Vercel kökte bu dosyayı arıyor; port varsayılanı 80, `PORT` ile değişiyor | ✅ |
-| A4 | `vercel.json` (bölge, bellek) | Bölge `fra1` — hedef kitle Türkiye | ✅ |
+| A4 | `vercel.json` (bölge) | Bölge `fra1` — hedef kitle Türkiye | ✅ (ilk deploy'da `functions.Dockerfile.vercel` hatası düzeltildi, 2 Eylül 2026) |
 | A5 | `ProxyOptions` Vercel profili | Yapılmazsa tüm trafik tek IP görünür, anonim limit ilk gün kilitlenir | ✅ |
 | A6 | Gözlemlenebilirlik: Prometheus → Vercel OTel | Sıfıra inen serverless'ta kazınacak bir şey yok; her örnek kısmi veri tutar (NFR-16/17) | ⬜ |
 | A7 | NFR-10 hedefini "sıcak örnek P95" olarak düzelt | Vercel 5 dk trafiksizlikte sıfıra iniyor; soğuk başlangıç 100 ms'yi aşar | ⬜ |
@@ -370,6 +370,18 @@ Vercel tarafında `KnownProxies` listelemeye gerek yok: Vercel `X-Forwarded-For`
 IP spoofing'i önlemek. Birincil olarak `x-vercel-forwarded-for` okunuyor — Vercel'in üstüne
 bir proxy konsa bile o korunuyor.
 
+**A4 — vercel.json, ilk gerçek deploy'da bulunan hata.** İlk sürüm `functions` altında
+`"Dockerfile.vercel": { memory, maxDuration }` taşıyordu — B3'ün işaret ettiği "hiç
+doğrulanmadı" riski tam burada gerçekleşti. Vercel build'i `Error: The pattern
+"Dockerfile.vercel" defined in \`functions\` doesn't match any Serverless Functions inside
+the \`api\` directory` ile reddetti: `functions` anahtarı yalnızca `api/` altındaki dosya
+yollarını glob'lar, kökteki otomatik algılanan `Dockerfile.vercel`'i değil — container
+image fonksiyonları için ayrı bir `services` yapılandırması var ve tek servisli bu kurulumda
+hiç gerekmiyor (Vercel dosyayı kökte kendisi bulup tüm trafiği yönlendiriyor). Ayrıca
+`memory` zaten Fluid compute açıkken vercel.json'dan ayarlanamıyor, proje panosundan
+(Functions bölümü) ayarlanması gerekiyor. **Karar:** `functions` bloğu tamamen kaldırıldı;
+bölge (`fra1`) dışında vercel.json'da fonksiyon ayarı yok.
+
 ### B. Faz 1'den kalan yayın işleri
 
 BRD Faz 1 teslimatı "dokümantasyon, açık kaynak yayın" diyor. Kod tarafı bitti, yayın bitmedi.
@@ -378,7 +390,7 @@ BRD Faz 1 teslimatı "dokümantasyon, açık kaynak yayın" diyor. Kod tarafı b
 |---|---|---|
 | B1 | `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, issue/PR şablonları | ⬜ |
 | B2 | GitHub'da yayınla (public repo, açıklama, topics) | ⬜ |
-| B3 | **Docker imajını doğrula** — hiç doğrulanmadı, daemon kapalıydı | ⬜ |
+| B3 | **Docker imajını doğrula** — ilk Vercel deploy'u `vercel.json` aşamasında düştü (bkz. §7 A4), imaj build'i henüz görülmedi | ⬜ |
 | B4 | NuGet paketleri (`OpenData.Turkey` vb.) — BRD §7.2 bonus, mimari hazır | ⬜ |
 | B5 | OpenAPI özetleri iki dilde (§6 kararı) | ✅ (2 Eylül 2026) |
 
