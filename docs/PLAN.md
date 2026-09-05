@@ -299,6 +299,7 @@ mimariye dokunan sonuçları:
 | A7 | NFR-10 hedefini "sıcak örnek P95" olarak düzelt | Vercel 5 dk trafiksizlikte sıfıra iniyor; soğuk başlangıç 100 ms'yi aşar | ⬜ |
 | A8 | Runtime imajı `-chiseled` → `-chiseled-extra` | İlk canlı istek `CultureNotFoundException` ile 500 verdi (bkz. aşağıda) | ✅ (2 Eylül 2026) |
 | A9 | .NET 9 → .NET 10 (SDK, TFM, Docker imajları, lockstep paketler) | Yerel SDK ve her iki Dockerfile aynı sürümde tutulmalı | ✅ (2 Eylül 2026) |
+| A10 | Vercel/Cloudflare için `X-Forwarded-Proto` düzeltmesi | Canlıda `/docs` üzerinden "Send" mixed-content ile engelleniyordu (bkz. aşağıda) | ✅ (5 Eylül 2026) |
 
 **Ölçüm:** süreç başlangıcı ~300 ms (ilk çalıştırma 5,8 sn ama o disk cache ısınması). Gerçek
 soğuk boot buna container açılışını ekler, arşivlenmiş fonksiyonda Vercel +1 sn diyor.
@@ -402,6 +403,38 @@ tzdata içeren, "shell yok" özelliğini koruyan varyant. `9.0-noble-chiseled-ex
 gerçek imajı barındırıyor, `DOTNET_SYSTEM_GLOBALIZATION_INVARIANT` da ayarlanmıyor. Not:
 Docker imajının build'i bu commit'e kadar hiç yerelde de doğrulanmamıştı (B3) — hata ancak
 canlıda, ilk istekte ortaya çıktı.
+
+**A10 — iki ayrı sorun, aynı belirti.** Canlıda `/docs` üzerinden "Send" tıklanınca tarayıcı
+konsolu `Mixed Content: ... was loaded over HTTPS, but requested an insecure resource
+'http://...'` diyordu. İki bağımsız kök neden vardı, ikisi de aynı anda mevcuttu:
+
+1. **`ASPNETCORE_ENVIRONMENT` Vercel'de set edilmemiş.** `appsettings.Vercel.json` zaten
+   `Proxy:Provider=Vercel` ve `RateLimit:EdgeBurstProtection=true` taşıyordu, ama ASP.NET Core
+   bu dosyayı yalnızca `ASPNETCORE_ENVIRONMENT=Vercel` iken yüklüyor. Loglarda `Hosting
+   environment: Production` görülmesi dosyanın hiç okunmadığını, uygulamanın sessizce
+   `appsettings.json`'daki varsayılana (`Provider=None`) düştüğünü gösteriyordu — hem rate
+   limit uyarısını hem "no proxy configured" bilgi satırını açıklıyor. **Vercel proje
+   panosunda `ASPNETCORE_ENVIRONMENT=Vercel` ortam değişkeni ayarlanmalı** — bu bir kod
+   düzeltmesi değil, dağıtım eksikliği; henüz uygulanmadı.
+2. **Kod tarafı: Vercel/Cloudflare hiç şema düzeltmesi yapmıyordu.** `ProxyOptions.
+   UseForwardedHeadersMiddleware` yalnızca `Generic` için `true` dönüyordu, çünkü vendor
+   sağlayıcılar istemci IP'sini kendi header'ından (`x-vercel-forwarded-for`) okuyor ve bu ara
+   katmana hiç ihtiyaç duymuyor — ama TLS Vercel kenarında bittiği ve container'a düz HTTP
+   geldiği için `Request.Scheme` hiçbir zaman "https" olmuyordu. .NET'in otomatik ürettiği
+   OpenAPI belgesi `servers` alanını **isteğin kendi şemasından** kuruyor
+   (`UriHelper.BuildAbsolute(httpRequest.Scheme, ...)`), yani `http://` üretiyordu — Scalar'ın
+   "Send"i de o adrese gidip https sayfadan engelleniyordu. **Karar:** `UseForwardedHeadersMiddleware`
+   artık `Provider != None` iken true; yeni `ForwardedHeadersToTrust` vendor sağlayıcılar için
+   yalnızca `XForwardedProto`'yu güveniyor (istemci IP'sine dokunmuyor — `ClientIdentityResolver`
+   zaten kendi header'ını tercih ediyor, `RemoteIpAddress`'i yalnızca o header yoksa kullanıyor).
+   `KnownProxies`/`KnownNetworks` vendor'lar için boş kalıyor (zaten `x-vercel-forwarded-for`
+   için de IP listesi tutulmuyor, aynı güven modeli). Gerçek Kestrel'e karşı doğrulandı: değişken
+   yalnızca birim testleriyle değil, `dotnet run` + `curl -H "X-Forwarded-Proto: https"` ile de
+   doğrulandı — `/openapi/v1.json`'daki `servers[0].url` doğru şekilde `https://` dönüyor.
+   `WebApplicationFactory`'nin bellek-içi `TestServer`'ı `RemoteIpAddress`'i null bıraktığından
+   uçtan uca bir xUnit testi güvenilir yazılamadı; `ProxyProviderTests` bunun yerine
+   `ProxyOptions`'ın hesaplanan alanlarını (`UseForwardedHeadersMiddleware`,
+   `ForwardedHeadersToTrust`) birim seviyesinde sabitliyor.
 
 ### B. Faz 1'den kalan yayın işleri
 

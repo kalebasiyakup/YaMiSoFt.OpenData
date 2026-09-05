@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.HttpOverrides;
+
 namespace YaMiSoFt.OpenData.Api.Configuration;
 
 /// <summary>The platform sitting in front of the application, if any.</summary>
@@ -79,9 +81,31 @@ public sealed class ProxyOptions
     }
 
     /// <summary>
-    /// True when the standard ForwardedHeaders middleware should run. Only <see
-    /// cref="ProxyProvider.Generic"/> needs it; the vendor providers carry the client address
-    /// in a header of their own that the middleware does not know about.
+    /// True when the standard ForwardedHeaders middleware should run.
     /// </summary>
-    public bool UseForwardedHeadersMiddleware => Provider == ProxyProvider.Generic;
+    /// <remarks>
+    /// Every provider needs this now, not only <see cref="ProxyProvider.Generic"/>. TLS
+    /// terminates at the vendor's edge and the container only ever sees plain HTTP from it, so
+    /// without this <c>Request.Scheme</c> stays "http" no matter what the caller actually used.
+    /// That silently breaks anything that reads it: the OpenAPI document's auto-generated
+    /// <c>servers</c> entry comes out as <c>http://</c>, and Scalar's "Try it" then issues a
+    /// plain-HTTP fetch from an HTTPS docs page, which every browser blocks as mixed content.
+    /// </remarks>
+    public bool UseForwardedHeadersMiddleware => Provider != ProxyProvider.None;
+
+    /// <summary>
+    /// The forwarded headers the middleware should trust.
+    /// </summary>
+    /// <remarks>
+    /// A vendor provider (Vercel, Cloudflare) only needs <see cref="ForwardedHeaders.XForwardedProto"/>
+    /// corrected here — its client address comes from <see cref="ClientAddressHeaders"/> instead,
+    /// read directly by the rate limiter's identity resolver, because the middleware does not
+    /// recognise that header. Letting it also rewrite <c>RemoteIpAddress</c> from a plain
+    /// <c>X-Forwarded-For</c> would just be a second, redundant source of truth for a value the
+    /// resolver already ignores when a vendor header is present. <see cref="ProxyProvider.Generic"/>
+    /// has no vendor header to fall back on, so it needs both.
+    /// </remarks>
+    public ForwardedHeaders ForwardedHeadersToTrust => Provider == ProxyProvider.Generic
+        ? ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
+        : ForwardedHeaders.XForwardedProto;
 }

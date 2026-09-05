@@ -165,7 +165,7 @@ if (proxyOptions.UseForwardedHeadersMiddleware)
 {
     builder.Services.Configure<ForwardedHeadersOptions>(options =>
     {
-        options.ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;
+        options.ForwardedHeaders = proxyOptions.ForwardedHeadersToTrust;
         options.KnownProxies.Clear();
         options.KnownIPNetworks.Clear();
 

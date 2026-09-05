@@ -1,5 +1,6 @@
 using System.Net;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.Extensions.Options;
 using YaMiSoFt.OpenData.Api.Configuration;
 using YaMiSoFt.OpenData.Api.RateLimiting;
@@ -127,13 +128,43 @@ public sealed class ProxyProviderTests
     }
 
     [Fact]
-    public void Only_a_generic_proxy_needs_the_forwarded_headers_middleware()
+    public void Every_configured_provider_needs_the_forwarded_headers_middleware()
     {
+        // Not only Generic: TLS terminates at the vendor's edge for Vercel and Cloudflare too,
+        // so Request.Scheme needs the same correction or the OpenAPI document's generated
+        // "servers" URL comes out as http:// and Scalar's "Try it" trips mixed-content blocking
+        // on an https docs page.
         Assert.False(new ProxyOptions { Provider = ProxyProvider.None }.UseForwardedHeadersMiddleware);
-        Assert.False(new ProxyOptions { Provider = ProxyProvider.Vercel }.UseForwardedHeadersMiddleware);
-        Assert.False(new ProxyOptions { Provider = ProxyProvider.Cloudflare }.UseForwardedHeadersMiddleware);
+        Assert.True(new ProxyOptions { Provider = ProxyProvider.Vercel }.UseForwardedHeadersMiddleware);
+        Assert.True(new ProxyOptions { Provider = ProxyProvider.Cloudflare }.UseForwardedHeadersMiddleware);
         Assert.True(new ProxyOptions { Provider = ProxyProvider.Generic }.UseForwardedHeadersMiddleware);
     }
+
+    [Fact]
+    public void Vendor_providers_only_trust_the_proto_header_not_forwarded_for()
+    {
+        // The client address middleware doesn't recognise x-vercel-forwarded-for or
+        // CF-Connecting-IP, so letting it also rewrite RemoteIpAddress from a plain
+        // X-Forwarded-For would be a second, redundant source of truth for a value
+        // ClientIdentityResolver already ignores once a vendor header is present.
+        Assert.Equal(ForwardedHeaders.XForwardedProto, new ProxyOptions { Provider = ProxyProvider.Vercel }.ForwardedHeadersToTrust);
+        Assert.Equal(ForwardedHeaders.XForwardedProto, new ProxyOptions { Provider = ProxyProvider.Cloudflare }.ForwardedHeadersToTrust);
+        Assert.Equal(
+            ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto,
+            new ProxyOptions { Provider = ProxyProvider.Generic }.ForwardedHeadersToTrust);
+    }
+
+    // A true end-to-end check (fetch /openapi/v1.json with X-Forwarded-Proto: https and assert
+    // the generated "servers" entry is https://) was tried and dropped: WebApplicationFactory's
+    // in-memory TestServer transport leaves Connection.RemoteIpAddress null, which
+    // ForwardedHeadersMiddleware treats as untrusted no matter how KnownProxies/KnownNetworks
+    // are configured, and IStartupFilter ordering could not reliably inject a fake peer address
+    // ahead of it on this minimal-hosting entry point. The underlying fix was instead verified
+    // directly against a real Kestrel server: with ForwardedHeadersOptions.KnownProxies/
+    // KnownNetworks cleared, a request from a real peer with X-Forwarded-Proto: https flips
+    // Request.Scheme (and IsHttps) to https, and without the header it stays http — confirming
+    // ForwardedHeadersToTrust below is what the OpenAPI "servers" URL and Scalar's "Try it"
+    // actually need.
 
     private static ClientIdentityResolver ResolverFor(ProxyProvider provider)
     {
