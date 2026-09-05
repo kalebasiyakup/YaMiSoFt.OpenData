@@ -5,7 +5,10 @@
 > Durum: Faz 0-1 tamam, Vercel A1-A5 tamam, **Faz 2'nin C1-C5'i tamam**, TR adres hiyerarsisi
 > kendi derlememize gecti, **countries/flags/timezones lisans yuzeyi azaltmak icin kaldirildi**
 > (2 Eylul 2026, bkz. DATA-LICENSES.md) — planin kaldirilan kisimlara ait izleri de temizlendi.
-> Kalan: C6 (anahtar portali), A6-A7, B (yayin), D (Faz 3), E (teknik borc). Bkz. §7.
+> **5 Eylul 2026: countries kendi derledigimiz ISO 3166-1 + E.164 verisiyle MIT altinda geri
+> geldi** (C8) — üçüncü parti paket yok, paylaşımlı-lisans yükümlülüğü yok; flags/timezones
+> hâlâ kaldırılmış durumda. Kalan: C6 (anahtar portali), A6-A7, B (yayin), D (Faz 3),
+> E (teknik borc). Bkz. §7.
 
 ---
 
@@ -422,6 +425,7 @@ BRD Faz 1 teslimatı "dokümantasyon, açık kaynak yayın" diyor. Kod tarafı b
 | C5 | Posta kodları | Semt seviyesinde, 2.433 kod; başlangıçta yükleniyor | ✅ |
 | C7 | TR adres verisini tek kaynağa taşı | il/ilçe/**semt**/mahalle tek derlemeden; ölçüm ve gerekçe aşağıda | ✅ |
 | C6 | API anahtar portalı | **Yapılmadı** — diğerlerinden farklı türde iş, aşağıya bak | ⬜ |
+| C8 | Ülke telefon kodları | ISO 3166-1 (199 ülke) + ITU-T E.164 çağrı kodu; lisans ve NANP ayrıntısı aşağıda | ✅ (5 Eylül 2026) |
 
 #### C1-C5 ve C7 nasıl yapıldı
 
@@ -516,6 +520,28 @@ kısmi yeniden üretim yüklenen ama yanlış cevaplayan bir hiyerarşi verirdi.
 toplu indirme uçlarının başka yerde ortadan kaldırdığı kazıma davranışının ta kendisi. `/all`
 de yok — 20 MB bir yanıt değil, bir indirmedir; isteyen dosyayı repodan alır. Semtlerin `/all`
 u **var**: 2.433 satır tek yanıtta makul ve posta kodu tablosunun tamamını veriyor.
+
+#### C8 nasıl yapıldı
+
+**Neden üçüncü parti paket yok.** `countries.json` daha önce burada vardı: mledoze/countries
+(ODbL-1.0) kaynaklıydı ve 2 Eylül 2026'da tam da bu paylaşımlı-lisans (share-alike) yükü
+yüzünden kaldırıldı (DATA-LICENSES.md). Aynı veriyi aynı sorunla geri koymamak için bu sefer
+hiçbir paket indirilmedi: ISO 3166-1 ülke kodları ve ITU-T E.164 çağrı kodları idari
+atamalardır — il/ilçe verisi veya BTK'nın GSM önekleri gibi, kendi başlarına telif konusu
+değildir. Lisanslanan şey bu projenin **derlemesi**, bu yüzden dosya doğrudan MIT taşıyabiliyor;
+ODbL'nin ya da mledoze'un şartlarını devralması gerekmiyor.
+
+**Çağrı kodu benzersiz bir anahtar değil.** ABD ve Kanada'nın ikisi de gerçekten "1"; Rusya ve
+Kazakistan'ın ikisi de gerçekten "7" — ITU-T ataması böyle, veri hatası değil. `CountryStore`
+bu yüzden `Find` için yalnızca ISO2/ISO3'ü indeksliyor (ikisi de garanti benzersiz), çağrı
+koduna göre tekil arama sunmuyor: MobilePrefix'in operatör alanını atlaması gibi, "otoriter
+görünüp yanlış olan" bir tekillik iddiası yayınlanmıyor. Diğer NANP üyeleri (Bahama, Jamaika
+vb.) çıplak "1" yerine kendi ayırt edici alan kodlarını taşıyor ("1242" gibi), böylece o
+satırlar yine de benzersiz kalıyor.
+
+**Kosova (XK) dahil, not düşülerek.** ISO 3166-1'in resmî bir parçası değil ama gerçek,
+aranabilir bir ülke; dışarıda bırakmak kendi başına bir doğruluk sorunu olurdu. DATA-LICENSES.md
+bunu açıkça not ediyor, örtük bırakmak yerine.
 
 ### D. Faz 3
 

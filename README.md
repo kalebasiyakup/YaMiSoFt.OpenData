@@ -5,7 +5,7 @@
 Geliştiriciler için ücretsiz, hızlı, dokümante edilmiş referans veri — Türkiye'nin tüm adres
 hiyerarşisi, para birimleri, diller ve resmî tatiller. Kayıt gerekmez.
 
-.NET 9 minimal API'lerle yazıldı. Tüm veri bu depoya commit'lenir, başlangıçta belleğe
+.NET 10 minimal API'lerle yazıldı. Tüm veri bu depoya commit'lenir, başlangıçta belleğe
 yüklenir ve değişmez koleksiyonlardan sunulur: çalışma zamanında ne veritabanı ne de dış
 çağrı vardır.
 
@@ -38,6 +38,9 @@ curl "localhost:5096/api/v1/districts?search=besiktas"
 # Para birimleri küsurat basamak sayısını taşır, tutar doğru yuvarlanır
 curl localhost:5096/api/v1/currencies/JPY     # decimalDigits: 0
 curl localhost:5096/api/v1/currencies/KWD     # decimalDigits: 3
+
+# Ülke arama/çağrı kodları — ISO 3166-1 alpha-2/alpha-3, ITU-T E.164
+curl localhost:5096/api/v1/countries/TR       # callingCode: "90"
 
 # Sadece ihtiyacınız olan alanlar
 curl "localhost:5096/api/v1/provinces?fields=id,name,districtCount&sort=districts&order=desc"
@@ -73,6 +76,7 @@ bir `/all` kardeşi vardır.
 | `/api/v1/quarters/{id}/neighborhoods` | Bir semtin yerleşimleri |
 | `/api/v1/currencies` · `/{code}` | ISO 4217, sembol ve küsurat basamağıyla |
 | `/api/v1/languages` · `/{code}` | ISO 639-1 veya 639-2, yerel adlarla |
+| `/api/v1/countries` · `/{code}` | ISO 3166-1 alpha-2 veya alpha-3, ITU-T E.164 çağrı koduyla |
 | `/api/v1/holidays/{year}` | Türkiye'nin tatil günleri, 2015-2050 |
 | `/api/v1/neighborhoods` · `/{id}` | `provinceId`, `districtId`, `quarterId`, `kind` veya `search` ile filtrele |
 | `/api/v1/districts/{id}/neighborhoods` | Bir ilçenin yerleşimleri |

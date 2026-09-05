@@ -33,6 +33,10 @@ public static class DataSetLoader
     public static DataSet<LanguageInfo> LoadLanguages(string directory) =>
         Load(directory, "languages", OpenDataJson.TypeInfo<DataSet<LanguageInfo>>());
 
+    /// <summary>Loads <c>countries.json</c>.</summary>
+    public static DataSet<Country> LoadCountries(string directory) =>
+        Load(directory, "countries", OpenDataJson.TypeInfo<DataSet<Country>>());
+
     /// <summary>Loads <c>holidays.json</c>.</summary>
     public static DataSet<Holiday> LoadHolidays(string directory) =>
         Load(directory, "holidays", OpenDataJson.TypeInfo<DataSet<Holiday>>());

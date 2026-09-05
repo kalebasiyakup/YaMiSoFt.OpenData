@@ -17,6 +17,7 @@ public sealed class DataSetHealthCheck(
     QuarterStore quarters,
     CurrencyStore currencies,
     LanguageStore languages,
+    CountryStore countries,
     HolidayStore holidays,
     NeighborhoodStore neighborhoods) : IHealthCheck
 {
@@ -32,6 +33,7 @@ public sealed class DataSetHealthCheck(
             ("quarters", quarters.Count),
             ("currencies", currencies.Count),
             ("languages", languages.Count),
+            ("countries", countries.Count),
             ("holidays", holidays.Count),
         };
 

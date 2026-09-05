@@ -102,12 +102,67 @@ public sealed class ReferenceEndpointTests(OpenDataApiFactory factory)
     }
 
     [Fact]
+    public async Task Country_resolves_by_either_iso_code()
+    {
+        foreach (var code in new[] { "tr", "TR", "tur", "TUR" })
+        {
+            using var response = await _client.GetAsync(new Uri($"/api/v1/countries/{code}", UriKind.Relative));
+
+            response.EnsureSuccessStatusCode();
+
+            var country = await ReadJsonAsync(response);
+            Assert.Equal("TR", country.GetProperty("iso2").GetString());
+            Assert.Equal("TUR", country.GetProperty("iso3").GetString());
+            Assert.Equal("90", country.GetProperty("callingCode").GetString());
+        }
+    }
+
+    [Fact]
+    public async Task Unknown_country_returns_problem_details()
+    {
+        using var response = await _client.GetAsync(new Uri("/api/v1/countries/ZZ", UriKind.Relative));
+
+        Assert.Equal(HttpStatusCode.NotFound, response.StatusCode);
+
+        var problem = await ReadJsonAsync(response);
+        Assert.Contains("country-not-found", problem.GetProperty("type").GetString(), StringComparison.Ordinal);
+    }
+
+    [Fact]
+    public async Task Countries_are_searchable_by_their_turkish_name()
+    {
+        using var response = await _client.GetAsync(
+            new Uri("/api/v1/countries?search=almanya", UriKind.Relative));
+
+        response.EnsureSuccessStatusCode();
+
+        var items = (await ReadJsonAsync(response)).GetProperty("items").EnumerateArray().ToArray();
+
+        Assert.Contains(items, item => item.GetProperty("iso2").GetString() == "DE");
+    }
+
+    [Fact]
+    public async Task Downloading_all_countries_returns_every_row()
+    {
+        using var response = await _client.GetAsync(new Uri("/api/v1/countries/all", UriKind.Relative));
+
+        response.EnsureSuccessStatusCode();
+
+        var items = (await ReadJsonAsync(response)).EnumerateArray().ToArray();
+
+        Assert.True(items.Length >= 190, $"Expected at least 190 countries, got {items.Length}.");
+        Assert.Contains(items, item => item.GetProperty("iso2").GetString() == "US");
+        Assert.Contains(items, item => item.GetProperty("iso2").GetString() == "CA");
+    }
+
+    [Fact]
     public async Task Field_selection_works_across_the_new_endpoints()
     {
         foreach (var (route, expected) in new[]
         {
             ("/api/v1/currencies?fields=code,symbol&pageSize=2", 2),
             ("/api/v1/languages?fields=alpha2&pageSize=2", 1),
+            ("/api/v1/countries?fields=iso2,callingcode&pageSize=2", 2),
         })
         {
             using var response = await _client.GetAsync(new Uri(route, UriKind.Relative));
@@ -131,6 +186,7 @@ public sealed class ReferenceEndpointTests(OpenDataApiFactory factory)
             "/api/v1/districts?fields=nope",
             "/api/v1/currencies?fields=nope",
             "/api/v1/languages?fields=nope",
+            "/api/v1/countries?fields=nope",
         })
         {
             using var response = await _client.GetAsync(new Uri(route, UriKind.Relative));
@@ -148,6 +204,7 @@ public sealed class ReferenceEndpointTests(OpenDataApiFactory factory)
             "/api/v1/districts?pageSize=501",
             "/api/v1/currencies?pageSize=501",
             "/api/v1/languages?pageSize=501",
+            "/api/v1/countries?pageSize=501",
         })
         {
             using var response = await _client.GetAsync(new Uri(route, UriKind.Relative));

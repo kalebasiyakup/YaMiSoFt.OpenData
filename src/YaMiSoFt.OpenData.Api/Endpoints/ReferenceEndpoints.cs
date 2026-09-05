@@ -10,7 +10,7 @@ using YaMiSoFt.OpenData.Data;
 namespace YaMiSoFt.OpenData.Api.Endpoints;
 
 /// <summary>
-/// Currency and language endpoints (BRD 5.2).
+/// Currency, language and country endpoints (BRD 5.2).
 /// </summary>
 /// <remarks>
 /// Each dataset contributes only its field list, its code hint and three thin lambdas; the
@@ -27,6 +27,11 @@ public static class ReferenceEndpoints
     private static readonly FrozenSet<string> LanguageFields = new[]
     {
         "alpha2", "alpha3", "nameen", "nametr", "nativename",
+    }.ToFrozenSet(StringComparer.Ordinal);
+
+    private static readonly FrozenSet<string> CountryFields = new[]
+    {
+        "iso2", "iso3", "nameen", "nametr", "callingcode",
     }.ToFrozenSet(StringComparer.Ordinal);
 
     /// <summary>Maps the currency and language routes onto <paramref name="group"/>.</summary>
@@ -111,6 +116,45 @@ public static class ReferenceEndpoints
             .WithBilingualSummary(
                 "Gets one language by ISO 639-1 or 639-2 code.",
                 "ISO 639-1 veya 639-2 koduna göre bir dili getirir.");
+
+        var countries = group.MapGroup("/countries").WithTags("Reference");
+
+        countries.MapGet("/", (
+                HttpContext context,
+                CountryStore store,
+                IOptions<OpenDataOptions> options,
+                [AsParameters] ListQuery query) =>
+            ReferenceHandlers.List(context, store, options.Value.Cache, query, CountryFields, "countries"))
+            .WithName("ListCountries")
+            .WithBilingualSummary(
+                "Lists ISO 3166-1 countries with their international calling codes.",
+                "Uluslararası telefon kodlarıyla ISO 3166-1 ülkelerini listeler.");
+
+        countries.MapGet("/all", (
+                HttpContext context,
+                CountryStore store,
+                IOptions<OpenDataOptions> options,
+                [AsParameters] ListQuery query) =>
+            ReferenceHandlers.All(context, store, options.Value.Cache, query, CountryFields, "countries"))
+            .WithName("DownloadCountries")
+            .WithBilingualSummary(
+                "Downloads every country in a single response.",
+                "Tüm ülkeleri tek yanıtta indirir.")
+            .WithMetadata(new BulkDownloadAttribute());
+
+        countries.MapGet("/{code}", (
+                HttpContext context,
+                CountryStore store,
+                IOptions<OpenDataOptions> options,
+                string code,
+                [AsParameters] ListQuery query) =>
+            ReferenceHandlers.Single(
+                context, store, options.Value.Cache, query, CountryFields, code,
+                "country", "Use an ISO 3166-1 alpha-2 or alpha-3 code such as 'TR' or 'TUR'."))
+            .WithName("GetCountry")
+            .WithBilingualSummary(
+                "Gets one country by ISO 3166-1 alpha-2 or alpha-3 code.",
+                "ISO 3166-1 alpha-2 veya alpha-3 koduna göre bir ülkeyi getirir.");
 
         return group;
     }

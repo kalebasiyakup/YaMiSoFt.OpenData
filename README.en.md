@@ -5,7 +5,7 @@
 Free, fast, documented reference data for developers — the full Turkish address hierarchy,
 currencies, languages and public holidays. No signup required.
 
-Built with .NET 9 minimal APIs. All data is committed to this repository, loaded into memory
+Built with .NET 10 minimal APIs. All data is committed to this repository, loaded into memory
 at startup, and served from immutable collections: no database, no external calls at runtime.
 
 > Status: **Faz 2** — the Turkish address hierarchy (81 provinces, 972 districts, 2 433
@@ -34,6 +34,9 @@ curl "localhost:5096/api/v1/districts?search=besiktas"
 # Currencies carry the minor-unit count, so money rounds correctly
 curl localhost:5096/api/v1/currencies/JPY     # decimalDigits: 0
 curl localhost:5096/api/v1/currencies/KWD     # decimalDigits: 3
+
+# Country dial codes — ISO 3166-1 alpha-2/alpha-3, ITU-T E.164
+curl localhost:5096/api/v1/countries/TR       # callingCode: "90"
 
 # Only the fields you need
 curl "localhost:5096/api/v1/provinces?fields=id,name,districtCount&sort=districts&order=desc"
@@ -69,6 +72,7 @@ complete dataset in a single response.
 | `/api/v1/quarters/{id}/neighborhoods` | The settlements of one quarter |
 | `/api/v1/currencies` · `/{code}` | ISO 4217, with symbol and minor units |
 | `/api/v1/languages` · `/{code}` | ISO 639-1 or 639-2, with native names |
+| `/api/v1/countries` · `/{code}` | ISO 3166-1 alpha-2 or alpha-3, with the ITU-T E.164 calling code |
 | `/api/v1/holidays/{year}` | Turkey's non-working days, 2015-2050 |
 | `/api/v1/neighborhoods` · `/{id}` | Filter by `provinceId`, `districtId`, `quarterId`, `kind` or `search` |
 | `/api/v1/districts/{id}/neighborhoods` | The settlements of one district |

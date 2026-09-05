@@ -15,6 +15,7 @@ provenance travels with the data rather than living only in this document.
 | Languages | `data/languages.json` | ICU, via the .NET runtime | Unicode-3.0 |
 | Public holidays | `data/holidays.json` | Computed for this project | MIT |
 | Mobile prefixes | `data/mobile-prefixes.json` | [google/libphonenumber](https://github.com/google/libphonenumber) | Apache-2.0 |
+| Countries & calling codes | `data/countries.json` | ISO 3166-1 country codes + ITU-T E.164 calling codes, compiled for this project | MIT |
 | Turkish currency names | `data/overrides/currencies.tr.json` | Written for this project | MIT |
 | Holiday corrections | `data/overrides/holidays.tr.json` | Written for this project | MIT |
 
@@ -67,6 +68,21 @@ allocations — facts, not authorship.
 code per quarter. Every settlement republishes the code of the quarter above it; that
 denormalization is checked against its source in the data tests, so the two can never drift.
 
+**Countries & calling codes — MIT, self-compiled (5 September 2026).** Deliberately not
+sourced from any third-party countries package — see "Previously carried, now removed" below
+for why the last one was dropped. ISO 3166-1 alpha-2/alpha-3 codes and ITU-T E.164 assigned
+calling codes are administrative assignments, not creative works, so they carry no copyright
+of their own (the same reasoning as the Turkish address hierarchy and the mobile prefixes
+above); what is licensed under this project's MIT is the compilation, which is why the dataset
+can be MIT rather than needing to inherit anyone else's share-alike terms. Two calling-code
+values are intentionally shared by two rows each — `"1"` (United States and Canada) and `"7"`
+(Russia and Kazakhstan) are real ITU-T assignments with no calling-code-level way to tell the
+pair apart; every other Nanpa member carries its distinguishing area code instead (e.g.
+`"1242"` for the Bahamas) so it stays unique. `XK` (Kosovo) is included with calling code
+`"383"` even though it is not part of the formal ISO 3166-1 standard, because it is a real,
+dialable country and omitting it would be its own kind of inaccuracy; this is noted here rather
+than left implicit.
+
 **Previously carried, now removed.** Three datasets were dropped rather than kept, each for
 its own reason, and are recorded here so this file still says what the repository once
 distributed:
@@ -75,7 +91,10 @@ distributed:
   ODbL-1.0. ODbL is share-alike: redistributing the database publicly requires offering it
   under ODbL too. That obligation is easy to satisfy while it is carried, but it is a
   condition this repository no longer wants to hold itself to, so the dataset and the
-  `/api/v1/countries` endpoints were removed rather than kept under it.
+  `/api/v1/countries` endpoints were removed rather than kept under it. **Reintroduced 5
+  September 2026** at the same path and route, this time compiled directly from ISO 3166-1 and
+  ITU-T E.164 (public facts, no upstream package, no share-alike obligation) — see the MIT
+  entry and note above.
 - **Flags** (`assets/flags/`) — [lipis/flag-icons](https://github.com/lipis/flag-icons),
   MIT. Not a licence problem on its own — MIT permitted the redistribution and the
   rasterization step it received. It was removed because the flag endpoint identified a

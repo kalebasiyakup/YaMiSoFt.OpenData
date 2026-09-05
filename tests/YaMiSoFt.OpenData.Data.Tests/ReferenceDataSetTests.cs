@@ -14,6 +14,7 @@ public sealed class ReferenceDataSetTests
 
     private static readonly DataSet<Currency> Currencies = DataSetLoader.LoadCurrencies(DataDirectory);
     private static readonly DataSet<LanguageInfo> Languages = DataSetLoader.LoadLanguages(DataDirectory);
+    private static readonly DataSet<Country> Countries = DataSetLoader.LoadCountries(DataDirectory);
 
     [Fact]
     public void Currency_codes_are_unique_iso_4217()
@@ -131,12 +132,83 @@ public sealed class ReferenceDataSetTests
     }
 
     [Fact]
+    public void Country_codes_are_unique_iso_3166_1()
+    {
+        var invalid = Countries.Items
+            .Where(static country =>
+                !Regex.IsMatch(country.Iso2, "^[A-Z]{2}$") ||
+                !Regex.IsMatch(country.Iso3, "^[A-Z]{3}$"))
+            .Select(static country => $"{country.Iso2}/{country.Iso3}")
+            .ToArray();
+
+        Assert.True(invalid.Length == 0, $"Malformed country codes: {string.Join(", ", invalid)}");
+
+        var duplicateIso2 = Countries.Items
+            .GroupBy(static country => country.Iso2, StringComparer.Ordinal)
+            .Where(static group => group.Count() > 1)
+            .Select(static group => group.Key)
+            .ToArray();
+        Assert.True(duplicateIso2.Length == 0, $"Duplicate ISO 3166-1 alpha-2 codes: {string.Join(", ", duplicateIso2)}");
+
+        var duplicateIso3 = Countries.Items
+            .GroupBy(static country => country.Iso3, StringComparer.Ordinal)
+            .Where(static group => group.Count() > 1)
+            .Select(static group => group.Key)
+            .ToArray();
+        Assert.True(duplicateIso3.Length == 0, $"Duplicate ISO 3166-1 alpha-3 codes: {string.Join(", ", duplicateIso3)}");
+    }
+
+    [Fact]
+    public void Calling_codes_are_well_formed_and_shared_only_by_the_known_nanp_exceptions()
+    {
+        var malformed = Countries.Items
+            .Where(static country => !Regex.IsMatch(country.CallingCode, "^[0-9]{1,4}$"))
+            .Select(static country => $"{country.Iso2}:{country.CallingCode}")
+            .ToArray();
+
+        Assert.True(malformed.Length == 0, $"Malformed calling codes: {string.Join(", ", malformed)}");
+
+        // "1" (US/Canada) and "7" (Russia/Kazakhstan) are real ITU-T assignments shared by two
+        // countries with no calling-code-level way to tell them apart; every other value must
+        // be unique or a caller could silently be handed the wrong country (CountryStore remark).
+        var unexpectedSharing = Countries.Items
+            .GroupBy(static country => country.CallingCode, StringComparer.Ordinal)
+            .Where(static group => group.Count() > 1 && group.Key is not ("1" or "7"))
+            .Select(static group => $"{group.Key}: {string.Join('/', group.Select(static c => c.Iso2))}")
+            .ToArray();
+
+        Assert.True(unexpectedSharing.Length == 0, $"Unexpected shared calling codes: {string.Join(", ", unexpectedSharing)}");
+    }
+
+    [Fact]
+    public void Curated_country_names_are_applied()
+    {
+        Assert.Equal("Türkiye", Countries.Items.Single(static c => c.Iso2 == "TR").NameTr);
+        Assert.Equal("90", Countries.Items.Single(static c => c.Iso2 == "TR").CallingCode);
+        Assert.Equal("Almanya", Countries.Items.Single(static c => c.Iso2 == "DE").NameTr);
+        Assert.Equal("Amerika Birleşik Devletleri", Countries.Items.Single(static c => c.Iso2 == "US").NameTr);
+    }
+
+    [Fact]
+    public void Every_country_has_both_names()
+    {
+        var missing = Countries.Items
+            .Where(static country =>
+                string.IsNullOrWhiteSpace(country.NameEn) || string.IsNullOrWhiteSpace(country.NameTr))
+            .Select(static country => country.Iso2)
+            .ToArray();
+
+        Assert.True(missing.Length == 0, $"Missing names: {string.Join(", ", missing)}");
+    }
+
+    [Fact]
     public void Datasets_carry_provenance()
     {
         foreach (var (name, version, source, license) in new[]
         {
             (Currencies.Name, Currencies.Version, Currencies.Source, Currencies.License),
             (Languages.Name, Languages.Version, Languages.Source, Languages.License),
+            (Countries.Name, Countries.Version, Countries.Source, Countries.License),
         })
         {
             Assert.False(string.IsNullOrWhiteSpace(name));

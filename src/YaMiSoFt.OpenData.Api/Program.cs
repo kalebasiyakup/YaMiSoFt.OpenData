@@ -97,6 +97,8 @@ builder.Services.AddSingleton(sp => new CurrencyStore(
     DataSetLoader.LoadCurrencies(sp.GetRequiredService<DataDirectory>().Path)));
 builder.Services.AddSingleton(sp => new LanguageStore(
     DataSetLoader.LoadLanguages(sp.GetRequiredService<DataDirectory>().Path)));
+builder.Services.AddSingleton(sp => new CountryStore(
+    DataSetLoader.LoadCountries(sp.GetRequiredService<DataDirectory>().Path)));
 builder.Services.AddSingleton(sp => new HolidayStore(
     DataSetLoader.LoadHolidays(sp.GetRequiredService<DataDirectory>().Path)));
 
