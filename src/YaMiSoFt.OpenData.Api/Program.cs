@@ -262,8 +262,8 @@ app.MapOpenApi();
 app.MapScalarApiReference("/docs", options => options
     .WithTitle("OpenData API")
     .WithTheme(ScalarTheme.BluePlanet)
-    .AddDocument("v1", "English", isDefault: true)
-    .AddDocument("v1-tr", "Türkçe"));
+    .AddDocument("v1", "English")
+    .AddDocument("v1-tr", "Türkçe", isDefault: true));
 
 var v1 = app.MapGroup("/api/v1");
 v1.MapTurkeyEndpoints();

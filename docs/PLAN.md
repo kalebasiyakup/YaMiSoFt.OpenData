@@ -265,11 +265,16 @@ politikası gerektirir, statik mimariden ilk sapmadır.
 
 BRD'nin kendi önerileri varsayım olarak alındı:
 - Anahtar portalı → **Faz 2**
-- Dokümantasyon → **İngilizce ana, Türkçe ek** — OpenAPI endpoint özetleri için uygulandı: `WithBilingualSummary`
-  ile her endpoint iki metin taşıyor, iki ayrı doküman servis ediliyor (`/openapi/v1.json` İngilizce
-  varsayılan, `/openapi/v1-tr.json` Türkçe), Scalar'da seçilebiliyor (§7 B5). Tek dokümanı istek
-  başına çevirmek yerine iki döküman seçildi çünkü `OpenApiOperationTransformerContext`'in
-  `HttpContext`'e erişimi yok — veri tarafındaki `?lang=` (FR-04) burada uygulanamıyor.
+- Dokümantasyon → **İngilizce ana yazım kaynağı, Türkçe ek** — OpenAPI endpoint özetleri için
+  uygulandı: `WithBilingualSummary` ile her endpoint iki metin taşıyor, iki ayrı doküman servis
+  ediliyor (`/openapi/v1.json` İngilizce, `/openapi/v1-tr.json` Türkçe), Scalar'da seçilebiliyor
+  (§7 B5). Tek dokümanı istek başına çevirmek yerine iki döküman seçildi çünkü
+  `OpenApiOperationTransformerContext`'in `HttpContext`'e erişimi yok — veri tarafındaki
+  `?lang=` (FR-04) burada uygulanamıyor. **Scalar'ın açılış dili 5 Eylül 2026'da Türkçe'ye
+  çevrildi** (`v1-tr` artık `isDefault: true`) — bu yalnızca `/docs`'un hangi dokümanla
+  açıldığını değiştiriyor; İngilizce hâlâ metinlerin yazıldığı ana dil, `?lang=`'siz veri
+  yanıtlarının varsayılan dili de hâlâ İngilizce (`RequestQuery.ResolveLanguage`), bu ikisi
+  bilerek dokunulmadı.
 
 Planı gerçekten değiştiren tek soru **barındırma**: cloud + Cloudflare mı, on-prem K8s mi?
 Faz 0'ın 13. maddesinin (deploy) somut içeriğini bu belirler. Diğer 13 madde bu karardan
