@@ -21,7 +21,7 @@ public static class PhoneEndpoints
     {
         ArgumentNullException.ThrowIfNull(group);
 
-        var operators = group.MapGroup("/mobile-operators").WithTags("Turkey");
+        var operators = group.MapGroup("/mobile-operators").WithTags("Mobile Operators");
 
         operators.MapGet("/", (
                 HttpContext context,

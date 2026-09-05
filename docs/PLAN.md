@@ -447,6 +447,46 @@ BRD Faz 1 teslimatı "dokümantasyon, açık kaynak yayın" diyor. Kod tarafı b
 | B3 | **Docker imajını doğrula** — ilk Vercel deploy'u `vercel.json` aşamasında düştü (bkz. §7 A4), imaj build'i henüz görülmedi | ⬜ |
 | B4 | NuGet paketleri (`OpenData.Turkey` vb.) — BRD §7.2 bonus, mimari hazır | ⬜ |
 | B5 | OpenAPI özetleri iki dilde (§6 kararı) | ✅ (2 Eylül 2026) |
+| B6 | Scalar sidebar'ı konu bazlı gruplara böl (Turkey/Reference kaldırıldı) | ✅ (5 Eylül 2026, ayrıntı aşağıda) |
+
+#### B6 nasıl yapıldı
+
+**Sorun.** Sidebar yalnızca iki kaba etiket taşıyordu: coğrafi köken (Turkey/Reference), konu
+değil. GSM operatörü ile posta kodu aynı torbada, para birimi ile ülke kodu ayrı torbadaydı.
+
+**Karar.** Her uç kendi konu etiketine taşındı: `Address` (il/ilçe/semt/mahalle/posta kodu),
+`Mobile Operators`, `Countries`, `Currencies`, `Languages`, `Public Holidays`. `Mobile
+Operators` ve `Countries` ayrıca Redocly kaynaklı `x-tagGroups` uzantısıyla ortak bir "Phone"
+üst başlığı altında iç içe gösteriliyor — Scalar bu uzantıyı okuyup sidebar'da nested grup
+oluşturuyor.
+
+**İki dokümanda iki dil, B5'in aynı deseni.** `WithTags` İngilizceyi doğrudan yazıyor (temel
+katman); yeni `TurkishTagTransformer` (`TurkishSummaryTransformer` ile birebir aynı desende)
+yalnızca `v1-tr` dokümanı üretilirken her operasyonun etiketini Türkçeye çeviriyor. Öncesinde
+etiketler her iki dokümanda da İngilizceydi (Türkçe doküman seçiliyken bile "Turkey" görünüyordu)
+— bu ilk kez düzeltildi.
+
+**Bulunan ince hata: `document.tags` operasyon etiketleriyle senkron değildi.**
+`TurkishTagTransformer` her operasyonun `tags` alanını Türkçeye çeviriyor ama dokümanın kendi
+üst-seviye `tags` bildirim listesi (`document.Tags`, açıklamaların da yaşadığı yer) bundan
+etkilenmiyordu — orada hâlâ İngilizce isimler duruyordu. Sonuç: `x-tagGroups`'un Türkçe adlarla
+(`"Telefon"`, `"GSM Operatörleri"`) atıfta bulunduğu etiketler, dokümanın kendi `tags`
+listesinde hiç yoktu. `TagGroupsDocumentTransformer`'a opsiyonel bir çeviri haritası eklenip
+yalnızca `v1-tr` için `document.Tags`'ı da aynı sözlükle yeniden adlandırdı; `TurkishTagNames`
+sözlüğü ikisi arasında tek kaynak olarak paylaşılıyor, ileride biri güncellenip diğeri
+unutulamaz.
+
+**Her etiket tam olarak bir grupta.** `x-tagGroups`'ta gruplanmamış bir etiketi Scalar'ın nasıl
+ele aldığı belgelenmemiş; sidebar'dan sessizce bir uç kaybolması, gereksiz tek-elemanlı bir grup
+görmekten çok daha kötü bir arıza. Bu yüzden `Address`, `Currencies`, `Languages`, `Public
+Holidays` de kendi tek-elemanlı gruplarında — görsel olarak düz bir üst-seviye etiketten
+farksız, ama hiçbiri "gruplanmamış" durumda kalmıyor.
+
+**Görsel doğrulama sınırı.** Bu ortamda tarayıcı otomasyonu yok; doğrulama `/openapi/v1.json`
+ve `/openapi/v1-tr.json`'un gerçek Kestrel'e karşı `curl` ile çekilip hem operasyon
+etiketlerinin hem `document.tags`'ın hem `x-tagGroups`'un beklenen şekilde olduğunu
+doğrulamakla sınırlı kaldı (bkz. `OpenApiDocumentTests.cs`). Scalar'ın sidebar'ı bunu gerçekten
+iç içe render ettiğinin nihai teyidi `/docs` açılıp gözle kontrol edilmesini gerektiriyor.
 
 ### C. Faz 2
 

@@ -117,8 +117,36 @@ builder.Services.AddProblemDetails();
 // (RequestQuery.ResolveLanguage, FR-04). Decision in PLAN.md §6: English primary ("v1", also
 // what WithSummary sets directly), Turkish supplementary ("v1-tr", filled in by
 // TurkishSummaryTransformer from the WithBilingualSummary metadata on each endpoint).
-builder.Services.AddOpenApi();
-builder.Services.AddOpenApi("v1-tr", options => options.AddOperationTransformer<TurkishSummaryTransformer>());
+// x-tagGroups nests related tags under one sidebar heading in Scalar — "GSM Operatörleri"/
+// "Mobile Operators" and "Ülke Kodları"/"Countries" both live under a "Telefon"/"Phone"
+// parent, since they are the two things a caller reaches for when they say "phone code".
+// Every other tag gets its own singleton group so it still renders as a plain top-level
+// entry (see TagGroupsDocumentTransformer's remarks on why nothing is left ungrouped).
+TagGroup[] englishTagGroups =
+[
+    new("Address", "Address"),
+    new("Phone", "Mobile Operators", "Countries"),
+    new("Currencies", "Currencies"),
+    new("Languages", "Languages"),
+    new("Public Holidays", "Public Holidays"),
+];
+TagGroup[] turkishTagGroups =
+[
+    new("Adres", "Adres"),
+    new("Telefon", "GSM Operatörleri", "Ülke Kodları"),
+    new("Para Birimleri", "Para Birimleri"),
+    new("Diller", "Diller"),
+    new("Resmi Tatiller", "Resmi Tatiller"),
+];
+
+builder.Services.AddOpenApi(options =>
+    options.AddDocumentTransformer(new TagGroupsDocumentTransformer(englishTagGroups)));
+builder.Services.AddOpenApi("v1-tr", options =>
+{
+    options.AddOperationTransformer<TurkishSummaryTransformer>();
+    options.AddOperationTransformer<TurkishTagTransformer>();
+    options.AddDocumentTransformer(new TagGroupsDocumentTransformer(turkishTagGroups, TurkishTagNames.Map));
+});
 
 builder.Services.AddResponseCompression(options =>
 {

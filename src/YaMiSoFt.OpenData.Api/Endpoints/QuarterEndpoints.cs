@@ -35,7 +35,7 @@ public static class QuarterEndpoints
     {
         ArgumentNullException.ThrowIfNull(group);
 
-        var quarters = group.MapGroup("/quarters").WithTags("Turkey");
+        var quarters = group.MapGroup("/quarters").WithTags("Address");
 
         quarters.MapGet("/", GetQuarters)
             .WithName("ListQuarters")
@@ -64,21 +64,21 @@ public static class QuarterEndpoints
 
         group.MapGet("/districts/{districtId:int}/quarters", GetDistrictQuarters)
             .WithName("ListDistrictQuarters")
-            .WithTags("Turkey")
+            .WithTags("Address")
             .WithBilingualSummary(
                 "Lists the quarters of one district.",
                 "Bir ilçenin semtlerini listeler.");
 
         group.MapGet("/postal-codes/{postalCode}", GetByPostalCode)
             .WithName("GetPostalCode")
-            .WithTags("Turkey")
+            .WithTags("Address")
             .WithBilingualSummary(
                 "Gets the quarter a five-digit postal code is assigned to.",
                 "Beş haneli bir posta kodunun atandığı semti getirir.");
 
         group.MapGet("/postal-codes/{postalCode}/neighborhoods", GetPostalCodeNeighborhoods)
             .WithName("ListPostalCodeNeighborhoods")
-            .WithTags("Turkey")
+            .WithTags("Address")
             .WithBilingualSummary(
                 "Lists the settlements covered by one postal code.",
                 "Bir posta kodunun kapsadığı yerleşim yerlerini listeler.");

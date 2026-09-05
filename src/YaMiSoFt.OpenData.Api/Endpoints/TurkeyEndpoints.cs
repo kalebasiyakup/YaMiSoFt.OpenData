@@ -29,7 +29,7 @@ public static class TurkeyEndpoints
     {
         ArgumentNullException.ThrowIfNull(group);
 
-        var provinces = group.MapGroup("/provinces").WithTags("Turkey");
+        var provinces = group.MapGroup("/provinces").WithTags("Address");
 
         provinces.MapGet("/", GetProvinces)
             .WithName("ListProvinces")
@@ -56,7 +56,7 @@ public static class TurkeyEndpoints
                 "Lists the districts of one province.",
                 "Bir ilin ilçelerini listeler.");
 
-        var districts = group.MapGroup("/districts").WithTags("Turkey");
+        var districts = group.MapGroup("/districts").WithTags("Address");
 
         districts.MapGet("/", GetDistricts)
             .WithName("ListDistricts")

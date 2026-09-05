@@ -29,7 +29,7 @@ public static class NeighborhoodEndpoints
     {
         ArgumentNullException.ThrowIfNull(group);
 
-        var neighborhoods = group.MapGroup("/neighborhoods").WithTags("Turkey");
+        var neighborhoods = group.MapGroup("/neighborhoods").WithTags("Address");
 
         neighborhoods.MapGet("/", GetNeighborhoods)
             .WithName("ListNeighborhoods")
@@ -50,7 +50,7 @@ public static class NeighborhoodEndpoints
         // repository.
         group.MapGet("/districts/{districtId:int}/neighborhoods", GetDistrictNeighborhoods)
             .WithName("ListDistrictNeighborhoods")
-            .WithTags("Turkey")
+            .WithTags("Address")
             .WithBilingualSummary(
                 "Lists the neighbourhoods and villages of one district.",
                 "Bir ilçenin mahallelerini ve köylerini listeler.");

@@ -46,3 +46,50 @@ public sealed class TurkishSummaryTransformer : IOpenApiOperationTransformer
         return Task.CompletedTask;
     }
 }
+
+/// <summary>
+/// Renames every operation's tag to Turkish when building the "v1-tr" OpenAPI document. The
+/// English tag set by <c>WithTags</c> is the primary/base value (BRD §12); this is the same
+/// English-primary-Turkish-supplement split <see cref="TurkishSummaryTransformer"/> applies to
+/// summaries, just for tags instead.
+/// </summary>
+public sealed class TurkishTagTransformer : IOpenApiOperationTransformer
+{
+    public Task TransformAsync(
+        OpenApiOperation operation, OpenApiOperationTransformerContext context, CancellationToken cancellationToken)
+    {
+        if (operation.Tags is null)
+        {
+            return Task.CompletedTask;
+        }
+
+        operation.Tags = new HashSet<OpenApiTagReference>(operation.Tags.Select(TranslateTag));
+
+        return Task.CompletedTask;
+    }
+
+    private static OpenApiTagReference TranslateTag(OpenApiTagReference tag) =>
+        tag.Name is { } name && TurkishTagNames.Map.TryGetValue(name, out var turkish)
+            ? new OpenApiTagReference(turkish)
+            : tag;
+}
+
+/// <summary>English tag name (as set by <c>WithTags</c>) to its Turkish counterpart.</summary>
+/// <remarks>
+/// Shared by <see cref="TurkishTagTransformer"/> (renames each operation's tag references) and
+/// <see cref="TagGroupsDocumentTransformer"/> (also renames the document's own <c>tags</c>
+/// declarations for the "v1-tr" document) so the two never drift apart into naming a tag two
+/// different things in the same document.
+/// </remarks>
+internal static class TurkishTagNames
+{
+    public static readonly IReadOnlyDictionary<string, string> Map = new Dictionary<string, string>(StringComparer.Ordinal)
+    {
+        ["Address"] = "Adres",
+        ["Mobile Operators"] = "GSM Operatörleri",
+        ["Countries"] = "Ülke Kodları",
+        ["Currencies"] = "Para Birimleri",
+        ["Languages"] = "Diller",
+        ["Public Holidays"] = "Resmi Tatiller",
+    };
+}

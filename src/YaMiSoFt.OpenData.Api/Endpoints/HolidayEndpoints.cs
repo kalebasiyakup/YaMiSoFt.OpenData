@@ -25,7 +25,7 @@ public static class HolidayEndpoints
     {
         ArgumentNullException.ThrowIfNull(group);
 
-        var holidays = group.MapGroup("/holidays").WithTags("Turkey");
+        var holidays = group.MapGroup("/holidays").WithTags("Public Holidays");
 
         holidays.MapGet("/all", GetAll)
             .WithName("DownloadHolidays")

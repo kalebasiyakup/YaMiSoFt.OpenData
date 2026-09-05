@@ -39,7 +39,7 @@ public static class ReferenceEndpoints
     {
         ArgumentNullException.ThrowIfNull(group);
 
-        var currencies = group.MapGroup("/currencies").WithTags("Reference");
+        var currencies = group.MapGroup("/currencies").WithTags("Currencies");
 
         currencies.MapGet("/", (
                 HttpContext context,
@@ -78,7 +78,7 @@ public static class ReferenceEndpoints
                 "Gets one currency by ISO 4217 code.",
                 "ISO 4217 koduna göre bir para birimini getirir.");
 
-        var languages = group.MapGroup("/languages").WithTags("Reference");
+        var languages = group.MapGroup("/languages").WithTags("Languages");
 
         languages.MapGet("/", (
                 HttpContext context,
@@ -117,7 +117,7 @@ public static class ReferenceEndpoints
                 "Gets one language by ISO 639-1 or 639-2 code.",
                 "ISO 639-1 veya 639-2 koduna göre bir dili getirir.");
 
-        var countries = group.MapGroup("/countries").WithTags("Reference");
+        var countries = group.MapGroup("/countries").WithTags("Countries");
 
         countries.MapGet("/", (
                 HttpContext context,
