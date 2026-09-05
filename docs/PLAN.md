@@ -295,6 +295,7 @@ mimariye dokunan sonuçları:
 | A6 | Gözlemlenebilirlik: Prometheus → Vercel OTel | Sıfıra inen serverless'ta kazınacak bir şey yok; her örnek kısmi veri tutar (NFR-16/17) | ⬜ |
 | A7 | NFR-10 hedefini "sıcak örnek P95" olarak düzelt | Vercel 5 dk trafiksizlikte sıfıra iniyor; soğuk başlangıç 100 ms'yi aşar | ⬜ |
 | A8 | Runtime imajı `-chiseled` → `-chiseled-extra` | İlk canlı istek `CultureNotFoundException` ile 500 verdi (bkz. aşağıda) | ✅ (2 Eylül 2026) |
+| A9 | .NET 9 → .NET 10 (SDK, TFM, Docker imajları, lockstep paketler) | Yerel SDK ve her iki Dockerfile aynı sürümde tutulmalı | ✅ (2 Eylül 2026) |
 
 **Ölçüm:** süreç başlangıcı ~300 ms (ilk çalıştırma 5,8 sn ama o disk cache ısınması). Gerçek
 soğuk boot buna container açılışını ekler, arşivlenmiş fonksiyonda Vercel +1 sn diyor.

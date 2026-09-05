@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 
 # ---- build ----------------------------------------------------------------
-FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 WORKDIR /src
 
 # Restore against the project files alone so that editing source or data does not
@@ -26,7 +26,7 @@ RUN dotnet publish src/YaMiSoFt.OpenData.Api/YaMiSoFt.OpenData.Api.csproj \
 # DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=true baked in, and ReferenceOrdering needs real
 # tr-TR/en-US collation for every list endpoint's default sort (PLAN.md 3.7) — the plain tag
 # throws CultureNotFoundException on first request.
-FROM mcr.microsoft.com/dotnet/aspnet:9.0-noble-chiseled-extra AS final
+FROM mcr.microsoft.com/dotnet/aspnet:10.0-noble-chiseled-extra AS final
 WORKDIR /app
 COPY --from=build /app .
 
