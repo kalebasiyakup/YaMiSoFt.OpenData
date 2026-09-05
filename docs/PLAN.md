@@ -453,12 +453,13 @@ BRD Faz 1 teslimatı "dokümantasyon, açık kaynak yayın" diyor. Kod tarafı b
 | # | İş | Not | Durum |
 |---|---|---|---|
 | C2 | Resmi tatiller | 2015-2050, dini tatiller hesaplamalı + düzeltme katmanı | ✅ |
-| C3 | Telefon kodları | TR alan kodları + 50 GSM öneki | ✅ |
+| C3 | Telefon kodları | TR alan kodları + 50 GSM öneki | ⚠️→✅ (bkz. C9, alan kodu hiç yayınlanmamıştı) |
 | C4 | Mahalle/köy | 73.552 yerleşim, tembel yükleniyor (ölçüm aşağıda) | ✅ |
 | C5 | Posta kodları | Semt seviyesinde, 2.433 kod; başlangıçta yükleniyor | ✅ |
 | C7 | TR adres verisini tek kaynağa taşı | il/ilçe/**semt**/mahalle tek derlemeden; ölçüm ve gerekçe aşağıda | ✅ |
 | C6 | API anahtar portalı | **Yapılmadı** — diğerlerinden farklı türde iş, aşağıya bak | ⬜ |
 | C8 | Ülke telefon kodları | ISO 3166-1 (199 ülke) + ITU-T E.164 çağrı kodu; lisans ve NANP ayrıntısı aşağıda | ✅ (5 Eylül 2026) |
+| C9 | GSM operatörleri + il alan kodları | `/mobile-operators`, `provinces.areaCodes`; C3'teki "alan kodu" boşluğunu kapatıyor, ayrıntı aşağıda | ✅ (5 Eylül 2026) |
 
 #### C1-C5 ve C7 nasıl yapıldı
 
@@ -575,6 +576,34 @@ satırlar yine de benzersiz kalıyor.
 **Kosova (XK) dahil, not düşülerek.** ISO 3166-1'in resmî bir parçası değil ama gerçek,
 aranabilir bir ülke; dışarıda bırakmak kendi başına bir doğruluk sorunu olurdu. DATA-LICENSES.md
 bunu açıkça not ediyor, örtük bırakmak yerine.
+
+#### C9 nasıl yapıldı
+
+**Bulgu: "alan kodu" hiç yayınlanmamıştı.** BRD §3.1 baştan beri il verisine "telefon alan
+kodu" alanını şart koşuyordu ve Faz 0/C3 tabloları bunu ✅ olarak işaretlemişti — ama
+`provinces.json`'da böyle bir alan hiç yoktu. 2 Eylül 2026'daki C7 taşımasında nüfus/alan/
+koordinatın **bilinçli olarak** düşürüldüğü belgelenmişti (bkz. C4/C5/C7 açıklaması), alan
+kodu ise **hiç belgelenmeden** aynı taşımada kayboldu — kaynak export'ta böyle bir alan hiç
+yoktu, taşıma öncesi il verisinde neden vardıysa artık yok. Bu görev bu boşluğu kapatıyor.
+
+**Alan kodu, il verisinin bir alanı olarak eklendi, ayrı bir kaynak değil.** BRD zaten bunu
+`Province` kaydının bir parçası olarak tanımlıyordu; İstanbul'un iki koduna (212 Avrupa,
+216 Anadolu) yer açmak için tekil bir alan yerine `AreaCodes: string[]` seçildi. Veri
+`data/provinces.json`'a doğrudan elle eklendi — DATA-LICENSES.md'nin zaten belirttiği gibi bu
+dört dosya "üretilen çıktı değil, doğruluk kaynağı" — ama `tools/DataTool -- turkey` yeniden
+çalıştırıldığında veri kaybolmasın diye aynı harita `TurkeyCommand.MapProvince`'e de statik
+olarak gömüldü (kaynak export'ta hiç telefon alanı yok, tıpkı plaka kodu gibi BTK'nın sabit
+bir ataması). 81 il + İstanbul'un 2. kodu = 82 kayıt; testler tekilliği ve İstanbul'un tek
+istisna olduğunu doğruluyor.
+
+**GSM operatörleri kasıtlı olarak önek eşlemesi taşımıyor.** `MobilePrefix.cs` zaten bilinçli
+bir karar taşıyordu: numara taşınabilirliği yüzünden "ilk tahsis edildiği operatör" bilgisi
+bugün o numarayı kimin taşıdığını yanlış gösterebilir. Yeni `MobileOperator` kaydı bu kararı
+bozmuyor, aynı mantığı diğer yönden de uyguluyor — üç operatörün (Turkcell, Türk Telekom,
+Vodafone) adını, önekle hiç ilişkilendirmeden yayınlıyor. Kuruluş yılı/marka geçmişi gibi
+tartışmalı olabilecek alanlar (örn. Vodafone'un 1994'te Telsim olarak başlayıp 2006'da
+yeniden markalanması) da bilerek dışarıda bırakıldı — yanlış çıkma riski taşıyan ayrıntılar,
+üç operatörün isimlerini yayınlamanın getirdiği faydayı aşıyor.
 
 ### D. Faz 3
 

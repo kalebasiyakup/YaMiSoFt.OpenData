@@ -101,6 +101,8 @@ builder.Services.AddSingleton(sp => new CountryStore(
     DataSetLoader.LoadCountries(sp.GetRequiredService<DataDirectory>().Path)));
 builder.Services.AddSingleton(sp => new HolidayStore(
     DataSetLoader.LoadHolidays(sp.GetRequiredService<DataDirectory>().Path)));
+builder.Services.AddSingleton(sp => new MobileOperatorStore(
+    DataSetLoader.LoadMobileOperators(sp.GetRequiredService<DataDirectory>().Path)));
 
 // Settlements are the one dataset that does not load at startup. See NeighborhoodStore: the
 // measured cost is ~520 ms of parsing, which on a scale-to-zero platform would land on every
@@ -240,6 +242,7 @@ v1.MapTurkeyEndpoints();
 v1.MapQuarterEndpoints();
 v1.MapReferenceEndpoints();
 v1.MapHolidayEndpoints();
+v1.MapPhoneEndpoints();
 v1.MapNeighborhoodEndpoints();
 
 app.MapHealthChecks("/health/live", new()

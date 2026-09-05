@@ -30,6 +30,13 @@ public sealed record Province
     /// <summary>URL-safe form of the name, e.g. "kahramanmaras".</summary>
     public required string Slug { get; init; }
 
+    /// <summary>
+    /// Landline area code(s) (alan kodu), three digits, no trunk "0". Every province has
+    /// exactly one except İstanbul, which has two — "212" (Avrupa Yakası) and "216" (Anadolu
+    /// Yakası) — the only province the 2000 numbering plan split this way.
+    /// </summary>
+    public required IReadOnlyList<string> AreaCodes { get; init; }
+
     /// <summary>Number of districts in the province.</summary>
     public int DistrictCount { get; init; }
 }

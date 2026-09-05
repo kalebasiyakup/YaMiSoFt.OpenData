@@ -230,6 +230,45 @@ public sealed class TurkeyDataSetTests
     }
 
     [Fact]
+    public void Every_province_has_at_least_one_well_formed_area_code()
+    {
+        var malformed = Provinces.Items
+            .SelectMany(province => province.AreaCodes.Select(code => (province.Name, code)))
+            .Where(static entry => entry.code.Length != 3 || !entry.code.All(char.IsAsciiDigit))
+            .Select(static entry => $"{entry.Name}:{entry.code}")
+            .ToArray();
+
+        Assert.True(malformed.Length == 0, $"Malformed area codes: {string.Join(", ", malformed)}");
+
+        var missing = Provinces.Items
+            .Where(static province => province.AreaCodes.Count == 0)
+            .Select(static province => province.Name)
+            .ToArray();
+
+        Assert.True(missing.Length == 0, $"Provinces with no area code: {string.Join(", ", missing)}");
+    }
+
+    [Fact]
+    public void Only_istanbul_has_more_than_one_area_code()
+    {
+        var multi = Provinces.Items
+            .Where(static province => province.AreaCodes.Count > 1)
+            .Select(static province => province.Name)
+            .ToArray();
+
+        Assert.Equal(["İstanbul"], multi);
+        Assert.Equal(["212", "216"], Provinces.Items.Single(static p => p.Id == 34).AreaCodes);
+    }
+
+    [Fact]
+    public void Area_codes_are_unique_across_provinces()
+    {
+        // 82 codes total: 81 provinces, İstanbul carrying two.
+        AssertUnique(Provinces.Items.SelectMany(static province => province.AreaCodes), "area code");
+        Assert.Equal(82, Provinces.Items.Sum(static province => province.AreaCodes.Count));
+    }
+
+    [Fact]
     public void Store_exposes_the_hierarchy()
     {
         var store = new TurkeyStore(Provinces, Districts);

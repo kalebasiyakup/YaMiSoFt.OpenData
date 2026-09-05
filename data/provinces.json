@@ -1,6 +1,6 @@
 {
   "name": "provinces",
-  "version": "2026-09-02",
+  "version": "2026-09-05",
   "source": "Compiled for this project (data/source)",
   "license": "MIT",
   "items": [
@@ -10,6 +10,7 @@
       "name": "Adana",
       "nameUpper": "ADANA",
       "slug": "adana",
+      "areaCodes": ["322"],
       "districtCount": 15
     },
     {
@@ -18,6 +19,7 @@
       "name": "Ad\u0131yaman",
       "nameUpper": "ADIYAMAN",
       "slug": "adiyaman",
+      "areaCodes": ["416"],
       "districtCount": 9
     },
     {
@@ -26,6 +28,7 @@
       "name": "Afyonkarahisar",
       "nameUpper": "AFYONKARAH\u0130SAR",
       "slug": "afyonkarahisar",
+      "areaCodes": ["272"],
       "districtCount": 18
     },
     {
@@ -34,6 +37,7 @@
       "name": "A\u011Fr\u0131",
       "nameUpper": "A\u011ERI",
       "slug": "agri",
+      "areaCodes": ["472"],
       "districtCount": 8
     },
     {
@@ -42,6 +46,7 @@
       "name": "Amasya",
       "nameUpper": "AMASYA",
       "slug": "amasya",
+      "areaCodes": ["358"],
       "districtCount": 7
     },
     {
@@ -50,6 +55,7 @@
       "name": "Ankara",
       "nameUpper": "ANKARA",
       "slug": "ankara",
+      "areaCodes": ["312"],
       "districtCount": 25
     },
     {
@@ -58,6 +64,7 @@
       "name": "Antalya",
       "nameUpper": "ANTALYA",
       "slug": "antalya",
+      "areaCodes": ["242"],
       "districtCount": 19
     },
     {
@@ -66,6 +73,7 @@
       "name": "Artvin",
       "nameUpper": "ARTV\u0130N",
       "slug": "artvin",
+      "areaCodes": ["466"],
       "districtCount": 9
     },
     {
@@ -74,6 +82,7 @@
       "name": "Ayd\u0131n",
       "nameUpper": "AYDIN",
       "slug": "aydin",
+      "areaCodes": ["256"],
       "districtCount": 17
     },
     {
@@ -82,6 +91,7 @@
       "name": "Bal\u0131kesir",
       "nameUpper": "BALIKES\u0130R",
       "slug": "balikesir",
+      "areaCodes": ["266"],
       "districtCount": 20
     },
     {
@@ -90,6 +100,7 @@
       "name": "Bilecik",
       "nameUpper": "B\u0130LEC\u0130K",
       "slug": "bilecik",
+      "areaCodes": ["228"],
       "districtCount": 8
     },
     {
@@ -98,6 +109,7 @@
       "name": "Bing\u00F6l",
       "nameUpper": "B\u0130NG\u00D6L",
       "slug": "bingol",
+      "areaCodes": ["426"],
       "districtCount": 8
     },
     {
@@ -106,6 +118,7 @@
       "name": "Bitlis",
       "nameUpper": "B\u0130TL\u0130S",
       "slug": "bitlis",
+      "areaCodes": ["434"],
       "districtCount": 7
     },
     {
@@ -114,6 +127,7 @@
       "name": "Bolu",
       "nameUpper": "BOLU",
       "slug": "bolu",
+      "areaCodes": ["374"],
       "districtCount": 9
     },
     {
@@ -122,6 +136,7 @@
       "name": "Burdur",
       "nameUpper": "BURDUR",
       "slug": "burdur",
+      "areaCodes": ["248"],
       "districtCount": 11
     },
     {
@@ -130,6 +145,7 @@
       "name": "Bursa",
       "nameUpper": "BURSA",
       "slug": "bursa",
+      "areaCodes": ["224"],
       "districtCount": 17
     },
     {
@@ -138,6 +154,7 @@
       "name": "\u00C7anakkale",
       "nameUpper": "\u00C7ANAKKALE",
       "slug": "canakkale",
+      "areaCodes": ["286"],
       "districtCount": 12
     },
     {
@@ -146,6 +163,7 @@
       "name": "\u00C7ank\u0131r\u0131",
       "nameUpper": "\u00C7ANKIRI",
       "slug": "cankiri",
+      "areaCodes": ["376"],
       "districtCount": 12
     },
     {
@@ -154,6 +172,7 @@
       "name": "\u00C7orum",
       "nameUpper": "\u00C7ORUM",
       "slug": "corum",
+      "areaCodes": ["364"],
       "districtCount": 14
     },
     {
@@ -162,6 +181,7 @@
       "name": "Denizli",
       "nameUpper": "DEN\u0130ZL\u0130",
       "slug": "denizli",
+      "areaCodes": ["258"],
       "districtCount": 19
     },
     {
@@ -170,6 +190,7 @@
       "name": "Diyarbak\u0131r",
       "nameUpper": "D\u0130YARBAKIR",
       "slug": "diyarbakir",
+      "areaCodes": ["412"],
       "districtCount": 17
     },
     {
@@ -178,6 +199,7 @@
       "name": "Edirne",
       "nameUpper": "ED\u0130RNE",
       "slug": "edirne",
+      "areaCodes": ["284"],
       "districtCount": 9
     },
     {
@@ -186,6 +208,7 @@
       "name": "Elaz\u0131\u011F",
       "nameUpper": "ELAZI\u011E",
       "slug": "elazig",
+      "areaCodes": ["424"],
       "districtCount": 11
     },
     {
@@ -194,6 +217,7 @@
       "name": "Erzincan",
       "nameUpper": "ERZ\u0130NCAN",
       "slug": "erzincan",
+      "areaCodes": ["446"],
       "districtCount": 9
     },
     {
@@ -202,6 +226,7 @@
       "name": "Erzurum",
       "nameUpper": "ERZURUM",
       "slug": "erzurum",
+      "areaCodes": ["442"],
       "districtCount": 20
     },
     {
@@ -210,6 +235,7 @@
       "name": "Eski\u015Fehir",
       "nameUpper": "ESK\u0130\u015EEH\u0130R",
       "slug": "eskisehir",
+      "areaCodes": ["222"],
       "districtCount": 14
     },
     {
@@ -218,6 +244,7 @@
       "name": "Gaziantep",
       "nameUpper": "GAZ\u0130ANTEP",
       "slug": "gaziantep",
+      "areaCodes": ["342"],
       "districtCount": 9
     },
     {
@@ -226,6 +253,7 @@
       "name": "Giresun",
       "nameUpper": "G\u0130RESUN",
       "slug": "giresun",
+      "areaCodes": ["454"],
       "districtCount": 16
     },
     {
@@ -234,6 +262,7 @@
       "name": "G\u00FCm\u00FC\u015Fhane",
       "nameUpper": "G\u00DCM\u00DC\u015EHANE",
       "slug": "gumushane",
+      "areaCodes": ["456"],
       "districtCount": 6
     },
     {
@@ -242,6 +271,7 @@
       "name": "Hakkari",
       "nameUpper": "HAKKAR\u0130",
       "slug": "hakkari",
+      "areaCodes": ["438"],
       "districtCount": 4
     },
     {
@@ -250,6 +280,7 @@
       "name": "Hatay",
       "nameUpper": "HATAY",
       "slug": "hatay",
+      "areaCodes": ["326"],
       "districtCount": 15
     },
     {
@@ -258,6 +289,7 @@
       "name": "Isparta",
       "nameUpper": "ISPARTA",
       "slug": "isparta",
+      "areaCodes": ["246"],
       "districtCount": 13
     },
     {
@@ -266,6 +298,7 @@
       "name": "Mersin",
       "nameUpper": "MERS\u0130N",
       "slug": "mersin",
+      "areaCodes": ["324"],
       "districtCount": 13
     },
     {
@@ -274,6 +307,7 @@
       "name": "\u0130stanbul",
       "nameUpper": "\u0130STANBUL",
       "slug": "istanbul",
+      "areaCodes": ["212", "216"],
       "districtCount": 39
     },
     {
@@ -282,6 +316,7 @@
       "name": "\u0130zmir",
       "nameUpper": "\u0130ZM\u0130R",
       "slug": "izmir",
+      "areaCodes": ["232"],
       "districtCount": 30
     },
     {
@@ -290,6 +325,7 @@
       "name": "Kars",
       "nameUpper": "KARS",
       "slug": "kars",
+      "areaCodes": ["474"],
       "districtCount": 8
     },
     {
@@ -298,6 +334,7 @@
       "name": "Kastamonu",
       "nameUpper": "KASTAMONU",
       "slug": "kastamonu",
+      "areaCodes": ["366"],
       "districtCount": 20
     },
     {
@@ -306,6 +343,7 @@
       "name": "Kayseri",
       "nameUpper": "KAYSER\u0130",
       "slug": "kayseri",
+      "areaCodes": ["352"],
       "districtCount": 16
     },
     {
@@ -314,6 +352,7 @@
       "name": "K\u0131rklareli",
       "nameUpper": "KIRKLAREL\u0130",
       "slug": "kirklareli",
+      "areaCodes": ["288"],
       "districtCount": 8
     },
     {
@@ -322,6 +361,7 @@
       "name": "K\u0131r\u015Fehir",
       "nameUpper": "KIR\u015EEH\u0130R",
       "slug": "kirsehir",
+      "areaCodes": ["386"],
       "districtCount": 7
     },
     {
@@ -330,6 +370,7 @@
       "name": "Kocaeli",
       "nameUpper": "KOCAEL\u0130",
       "slug": "kocaeli",
+      "areaCodes": ["262"],
       "districtCount": 12
     },
     {
@@ -338,6 +379,7 @@
       "name": "Konya",
       "nameUpper": "KONYA",
       "slug": "konya",
+      "areaCodes": ["332"],
       "districtCount": 31
     },
     {
@@ -346,6 +388,7 @@
       "name": "K\u00FCtahya",
       "nameUpper": "K\u00DCTAHYA",
       "slug": "kutahya",
+      "areaCodes": ["274"],
       "districtCount": 13
     },
     {
@@ -354,6 +397,7 @@
       "name": "Malatya",
       "nameUpper": "MALATYA",
       "slug": "malatya",
+      "areaCodes": ["422"],
       "districtCount": 13
     },
     {
@@ -362,6 +406,7 @@
       "name": "Manisa",
       "nameUpper": "MAN\u0130SA",
       "slug": "manisa",
+      "areaCodes": ["236"],
       "districtCount": 17
     },
     {
@@ -370,6 +415,7 @@
       "name": "Kahramanmara\u015F",
       "nameUpper": "KAHRAMANMARA\u015E",
       "slug": "kahramanmaras",
+      "areaCodes": ["344"],
       "districtCount": 11
     },
     {
@@ -378,6 +424,7 @@
       "name": "Mardin",
       "nameUpper": "MARD\u0130N",
       "slug": "mardin",
+      "areaCodes": ["482"],
       "districtCount": 10
     },
     {
@@ -386,6 +433,7 @@
       "name": "Mu\u011Fla",
       "nameUpper": "MU\u011ELA",
       "slug": "mugla",
+      "areaCodes": ["252"],
       "districtCount": 13
     },
     {
@@ -394,6 +442,7 @@
       "name": "Mu\u015F",
       "nameUpper": "MU\u015E",
       "slug": "mus",
+      "areaCodes": ["436"],
       "districtCount": 6
     },
     {
@@ -402,6 +451,7 @@
       "name": "Nev\u015Fehir",
       "nameUpper": "NEV\u015EEH\u0130R",
       "slug": "nevsehir",
+      "areaCodes": ["384"],
       "districtCount": 8
     },
     {
@@ -410,6 +460,7 @@
       "name": "Ni\u011Fde",
       "nameUpper": "N\u0130\u011EDE",
       "slug": "nigde",
+      "areaCodes": ["388"],
       "districtCount": 6
     },
     {
@@ -418,6 +469,7 @@
       "name": "Ordu",
       "nameUpper": "ORDU",
       "slug": "ordu",
+      "areaCodes": ["452"],
       "districtCount": 19
     },
     {
@@ -426,6 +478,7 @@
       "name": "Rize",
       "nameUpper": "R\u0130ZE",
       "slug": "rize",
+      "areaCodes": ["464"],
       "districtCount": 12
     },
     {
@@ -434,6 +487,7 @@
       "name": "Sakarya",
       "nameUpper": "SAKARYA",
       "slug": "sakarya",
+      "areaCodes": ["264"],
       "districtCount": 16
     },
     {
@@ -442,6 +496,7 @@
       "name": "Samsun",
       "nameUpper": "SAMSUN",
       "slug": "samsun",
+      "areaCodes": ["362"],
       "districtCount": 17
     },
     {
@@ -450,6 +505,7 @@
       "name": "Siirt",
       "nameUpper": "S\u0130\u0130RT",
       "slug": "siirt",
+      "areaCodes": ["484"],
       "districtCount": 7
     },
     {
@@ -458,6 +514,7 @@
       "name": "Sinop",
       "nameUpper": "S\u0130NOP",
       "slug": "sinop",
+      "areaCodes": ["368"],
       "districtCount": 9
     },
     {
@@ -466,6 +523,7 @@
       "name": "Sivas",
       "nameUpper": "S\u0130VAS",
       "slug": "sivas",
+      "areaCodes": ["346"],
       "districtCount": 17
     },
     {
@@ -474,6 +532,7 @@
       "name": "Tekirda\u011F",
       "nameUpper": "TEK\u0130RDA\u011E",
       "slug": "tekirdag",
+      "areaCodes": ["282"],
       "districtCount": 11
     },
     {
@@ -482,6 +541,7 @@
       "name": "Tokat",
       "nameUpper": "TOKAT",
       "slug": "tokat",
+      "areaCodes": ["356"],
       "districtCount": 12
     },
     {
@@ -490,6 +550,7 @@
       "name": "Trabzon",
       "nameUpper": "TRABZON",
       "slug": "trabzon",
+      "areaCodes": ["462"],
       "districtCount": 18
     },
     {
@@ -498,6 +559,7 @@
       "name": "Tunceli",
       "nameUpper": "TUNCEL\u0130",
       "slug": "tunceli",
+      "areaCodes": ["428"],
       "districtCount": 8
     },
     {
@@ -506,6 +568,7 @@
       "name": "\u015Eanl\u0131urfa",
       "nameUpper": "\u015EANLIURFA",
       "slug": "sanliurfa",
+      "areaCodes": ["414"],
       "districtCount": 13
     },
     {
@@ -514,6 +577,7 @@
       "name": "U\u015Fak",
       "nameUpper": "U\u015EAK",
       "slug": "usak",
+      "areaCodes": ["276"],
       "districtCount": 6
     },
     {
@@ -522,6 +586,7 @@
       "name": "Van",
       "nameUpper": "VAN",
       "slug": "van",
+      "areaCodes": ["432"],
       "districtCount": 13
     },
     {
@@ -530,6 +595,7 @@
       "name": "Yozgat",
       "nameUpper": "YOZGAT",
       "slug": "yozgat",
+      "areaCodes": ["354"],
       "districtCount": 14
     },
     {
@@ -538,6 +604,7 @@
       "name": "Zonguldak",
       "nameUpper": "ZONGULDAK",
       "slug": "zonguldak",
+      "areaCodes": ["372"],
       "districtCount": 8
     },
     {
@@ -546,6 +613,7 @@
       "name": "Aksaray",
       "nameUpper": "AKSARAY",
       "slug": "aksaray",
+      "areaCodes": ["382"],
       "districtCount": 8
     },
     {
@@ -554,6 +622,7 @@
       "name": "Bayburt",
       "nameUpper": "BAYBURT",
       "slug": "bayburt",
+      "areaCodes": ["458"],
       "districtCount": 3
     },
     {
@@ -562,6 +631,7 @@
       "name": "Karaman",
       "nameUpper": "KARAMAN",
       "slug": "karaman",
+      "areaCodes": ["338"],
       "districtCount": 6
     },
     {
@@ -570,6 +640,7 @@
       "name": "K\u0131r\u0131kkale",
       "nameUpper": "KIRIKKALE",
       "slug": "kirikkale",
+      "areaCodes": ["318"],
       "districtCount": 9
     },
     {
@@ -578,6 +649,7 @@
       "name": "Batman",
       "nameUpper": "BATMAN",
       "slug": "batman",
+      "areaCodes": ["488"],
       "districtCount": 6
     },
     {
@@ -586,6 +658,7 @@
       "name": "\u015E\u0131rnak",
       "nameUpper": "\u015EIRNAK",
       "slug": "sirnak",
+      "areaCodes": ["486"],
       "districtCount": 7
     },
     {
@@ -594,6 +667,7 @@
       "name": "Bart\u0131n",
       "nameUpper": "BARTIN",
       "slug": "bartin",
+      "areaCodes": ["378"],
       "districtCount": 4
     },
     {
@@ -602,6 +676,7 @@
       "name": "Ardahan",
       "nameUpper": "ARDAHAN",
       "slug": "ardahan",
+      "areaCodes": ["478"],
       "districtCount": 6
     },
     {
@@ -610,6 +685,7 @@
       "name": "I\u011Fd\u0131r",
       "nameUpper": "I\u011EDIR",
       "slug": "igdir",
+      "areaCodes": ["476"],
       "districtCount": 4
     },
     {
@@ -618,6 +694,7 @@
       "name": "Yalova",
       "nameUpper": "YALOVA",
       "slug": "yalova",
+      "areaCodes": ["226"],
       "districtCount": 6
     },
     {
@@ -626,6 +703,7 @@
       "name": "Karab\u00FCk",
       "nameUpper": "KARAB\u00DCK",
       "slug": "karabuk",
+      "areaCodes": ["370"],
       "districtCount": 6
     },
     {
@@ -634,6 +712,7 @@
       "name": "Kilis",
       "nameUpper": "K\u0130L\u0130S",
       "slug": "kilis",
+      "areaCodes": ["348"],
       "districtCount": 4
     },
     {
@@ -642,6 +721,7 @@
       "name": "Osmaniye",
       "nameUpper": "OSMAN\u0130YE",
       "slug": "osmaniye",
+      "areaCodes": ["328"],
       "districtCount": 7
     },
     {
@@ -650,6 +730,7 @@
       "name": "D\u00FCzce",
       "nameUpper": "D\u00DCZCE",
       "slug": "duzce",
+      "areaCodes": ["380"],
       "districtCount": 8
     }
   ]

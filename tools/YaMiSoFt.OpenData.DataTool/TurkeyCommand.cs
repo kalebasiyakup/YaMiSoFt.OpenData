@@ -114,18 +114,53 @@ public static class TurkeyCommand
         return 0;
     }
 
+    /// <summary>
+    /// Landline area codes (alan kodu) by plate code. Not part of the source export — it has
+    /// no telephony fields at all — so this is the BTK numbering plan compiled directly into
+    /// the tool, the same way <see cref="Province.PlateCode"/> itself is a stable government
+    /// assignment rather than something derived. İstanbul ("34") is the only entry with two.
+    /// </summary>
+    private static readonly IReadOnlyDictionary<string, string[]> AreaCodesByPlate =
+        new Dictionary<string, string[]>(StringComparer.Ordinal)
+        {
+            ["01"] = ["322"], ["02"] = ["416"], ["03"] = ["272"], ["04"] = ["472"], ["05"] = ["358"],
+            ["06"] = ["312"], ["07"] = ["242"], ["08"] = ["466"], ["09"] = ["256"], ["10"] = ["266"],
+            ["11"] = ["228"], ["12"] = ["426"], ["13"] = ["434"], ["14"] = ["374"], ["15"] = ["248"],
+            ["16"] = ["224"], ["17"] = ["286"], ["18"] = ["376"], ["19"] = ["364"], ["20"] = ["258"],
+            ["21"] = ["412"], ["22"] = ["284"], ["23"] = ["424"], ["24"] = ["446"], ["25"] = ["442"],
+            ["26"] = ["222"], ["27"] = ["342"], ["28"] = ["454"], ["29"] = ["456"], ["30"] = ["438"],
+            ["31"] = ["326"], ["32"] = ["246"], ["33"] = ["324"], ["34"] = ["212", "216"], ["35"] = ["232"],
+            ["36"] = ["474"], ["37"] = ["366"], ["38"] = ["352"], ["39"] = ["288"], ["40"] = ["386"],
+            ["41"] = ["262"], ["42"] = ["332"], ["43"] = ["274"], ["44"] = ["422"], ["45"] = ["236"],
+            ["46"] = ["344"], ["47"] = ["482"], ["48"] = ["252"], ["49"] = ["436"], ["50"] = ["384"],
+            ["51"] = ["388"], ["52"] = ["452"], ["53"] = ["464"], ["54"] = ["264"], ["55"] = ["362"],
+            ["56"] = ["484"], ["57"] = ["368"], ["58"] = ["346"], ["59"] = ["282"], ["60"] = ["356"],
+            ["61"] = ["462"], ["62"] = ["428"], ["63"] = ["414"], ["64"] = ["276"], ["65"] = ["432"],
+            ["66"] = ["354"], ["67"] = ["372"], ["68"] = ["382"], ["69"] = ["458"], ["70"] = ["338"],
+            ["71"] = ["318"], ["72"] = ["488"], ["73"] = ["486"], ["74"] = ["378"], ["75"] = ["478"],
+            ["76"] = ["476"], ["77"] = ["226"], ["78"] = ["370"], ["79"] = ["348"], ["80"] = ["328"],
+            ["81"] = ["380"],
+        };
+
     private static Province MapProvince(JsonElement element, IReadOnlyDictionary<int, int> districtCounts)
     {
         var id = element.GetProperty("IlId").GetInt32();
         var name = Text(element, "IlAdi");
+        var plateCode = Text(element, "Plaka");
+
+        if (!AreaCodesByPlate.TryGetValue(plateCode, out var areaCodes))
+        {
+            throw new InvalidDataException($"No area code mapping for plate code '{plateCode}' ({name}).");
+        }
 
         return new Province
         {
             Id = id,
-            PlateCode = Text(element, "Plaka"),
+            PlateCode = plateCode,
             Name = name,
             NameUpper = Text(element, "IlAdiBuyuk"),
             Slug = SearchTextNormalizer.Slugify(name),
+            AreaCodes = areaCodes,
             DistrictCount = districtCounts.GetValueOrDefault(id),
         };
     }

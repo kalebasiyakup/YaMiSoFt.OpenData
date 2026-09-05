@@ -1,0 +1,11 @@
+{
+  "name": "mobile-operators",
+  "version": "2026-09-05",
+  "source": "Turkey's three licensed mobile network operators (compiled for this project)",
+  "license": "MIT",
+  "items": [
+    { "code": "turkcell", "name": "Turkcell", "legalName": "Turkcell İletişim Hizmetleri A.Ş." },
+    { "code": "turk-telekom", "name": "Türk Telekom", "legalName": "Türk Telekomünikasyon A.Ş." },
+    { "code": "vodafone", "name": "Vodafone", "legalName": "Vodafone Telekomünikasyon A.Ş." }
+  ]
+}

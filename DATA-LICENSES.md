@@ -16,10 +16,29 @@ provenance travels with the data rather than living only in this document.
 | Public holidays | `data/holidays.json` | Computed for this project | MIT |
 | Mobile prefixes | `data/mobile-prefixes.json` | [google/libphonenumber](https://github.com/google/libphonenumber) | Apache-2.0 |
 | Countries & calling codes | `data/countries.json` | ISO 3166-1 country codes + ITU-T E.164 calling codes, compiled for this project | MIT |
+| Mobile operators | `data/mobile-operators.json` | Turkey's three licensed mobile network operators, compiled for this project | MIT |
 | Turkish currency names | `data/overrides/currencies.tr.json` | Written for this project | MIT |
 | Holiday corrections | `data/overrides/holidays.tr.json` | Written for this project | MIT |
 
 ## Notes
+
+**Province area codes (5 September 2026).** `provinces.json` now carries `areaCodes`, the
+landline "alan kodu" per province — three digits, no trunk "0". This is the BTK national
+numbering plan, a stable government assignment with no copyright of its own, the same
+reasoning as the plate codes already in the file; İstanbul is the only province with two
+(`212` Avrupa Yakası, `216` Anadolu Yakası). It was part of the original BRD §3.1 scope but was
+silently dropped during the 2 September 2026 move to the curated address export (see "No
+population, area or coordinates" below, which documented the fields that were dropped
+*deliberately* — this one wasn't, and PLAN.md's Faz 0/C3 status lines claimed it as done when
+it no longer was; both have been corrected). It is added back by hand here, independent of
+the source export, because the export carries no telephony fields at all.
+
+**Mobile operators — MIT, self-compiled (5 September 2026).** Turkey's three licensed mobile
+network operators (Turkcell, Vodafone, Türk Telekom) — names, not a database anyone holds
+copyright over. Deliberately **not** linked to `mobile-prefixes.json`: see that dataset's own
+entry below for why a prefix→operator mapping isn't published, which applies just as much in
+this direction. This file exists so "which operators does Turkey have" has an answer without
+resurrecting that mapping.
 
 **Turkish address hierarchy — MIT.** The four levels — il, ilçe, semt, mahalle/köy — were
 compiled for this project from one Turkish-language export and are published here under MIT

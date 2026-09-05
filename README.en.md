@@ -38,6 +38,12 @@ curl localhost:5096/api/v1/currencies/KWD     # decimalDigits: 3
 # Country dial codes — ISO 3166-1 alpha-2/alpha-3, ITU-T E.164
 curl localhost:5096/api/v1/countries/TR       # callingCode: "90"
 
+# Province landline area code (a province field; İstanbul has two: 212, 216)
+curl localhost:5096/api/v1/provinces/34
+
+# Mobile network operators — not linked to a prefix (number portability)
+curl localhost:5096/api/v1/mobile-operators/turkcell
+
 # Only the fields you need
 curl "localhost:5096/api/v1/provinces?fields=id,name,districtCount&sort=districts&order=desc"
 
@@ -73,6 +79,7 @@ complete dataset in a single response.
 | `/api/v1/currencies` · `/{code}` | ISO 4217, with symbol and minor units |
 | `/api/v1/languages` · `/{code}` | ISO 639-1 or 639-2, with native names |
 | `/api/v1/countries` · `/{code}` | ISO 3166-1 alpha-2 or alpha-3, with the ITU-T E.164 calling code |
+| `/api/v1/mobile-operators` · `/{code}` | Turkcell, Vodafone, Türk Telekom — no prefix mapping |
 | `/api/v1/holidays/{year}` | Turkey's non-working days, 2015-2050 |
 | `/api/v1/neighborhoods` · `/{id}` | Filter by `provinceId`, `districtId`, `quarterId`, `kind` or `search` |
 | `/api/v1/districts/{id}/neighborhoods` | The settlements of one district |

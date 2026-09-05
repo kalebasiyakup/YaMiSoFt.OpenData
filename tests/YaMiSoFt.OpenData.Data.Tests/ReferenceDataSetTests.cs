@@ -15,6 +15,7 @@ public sealed class ReferenceDataSetTests
     private static readonly DataSet<Currency> Currencies = DataSetLoader.LoadCurrencies(DataDirectory);
     private static readonly DataSet<LanguageInfo> Languages = DataSetLoader.LoadLanguages(DataDirectory);
     private static readonly DataSet<Country> Countries = DataSetLoader.LoadCountries(DataDirectory);
+    private static readonly DataSet<MobileOperator> MobileOperators = DataSetLoader.LoadMobileOperators(DataDirectory);
 
     [Fact]
     public void Currency_codes_are_unique_iso_4217()
@@ -202,6 +203,28 @@ public sealed class ReferenceDataSetTests
     }
 
     [Fact]
+    public void Mobile_operators_are_unique_and_named()
+    {
+        var missing = MobileOperators.Items
+            .Where(static op => string.IsNullOrWhiteSpace(op.Name) || string.IsNullOrWhiteSpace(op.LegalName))
+            .Select(static op => op.Code)
+            .ToArray();
+        Assert.True(missing.Length == 0, $"Missing names: {string.Join(", ", missing)}");
+
+        var duplicates = MobileOperators.Items
+            .GroupBy(static op => op.Code, StringComparer.Ordinal)
+            .Where(static group => group.Count() > 1)
+            .Select(static group => group.Key)
+            .ToArray();
+        Assert.True(duplicates.Length == 0, $"Duplicate operator codes: {string.Join(", ", duplicates)}");
+
+        // The three licensed Turkish mobile network operators — pinned so a future edit that
+        // silently drops or renames one is caught here rather than shipped.
+        var names = MobileOperators.Items.Select(static op => op.Name).Order(StringComparer.Ordinal).ToArray();
+        Assert.Equal(["Turkcell", "Türk Telekom", "Vodafone"], names);
+    }
+
+    [Fact]
     public void Datasets_carry_provenance()
     {
         foreach (var (name, version, source, license) in new[]
@@ -209,6 +232,7 @@ public sealed class ReferenceDataSetTests
             (Currencies.Name, Currencies.Version, Currencies.Source, Currencies.License),
             (Languages.Name, Languages.Version, Languages.Source, Languages.License),
             (Countries.Name, Countries.Version, Countries.Source, Countries.License),
+            (MobileOperators.Name, MobileOperators.Version, MobileOperators.Source, MobileOperators.License),
         })
         {
             Assert.False(string.IsNullOrWhiteSpace(name));

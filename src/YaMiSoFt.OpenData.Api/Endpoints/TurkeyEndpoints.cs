@@ -16,7 +16,7 @@ public static class TurkeyEndpoints
 {
     private static readonly FrozenSet<string> ProvinceFields = new[]
     {
-        "id", "platecode", "name", "nameupper", "slug", "districtcount",
+        "id", "platecode", "name", "nameupper", "slug", "areacodes", "districtcount",
     }.ToFrozenSet(StringComparer.Ordinal);
 
     private static readonly FrozenSet<string> DistrictFields = new[]

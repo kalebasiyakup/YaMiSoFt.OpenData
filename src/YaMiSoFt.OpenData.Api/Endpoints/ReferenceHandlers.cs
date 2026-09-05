@@ -104,9 +104,14 @@ public static class ReferenceHandlers
         {
             var title = char.ToUpperInvariant(name[0]) + name[1..];
 
+            // "type" is a URI reference (RFC 9457); a name of more than one word ("mobile
+            // operator") must not leave a raw space in it, so this slugs independently of the
+            // natural-language name used in the title and detail text below.
+            var typeSlug = name.Replace(' ', '-');
+
             return ApiProblem.NotFound(
                 context,
-                $"{name}-not-found",
+                $"{typeSlug}-not-found",
                 $"{title} not found",
                 $"No {name} matches the code '{EchoedInput.Clip(code)}'. {codeHint}");
         }

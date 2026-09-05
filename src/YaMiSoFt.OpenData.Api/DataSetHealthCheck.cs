@@ -19,6 +19,7 @@ public sealed class DataSetHealthCheck(
     LanguageStore languages,
     CountryStore countries,
     HolidayStore holidays,
+    MobileOperatorStore mobileOperators,
     NeighborhoodStore neighborhoods) : IHealthCheck
 {
     /// <inheritdoc />
@@ -35,6 +36,7 @@ public sealed class DataSetHealthCheck(
             ("languages", languages.Count),
             ("countries", countries.Count),
             ("holidays", holidays.Count),
+            ("mobileOperators", mobileOperators.Count),
         };
 
         var data = counts.ToDictionary(

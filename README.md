@@ -42,6 +42,12 @@ curl localhost:5096/api/v1/currencies/KWD     # decimalDigits: 3
 # Ülke arama/çağrı kodları — ISO 3166-1 alpha-2/alpha-3, ITU-T E.164
 curl localhost:5096/api/v1/countries/TR       # callingCode: "90"
 
+# İl telefon alan kodu (il verisinin bir alanı; İstanbul'un 2 kodu var: 212, 216)
+curl localhost:5096/api/v1/provinces/34
+
+# GSM operatörleri — önekle ilişkilendirilmez (numara taşınabilirliği)
+curl localhost:5096/api/v1/mobile-operators/turkcell
+
 # Sadece ihtiyacınız olan alanlar
 curl "localhost:5096/api/v1/provinces?fields=id,name,districtCount&sort=districts&order=desc"
 
@@ -77,6 +83,7 @@ bir `/all` kardeşi vardır.
 | `/api/v1/currencies` · `/{code}` | ISO 4217, sembol ve küsurat basamağıyla |
 | `/api/v1/languages` · `/{code}` | ISO 639-1 veya 639-2, yerel adlarla |
 | `/api/v1/countries` · `/{code}` | ISO 3166-1 alpha-2 veya alpha-3, ITU-T E.164 çağrı koduyla |
+| `/api/v1/mobile-operators` · `/{code}` | Turkcell, Vodafone, Türk Telekom — önek eşlemesi yok |
 | `/api/v1/holidays/{year}` | Türkiye'nin tatil günleri, 2015-2050 |
 | `/api/v1/neighborhoods` · `/{id}` | `provinceId`, `districtId`, `quarterId`, `kind` veya `search` ile filtrele |
 | `/api/v1/districts/{id}/neighborhoods` | Bir ilçenin yerleşimleri |

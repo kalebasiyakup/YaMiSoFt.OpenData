@@ -45,6 +45,10 @@ public static class DataSetLoader
     public static DataSet<MobilePrefix> LoadMobilePrefixes(string directory) =>
         Load(directory, "mobile-prefixes", OpenDataJson.TypeInfo<DataSet<MobilePrefix>>());
 
+    /// <summary>Loads <c>mobile-operators.json</c>.</summary>
+    public static DataSet<MobileOperator> LoadMobileOperators(string directory) =>
+        Load(directory, "mobile-operators", OpenDataJson.TypeInfo<DataSet<MobileOperator>>());
+
     /// <summary>Loads <c>neighborhoods.json</c>.</summary>
     public static DataSet<Neighborhood> LoadNeighborhoods(string directory) =>
         Load(directory, "neighborhoods", OpenDataJson.TypeInfo<DataSet<Neighborhood>>());

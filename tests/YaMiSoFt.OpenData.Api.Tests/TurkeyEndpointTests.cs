@@ -41,6 +41,20 @@ public sealed class TurkeyEndpointTests(OpenDataApiFactory factory)
         Assert.Equal("46", province.GetProperty("plateCode").GetString());
         Assert.Equal("kahramanmaras", province.GetProperty("slug").GetString());
         Assert.True(province.GetProperty("districtCount").GetInt32() > 0);
+        Assert.Equal(["344"], province.GetProperty("areaCodes").EnumerateArray().Select(static c => c.GetString()));
+    }
+
+    [Fact]
+    public async Task Istanbul_carries_both_of_its_area_codes()
+    {
+        using var response = await _client.GetAsync(new Uri("/api/v1/provinces/34", UriKind.Relative));
+
+        response.EnsureSuccessStatusCode();
+
+        var province = await ReadJsonAsync(response);
+        Assert.Equal(
+            ["212", "216"],
+            province.GetProperty("areaCodes").EnumerateArray().Select(static c => c.GetString()));
     }
 
     [Fact]
