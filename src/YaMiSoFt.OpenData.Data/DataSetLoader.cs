@@ -49,6 +49,10 @@ public static class DataSetLoader
     public static DataSet<MobileOperator> LoadMobileOperators(string directory) =>
         Load(directory, "mobile-operators", OpenDataJson.TypeInfo<DataSet<MobileOperator>>());
 
+    /// <summary>Loads <c>banks.json</c>.</summary>
+    public static DataSet<Bank> LoadBanks(string directory) =>
+        Load(directory, "banks", OpenDataJson.TypeInfo<DataSet<Bank>>());
+
     /// <summary>Loads <c>neighborhoods.json</c>.</summary>
     public static DataSet<Neighborhood> LoadNeighborhoods(string directory) =>
         Load(directory, "neighborhoods", OpenDataJson.TypeInfo<DataSet<Neighborhood>>());

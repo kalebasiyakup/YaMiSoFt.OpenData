@@ -1,4 +1,4 @@
-using System.Text.Json.Nodes;
+﻿using System.Text.Json.Nodes;
 using Microsoft.AspNetCore.OpenApi;
 using Microsoft.OpenApi;
 
@@ -9,8 +9,8 @@ public sealed record TagGroup(string Name, params string[] Tags);
 
 /// <summary>
 /// Adds Redocly's <c>x-tagGroups</c> extension to the document root so Scalar's sidebar can
-/// nest related tags under one heading — "GSM Operatörleri" and "Ülke Kodları" under
-/// "Telefon", say — instead of listing every tag flat.
+/// nest related tags under one heading instead of listing every tag flat, and so the order of
+/// the sections is ours rather than whatever order the endpoints happen to be mapped in.
 /// </summary>
 /// <remarks>
 /// Every tag is placed in exactly one group, even when that means a group of one. Whether

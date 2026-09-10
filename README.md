@@ -65,6 +65,10 @@ curl "localhost:5096/api/v1/quarters/1154/neighborhoods"
 curl localhost:5096/api/v1/postal-codes/34357
 curl localhost:5096/api/v1/postal-codes/34357/neighborhoods
 
+# IBAN'ın içindeki EFT kodundan bankayı bul
+curl localhost:5096/api/v1/banks/by-iban/TR420001000000000000000001
+curl localhost:5096/api/v1/banks/0010     # aynı kayıt, doğrudan EFT koduyla
+
 # IBAN ve TC kimlik doğrulama — sadece hesaplama, veri sorgulanmaz/saklanmaz
 curl localhost:5096/api/v1/validate/iban/TR330006100519786457841326
 curl localhost:5096/api/v1/validate/tc-kimlik/10000000146
@@ -93,6 +97,8 @@ bir `/all` kardeşi vardır.
 | `/api/v1/districts/{id}/neighborhoods` | Bir ilçenin yerleşimleri |
 | `/api/v1/postal-codes/{code}` | Beş haneli kodun atandığı semt |
 | `/api/v1/postal-codes/{code}/neighborhoods` | Bir kodun kapsadığı yerleşimler |
+| `/api/v1/banks` · `/{code}` | TCMB ödeme sistemleri katılımcıları, EFT koduyla. `name`, `code`, `type` ile sırala |
+| `/api/v1/banks/by-iban/{iban}` | Türk IBAN'ının 5-9. hanelerindeki EFT kodundan bankayı çözer |
 | `/api/v1/validate/iban/{iban}` | Format + sağlama basamağı; banka verisi sorgulanmaz |
 | `/api/v1/validate/tc-kimlik/{no}` | Sağlama basamağı; gerçek bir kişiye ait olduğunu doğrulamaz |
 | `/health/live` · `/health/ready` | Canlılık ve hazır olma |

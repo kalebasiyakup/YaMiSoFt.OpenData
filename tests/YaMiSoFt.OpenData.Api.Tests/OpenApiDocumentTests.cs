@@ -1,11 +1,11 @@
-using System.Text.Json;
+﻿using System.Text.Json;
 
 namespace YaMiSoFt.OpenData.Api.Tests;
 
 /// <summary>
 /// Covers the generated OpenAPI documents' tag structure: per-topic tags rather than the old
 /// "Turkey"/"Reference" split, English in "v1" and Turkish in "v1-tr", and the "x-tagGroups"
-/// extension Scalar's sidebar nests "Phone"/"Telefon" under.
+/// extension that drives Scalar's sidebar sections.
 /// </summary>
 public sealed class OpenApiDocumentTests(OpenDataApiFactory factory) : IClassFixture<OpenDataApiFactory>
 {
@@ -14,10 +14,10 @@ public sealed class OpenApiDocumentTests(OpenDataApiFactory factory) : IClassFix
     [Theory]
     [InlineData(
         "/openapi/v1.json",
-        new[] { "Address", "Mobile Operators", "Countries", "Currencies", "Languages", "Public Holidays", "Validation" })]
+        new[] { "Address", "Mobile Operators", "Countries", "Currencies", "Languages", "Public Holidays", "Banks", "Validation" })]
     [InlineData(
         "/openapi/v1-tr.json",
-        new[] { "Adres", "GSM Operatörleri", "Ülke Kodları", "Para Birimleri", "Diller", "Resmi Tatiller", "Doğrulama" })]
+        new[] { "Adres", "GSM Operatörleri", "Ülke Kodları", "Para Birimleri", "Diller", "Resmi Tatiller", "Bankalar", "Doğrulama" })]
     public async Task Every_operation_tag_is_from_the_expected_set(string route, string[] expectedTags)
     {
         var document = await ReadDocumentAsync(route);
@@ -37,8 +37,8 @@ public sealed class OpenApiDocumentTests(OpenDataApiFactory factory) : IClassFix
     }
 
     [Theory]
-    [InlineData("/openapi/v1.json", new[] { "Address", "Mobile Operators", "Countries", "Currencies", "Languages", "Public Holidays", "Validation" })]
-    [InlineData("/openapi/v1-tr.json", new[] { "Adres", "GSM Operatörleri", "Ülke Kodları", "Para Birimleri", "Diller", "Resmi Tatiller", "Doğrulama" })]
+    [InlineData("/openapi/v1.json", new[] { "Address", "Mobile Operators", "Countries", "Currencies", "Languages", "Public Holidays", "Banks", "Validation" })]
+    [InlineData("/openapi/v1-tr.json", new[] { "Adres", "GSM Operatörleri", "Ülke Kodları", "Para Birimleri", "Diller", "Resmi Tatiller", "Bankalar", "Doğrulama" })]
     public async Task Document_level_tags_match_the_operations_that_use_them(string route, string[] expectedTags)
     {
         // A document's own "tags" declarations drifting from what operations actually carry
@@ -52,30 +52,25 @@ public sealed class OpenApiDocumentTests(OpenDataApiFactory factory) : IClassFix
         Assert.Equal(expectedTags.ToHashSet(StringComparer.Ordinal), declaredTags);
     }
 
-    [Fact]
-    public async Task English_document_nests_mobile_operators_and_countries_under_phone()
+    [Theory]
+    [InlineData("/openapi/v1.json", "Countries", "Mobile Operators")]
+    [InlineData("/openapi/v1-tr.json", "Ülke Kodları", "GSM Operatörleri")]
+    public async Task Country_codes_are_a_top_level_section_of_their_own(
+        string route, string countryTag, string operatorTag)
     {
-        var document = await ReadDocumentAsync("/openapi/v1.json");
+        // Country codes used to sit under a "Phone"/"Telefon" heading next to the mobile
+        // operators. They are a reference dataset callers reach for on their own, so each of
+        // the two is now its own section rather than one being nested beside the other.
+        var document = await ReadDocumentAsync(route);
+        var groups = document.GetProperty("x-tagGroups").EnumerateArray().ToArray();
 
-        var phoneGroup = document.GetProperty("x-tagGroups").EnumerateArray()
-            .Single(static group => group.GetProperty("name").GetString() == "Phone");
+        var countryGroup = Assert.Single(
+            groups, group => group.GetProperty("name").GetString() == countryTag);
+        Assert.Equal([countryTag], countryGroup.GetProperty("tags").EnumerateArray().Select(static t => t.GetString()));
 
-        var tags = phoneGroup.GetProperty("tags").EnumerateArray().Select(static t => t.GetString());
-
-        Assert.Equal(["Mobile Operators", "Countries"], tags);
-    }
-
-    [Fact]
-    public async Task Turkish_document_nests_gsm_and_country_codes_under_telefon()
-    {
-        var document = await ReadDocumentAsync("/openapi/v1-tr.json");
-
-        var phoneGroup = document.GetProperty("x-tagGroups").EnumerateArray()
-            .Single(static group => group.GetProperty("name").GetString() == "Telefon");
-
-        var tags = phoneGroup.GetProperty("tags").EnumerateArray().Select(static t => t.GetString());
-
-        Assert.Equal(["GSM Operatörleri", "Ülke Kodları"], tags);
+        var operatorGroup = Assert.Single(
+            groups, group => group.GetProperty("name").GetString() == operatorTag);
+        Assert.Equal([operatorTag], operatorGroup.GetProperty("tags").EnumerateArray().Select(static t => t.GetString()));
     }
 
     [Theory]

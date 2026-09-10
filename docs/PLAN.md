@@ -656,7 +656,7 @@ yeniden markalanması) da bilerek dışarıda bırakıldı — yanlış çıkma 
 |---|---|---|---|
 | D1 | IBAN doğrulama | Saf hesaplama, veri yok — en ucuz kazanç | ✅ (10 Eylül 2026) |
 | D2 | TC kimlik checksum | Saf hesaplama, KVKK açısından güvenli | ✅ (10 Eylül 2026) |
-| D3 | Bankalar (EFT/SWIFT kodları) | TCMB | ⬜ |
+| D3 | Bankalar (EFT kodları) | TCMB katılımcı listesi; SWIFT/BIC hariç bırakıldı, gerekçe aşağıda | ✅ (10 Eylül 2026) |
 | D4 | Vergi daireleri | GİB | ⬜ |
 | D5 | Üniversiteler | YÖK | ⬜ |
 | D6 | NUTS / İBBS bölgeleri | TÜİK | ⬜ |
@@ -688,6 +688,52 @@ fark bu maddenin kapsamda olmasının tek sebebi.
 (`TR330006100519786457841326`) ve yaygın olarak kanonik kabul edilen Almanya/İngiltere IBAN
 örnekleri (Wikipedia'nın IBAN maddesinde de kullanılan) testlere geçti — algoritmanın hem
 doğru hem de bu üç örneğin gerçekten geçerli olduğu bu şekilde çapraz doğrulandı.
+
+#### D3 nasıl yapıldı
+
+**Kaynak, ikinci elden değil TCMB'nin kendisi.** `data/banks.json`, TCMB'nin yayımladığı
+*Ödeme Sistemleri Katılımcıları (2026)* listesinin satır satır kopyası: 71 kayıt, TCMB'nin
+sıralamasıyla, `legalName` birebir. Sıra korunuyor çünkü dosyayı yayımlanan listeyle karakter
+karakter karşılaştırmak böylece tek bir diff işi oluyor — bu veri setinin denetlenebilirliği
+tamamen buna dayanıyor, zira üretecek bir araç yok, elle tutuluyor.
+
+**Asıl kazanç EFT kodu.** Her Türk IBAN'ının 5-9. haneleri, beş haneye sola sıfır doldurulmuş
+EFT kodu. `/api/v1/banks/by-iban/{iban}` bunu okuyup bankayı adlandırıyor — D1'de yazılan
+`IbanValidator` yeniden kullanılıyor, ikinci bir IBAN ayrıştırıcı yok.
+
+**IBAN doğrulama ucu değişmedi.** İlk düşünce `/validate/iban` yanıtına bir `bank` alanı
+eklemekti; vazgeçildi. O uç bilinçli olarak veri setinden bağımsız — sürümü, ETag'i, `DataResult`'ı
+yok (bkz. D1/D2). İçine veri setinden gelen bir alan koymak, sürümlenmemiş bir yanıtın
+sürümlü veriye bağımlı hale gelmesi demekti. Bunun yerine arama, kendi ETag'iyle `/banks`
+altında ayrı bir uç oldu; `/validate/iban` saf hesaplama olarak kaldı.
+
+**Durum kodları iki ucun iki farklı soru sorduğunu söylüyor.** `/validate/iban` "bu IBAN geçerli
+mi?" sorusuna 200 + `isValid:false` ile "hayır" diyebiliyor. `/banks/by-iban/{iban}` içinse IBAN
+bir kaynak kimliği: bozuk IBAN 400, geçerli ama karşılığı olmayan (yabancı IBAN ya da atanmamış
+banka kodu) 404. Yumuşak cevabı isteyen doğrulama ucunu kullanmaya devam ediyor.
+
+**ETag banka koduna göre, IBAN'a göre değil.** Aynı bankadaki her hesap aynı kaydı döndüğü için
+aynı doğrulayıcıyı paylaşıyor; istemci farklı bir hesabı sorduğunda da 304 alabiliyor. IBAN yine
+de URL'de geçiyor, yani erişim kayıtlarına ve kenar önbelleği anahtarlarına giriyor — bunu
+istemeyen çağıran 5-9. haneleri kendisi okuyup `/banks/{code}`'u çağırabilir, aynı kayıt geliyor.
+Bu, uç noktanın kendi dokümantasyonunda yazılı.
+
+**SWIFT/BIC yayımlanmadı.** Bu maddenin başlığı "EFT/SWIFT kodları" idi; SWIFT yarısı bilerek
+dışarıda kaldı. SWIFT'in kendi BIC dizini lisanslı bir ürün, yerine geçen ücretsiz toplayıcı
+listeler ise ölçülebilir biçimde bozuk — derleme sırasında bakılan bir tanesi Akbank'ın
+`AKBKTRIS` kodunu başka bir bankaya yazmıştı. Yanlış bir BIC'i çağıran ayırt edemez ve yanlış
+BIC parayı yanlış yere yönlendirir. Alanın hiç olmaması, çoğu zaman doğru olmasından iyi;
+ileride bankaların kendi yayımladığı kaynaklardan eklenmesi tamamen toplamalı bir değişiklik.
+
+**`type` transkripsiyon değil, eklenen alan.** TCMB listesi kategori taşımıyor. BDDK lisans
+kategorisi, Türk bankacılık adlandırma kuralı gereği unvanın kendisinde geçtiği için oradan
+dolduruluyor (KATILIM → katılım, YATIRIM/KALKINMA → kalkınma-yatırım, gerisi mevduat). Kuralın
+karar veremediği tam üç satır var — İller Bankası, Türk Eximbank, Takasbank — ve elle
+düzeltildi. Testler hem kuralı hem bu üç istisnayı sabitliyor, yani deseni sessizce bozan yeni
+bir satır CI'da düşüyor.
+
+**MKK ve PTT banka değil ama listede.** İkisi de ödeme sistemi katılımcısı; `type: "Other"` ile
+tutuluyorlar çünkü bu veri setinin değeri kod→kurum eşlemesinin eksiksiz olması.
 
 ### E. Teknik borç ve ertelenenler
 

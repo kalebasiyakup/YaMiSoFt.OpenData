@@ -17,6 +17,7 @@ provenance travels with the data rather than living only in this document.
 | Mobile prefixes | `data/mobile-prefixes.json` | [google/libphonenumber](https://github.com/google/libphonenumber) | Apache-2.0 |
 | Countries & calling codes | `data/countries.json` | ISO 3166-1 country codes + ITU-T E.164 calling codes, compiled for this project | MIT |
 | Mobile operators | `data/mobile-operators.json` | Turkey's three licensed mobile network operators, compiled for this project | MIT |
+| Banks (TCMB EFT codes) | `data/banks.json` | TCMB Ödeme Sistemleri Katılımcıları (2026) | MIT |
 | Turkish currency names | `data/overrides/currencies.tr.json` | Written for this project | MIT |
 | Holiday corrections | `data/overrides/holidays.tr.json` | Written for this project | MIT |
 
@@ -39,6 +40,42 @@ copyright over. Deliberately **not** linked to `mobile-prefixes.json`: see that 
 entry below for why a prefix→operator mapping isn't published, which applies just as much in
 this direction. This file exists so "which operators does Turkey have" has an answer without
 resurrecting that mapping.
+
+**Banks and EFT codes — MIT, transcribed from TCMB (10 September 2026).** `banks.json` is a
+row-for-row transcription of TCMB's own *Ödeme Sistemleri Katılımcıları (2026)* list: 71 rows,
+in TCMB's order, with `legalName` carried verbatim so any row can be checked against the
+published list character for character. A participant code and a registered company name are
+administrative assignments, not creative works — the same reasoning as the address hierarchy
+and the calling codes — so the compilation is MIT like the rest of the repository.
+
+The EFT code is the reason to publish this at all: characters 5-9 of every Turkish IBAN are
+that code, left-padded to five digits, which is what `/api/v1/banks/by-iban/{iban}` reads.
+
+*Two rows are not banks.* Merkezi Kayıt Kuruluşu (`0806`) and PTT (`0807`) are payment-system
+participants rather than banks. They are kept, marked `type: "Other"`, because dropping them
+would leave holes in a code-to-institution map whose whole value is being complete.
+
+*`type` is added here, not transcribed.* TCMB's list carries no category, so the BDDK licence
+category is filled in per row from the registered name, which under Turkish banking naming
+rules states it: "KATILIM BANKASI" → `Participation`, "YATIRIM"/"KALKINMA" → `DevelopmentInvestment`,
+`0001` → `CentralBank`, the two rows above → `Other`, everything else → `Deposit` (digital-only
+banks included — FUPS Bank, Colendi Bank, Ziraat Dinamik and Enpara all hold digital *deposit*
+banking licences). Exactly three rows are development and investment banks whose names say
+neither word — İller Bankası (`0004`), Türk Eximbank (`0016`) and Takasbank (`0132`) — and they
+are corrected by hand. The data tests assert the rule *and* those three exceptions, so a future
+row that quietly breaks the pattern fails CI instead of shipping with the wrong category.
+
+*`name` is editorial, `legalName` is authoritative.* "Garanti BBVA" for "T. GARANTİ BANKASI
+A.Ş." is this project's display choice, made because that is what the institution calls itself
+today; a caller that needs the string a regulator would recognise wants `legalName`, which is
+never touched.
+
+*No BIC/SWIFT field, deliberately.* PLAN.md scoped D3 as "EFT/SWIFT codes" and the SWIFT half
+is not shipped. SWIFT's own BIC directory is a licensed product, and the free aggregator lists
+that stand in for it are demonstrably corrupt — one consulted while compiling this file listed
+Akbank's `AKBKTRIS` against a different bank entirely. A caller cannot tell a wrong BIC from a
+right one, and a wrong BIC misroutes money, so no field is better than a field that is right
+most of the time. Adding one later from per-bank published sources is purely additive.
 
 **Turkish address hierarchy — MIT.** The four levels — il, ilçe, semt, mahalle/köy — were
 compiled for this project from one Turkish-language export and are published here under MIT

@@ -1,4 +1,4 @@
-using System.Globalization;
+﻿using System.Globalization;
 using System.IO.Compression;
 using System.Text.Json;
 using System.Net;
@@ -103,6 +103,8 @@ builder.Services.AddSingleton(sp => new HolidayStore(
     DataSetLoader.LoadHolidays(sp.GetRequiredService<DataDirectory>().Path)));
 builder.Services.AddSingleton(sp => new MobileOperatorStore(
     DataSetLoader.LoadMobileOperators(sp.GetRequiredService<DataDirectory>().Path)));
+builder.Services.AddSingleton(sp => new BankStore(
+    DataSetLoader.LoadBanks(sp.GetRequiredService<DataDirectory>().Path)));
 
 // Settlements are the one dataset that does not load at startup. See NeighborhoodStore: the
 // measured cost is ~520 ms of parsing, which on a scale-to-zero platform would land on every
@@ -117,27 +119,32 @@ builder.Services.AddProblemDetails();
 // (RequestQuery.ResolveLanguage, FR-04). Decision in PLAN.md §6: English primary ("v1", also
 // what WithSummary sets directly), Turkish supplementary ("v1-tr", filled in by
 // TurkishSummaryTransformer from the WithBilingualSummary metadata on each endpoint).
-// x-tagGroups nests related tags under one sidebar heading in Scalar — "GSM Operatörleri"/
-// "Mobile Operators" and "Ülke Kodları"/"Countries" both live under a "Telefon"/"Phone"
-// parent, since they are the two things a caller reaches for when they say "phone code".
-// Every other tag gets its own singleton group so it still renders as a plain top-level
-// entry (see TagGroupsDocumentTransformer's remarks on why nothing is left ungrouped).
+// x-tagGroups can nest related tags under one sidebar heading in Scalar, but no tag currently
+// earns a shared parent: country codes are a reference dataset in their own right (currency,
+// language and dialling data all hang off them), so burying them under a "Telefon"/"Phone"
+// heading hid them from callers who were not looking for a phone code. Every tag therefore
+// gets its own singleton group and renders as a plain top-level entry (see
+// TagGroupsDocumentTransformer's remarks on why nothing is left ungrouped).
 TagGroup[] englishTagGroups =
 [
     new("Address", "Address"),
-    new("Phone", "Mobile Operators", "Countries"),
+    new("Mobile Operators", "Mobile Operators"),
+    new("Countries", "Countries"),
     new("Currencies", "Currencies"),
     new("Languages", "Languages"),
     new("Public Holidays", "Public Holidays"),
+    new("Banks", "Banks"),
     new("Validation", "Validation"),
 ];
 TagGroup[] turkishTagGroups =
 [
     new("Adres", "Adres"),
-    new("Telefon", "GSM Operatörleri", "Ülke Kodları"),
+    new("GSM Operatörleri", "GSM Operatörleri"),
+    new("Ülke Kodları", "Ülke Kodları"),
     new("Para Birimleri", "Para Birimleri"),
     new("Diller", "Diller"),
     new("Resmi Tatiller", "Resmi Tatiller"),
+    new("Bankalar", "Bankalar"),
     new("Doğrulama", "Doğrulama"),
 ];
 
@@ -274,6 +281,7 @@ v1.MapReferenceEndpoints();
 v1.MapHolidayEndpoints();
 v1.MapPhoneEndpoints();
 v1.MapNeighborhoodEndpoints();
+v1.MapBankEndpoints();
 v1.MapValidationEndpoints();
 
 app.MapHealthChecks("/health/live", new()
