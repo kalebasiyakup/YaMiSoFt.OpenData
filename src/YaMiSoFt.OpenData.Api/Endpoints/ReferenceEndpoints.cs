@@ -50,7 +50,7 @@ public static class ReferenceEndpoints
             .WithName("ListCurrencies")
             .WithBilingualSummary(
                 "Lists ISO 4217 currencies with symbols and minor-unit counts.",
-                "Sembolleri ve kuruş basamak sayılarıyla ISO 4217 para birimlerini listeler.");
+                "Para birimlerini, sembolleri ve kuruş basamak sayılarıyla birlikte listeler.");
 
         currencies.MapGet("/all", (
                 HttpContext context,
@@ -76,7 +76,7 @@ public static class ReferenceEndpoints
             .WithName("GetCurrency")
             .WithBilingualSummary(
                 "Gets one currency by ISO 4217 code.",
-                "ISO 4217 koduna göre bir para birimini getirir.");
+                "Para birimi koduna (örn. TRY) göre bir para birimini getirir.");
 
         var languages = group.MapGroup("/languages").WithTags("Languages");
 
@@ -89,7 +89,7 @@ public static class ReferenceEndpoints
             .WithName("ListLanguages")
             .WithBilingualSummary(
                 "Lists ISO 639 languages with native names.",
-                "Yerel adlarıyla ISO 639 dillerini listeler.");
+                "Dilleri, kendi dillerindeki adlarıyla birlikte listeler.");
 
         languages.MapGet("/all", (
                 HttpContext context,
@@ -115,7 +115,7 @@ public static class ReferenceEndpoints
             .WithName("GetLanguage")
             .WithBilingualSummary(
                 "Gets one language by ISO 639-1 or 639-2 code.",
-                "ISO 639-1 veya 639-2 koduna göre bir dili getirir.");
+                "İki veya üç harfli dil koduna (örn. tr) göre bir dili getirir.");
 
         var countries = group.MapGroup("/countries").WithTags("Countries");
 
@@ -128,7 +128,7 @@ public static class ReferenceEndpoints
             .WithName("ListCountries")
             .WithBilingualSummary(
                 "Lists ISO 3166-1 countries with their international calling codes.",
-                "Uluslararası telefon kodlarıyla ISO 3166-1 ülkelerini listeler.");
+                "Ülkeleri, uluslararası telefon kodlarıyla birlikte listeler.");
 
         countries.MapGet("/all", (
                 HttpContext context,
@@ -154,7 +154,7 @@ public static class ReferenceEndpoints
             .WithName("GetCountry")
             .WithBilingualSummary(
                 "Gets one country by ISO 3166-1 alpha-2 or alpha-3 code.",
-                "ISO 3166-1 alpha-2 veya alpha-3 koduna göre bir ülkeyi getirir.");
+                "İki veya üç harfli ülke koduna (örn. TR ya da TUR) göre bir ülkeyi getirir.");
 
         return group;
     }
