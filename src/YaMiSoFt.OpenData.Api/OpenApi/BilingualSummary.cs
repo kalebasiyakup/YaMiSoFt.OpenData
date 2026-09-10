@@ -77,7 +77,7 @@ public sealed class TurkishTagTransformer : IOpenApiOperationTransformer
 /// <summary>English tag name (as set by <c>WithTags</c>) to its Turkish counterpart.</summary>
 /// <remarks>
 /// Shared by <see cref="TurkishTagTransformer"/> (renames each operation's tag references) and
-/// <see cref="TagGroupsDocumentTransformer"/> (also renames the document's own <c>tags</c>
+/// <see cref="TagOrderDocumentTransformer"/> (also renames the document's own <c>tags</c>
 /// declarations for the "v1-tr" document) so the two never drift apart into naming a tag two
 /// different things in the same document.
 /// </remarks>

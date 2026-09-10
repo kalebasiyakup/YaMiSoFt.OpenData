@@ -452,7 +452,7 @@ BRD Faz 1 teslimatı "dokümantasyon, açık kaynak yayın" diyor. Kod tarafı b
 | B3 | **Docker imajını doğrula** — ilk Vercel deploy'u `vercel.json` aşamasında düştü (bkz. §7 A4), imaj build'i henüz görülmedi | ⬜ |
 | B4 | NuGet paketleri (`OpenData.Turkey` vb.) — BRD §7.2 bonus, mimari hazır | ⬜ |
 | B5 | OpenAPI özetleri iki dilde (§6 kararı) | ✅ (2 Eylül 2026) |
-| B6 | Scalar sidebar'ı konu bazlı gruplara böl (Turkey/Reference kaldırıldı) | ✅ (5 Eylül 2026, ayrıntı aşağıda) |
+| B6 | Scalar sidebar'ı konu bazlı bölümlere ayır (Turkey/Reference kaldırıldı) | ✅ (5 Eylül 2026, düz sidebar'a geçiş 11 Eylül 2026, ayrıntı aşağıda) |
 
 #### B6 nasıl yapıldı
 
@@ -461,8 +461,9 @@ değil. GSM operatörü ile posta kodu aynı torbada, para birimi ile ülke kodu
 
 **Karar.** Her uç kendi konu etiketine taşındı: `Address` (il/ilçe/semt/mahalle/posta kodu),
 `Mobile Operators`, `Countries`, `Currencies`, `Languages`, `Public Holidays` — sonradan
-`Validation` ve `Banks` de eklendi. Sidebar'daki bölüm sırası Redocly kaynaklı `x-tagGroups`
-uzantısıyla veriliyor; Scalar bu uzantıyı okuyup sidebar'ı ona göre kuruyor.
+`Validation` ve `Banks` de eklendi. Sidebar'daki bölüm sırası dokümanın kendi `tags` listesinin
+sırasıyla veriliyor; `TagOrderDocumentTransformer` bu listeyi endpoint'lerin map edilme
+sırasından bağımsız, sabit bir sırada tutuyor (bkz. aşağıda, mekanizma 11 Eylül'de değişti).
 
 **İki dokümanda iki dil, B5'in aynı deseni.** `WithTags` İngilizceyi doğrudan yazıyor (temel
 katman); yeni `TurkishTagTransformer` (`TurkishSummaryTransformer` ile birebir aynı desende)
@@ -473,33 +474,31 @@ etiketler her iki dokümanda da İngilizceydi (Türkçe doküman seçiliyken bil
 **Bulunan ince hata: `document.tags` operasyon etiketleriyle senkron değildi.**
 `TurkishTagTransformer` her operasyonun `tags` alanını Türkçeye çeviriyor ama dokümanın kendi
 üst-seviye `tags` bildirim listesi (`document.Tags`, açıklamaların da yaşadığı yer) bundan
-etkilenmiyordu — orada hâlâ İngilizce isimler duruyordu. Sonuç: `x-tagGroups`'un Türkçe adlarla
-(`"Telefon"`, `"GSM Operatörleri"`) atıfta bulunduğu etiketler, dokümanın kendi `tags`
-listesinde hiç yoktu. `TagGroupsDocumentTransformer`'a opsiyonel bir çeviri haritası eklenip
-yalnızca `v1-tr` için `document.Tags`'ı da aynı sözlükle yeniden adlandırdı; `TurkishTagNames`
-sözlüğü ikisi arasında tek kaynak olarak paylaşılıyor, ileride biri güncellenip diğeri
-unutulamaz.
+etkilenmiyordu — orada hâlâ İngilizce isimler duruyordu. Çeviri haritası (`TurkishTagNames.Map`)
+bu yüzden yalnızca `TurkishTagTransformer`'a değil, dokümanın kendi `tags` listesini yeniden
+adlandıran sıralama geçişine de veriliyor; ikisi tek bir sözlüğü paylaşıyor, ileride biri
+güncellenip diğeri unutulamaz.
 
-**Her etiket tam olarak bir grupta.** `x-tagGroups`'ta gruplanmamış bir etiketi Scalar'ın nasıl
-ele aldığı belgelenmemiş; sidebar'dan sessizce bir uç kaybolması, gereksiz tek-elemanlı bir grup
-görmekten çok daha kötü bir arıza. Bu yüzden her etiket kendi tek-elemanlı grubunda — görsel
-olarak düz bir üst-seviye etiketten farksız, ama hiçbiri "gruplanmamış" durumda kalmıyor.
-
-**Sonradan geri alındı: "Phone"/"Telefon" iç içe grubu.** İlk halde `Mobile Operators` ve
-`Countries` ortak bir "Phone"/"Telefon" üst başlığı altında iç içe gösteriliyordu — gerekçe,
-"telefon kodu" diyen bir çağıranın ikisine birden uzanmasıydı. Kaldırıldı: ülke kodları kendi
-başına bir referans veri seti (para birimi, dil ve çağrı kodu verisi ona asılı), bir telefon
-başlığının altına gömülünce telefon aramayan çağıranlardan gizlenmiş oluyordu. Artık **hiçbir
-etiketin ortak üst başlığı yok**; `x-tagGroups` yalnızca bölüm sırasını belirliyor. Mekanizma
-(uzantı, çeviri haritası, tek-elemanlı gruplar) olduğu gibi duruyor, ileride bir grup gerçekten
-hak ederse tek satırlık değişiklik.
+**Sonradan tamamen kaldırıldı: `x-tagGroups` (11 Eylül 2026).** Bu API'de hiçbir etiket bir
+başkasıyla üst başlık paylaşmıyor — her grup tek bir etiketten oluşan bir grup, yani grup adı
+ile tek elemanının adı hep aynı. Scalar'da gözle bakılınca bu, sidebar'da aynı adı iki kez
+gösteren gereksiz bir iç içe menü seviyesi olarak render ediyordu ("Banks" üst menü, altında
+tek elemanlı "Banks" alt menüsü). `x-tagGroups` uzantısı tamamen kaldırıldı;
+`TagGroupsDocumentTransformer` yerini `TagOrderDocumentTransformer`'a bıraktı — o da yalnızca
+dokümanın kendi `tags` dizisini istenen sırayla yeniden yazıyor, Scalar'ın düz sidebar'ı zaten
+bu diziyi okuyor. Çeviri mantığı (`tagNameTranslation`) aynen taşındı. Bir grup gerçekten iki
+veya daha fazla etiketi paylaşacak olursa (örn. "Phone" altında `Mobile Operators` +
+`Countries`, önceden denenmiş ve kaldırılmıştı — bkz. yukarı, "Karar") `x-tagGroups` o zaman
+geri gelir; tek elemanlı gruplar için değil.
 
 **Görsel doğrulama sınırı.** Bu ortamda tarayıcı otomasyonu yok; doğrulama `/openapi/v1.json`
 ve `/openapi/v1-tr.json`'un gerçek Kestrel'e karşı `curl` ile çekilip hem operasyon
-etiketlerinin hem `document.tags`'ın hem `x-tagGroups`'un beklenen şekilde olduğunu
-doğrulamakla sınırlı kaldı (bkz. `OpenApiDocumentTests.cs`). Scalar'ın sidebar'ı bu bölümleri
-gerçekten beklenen sırayla render ettiğinin nihai teyidi `/docs` açılıp gözle kontrol edilmesini
-gerektiriyor.
+etiketlerinin hem `document.tags` sırasının beklenen şekilde olduğunu doğrulamakla sınırlı
+kalıyor (bkz. `OpenApiDocumentTests.cs`). `x-tagGroups`'un kaldırılma kararının kendisi tam
+olarak bu sınırın sonucu: curl/`OpenApiDocumentTests.cs` yapısal olarak doğru görünen bir
+uzantının Scalar'da nasıl render edildiğini göremiyordu, gerçek arıza ancak `/docs` gözle
+açılınca ortaya çıktı (11 Eylül 2026). Sidebar'ın bundan sonra da beklendiği gibi düz
+render ettiğinin nihai teyidi hâlâ `/docs`'u gözle kontrol etmeyi gerektiriyor.
 
 ### C. Faz 2
 

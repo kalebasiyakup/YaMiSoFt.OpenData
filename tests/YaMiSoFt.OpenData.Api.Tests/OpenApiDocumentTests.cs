@@ -1,11 +1,11 @@
-﻿using System.Text.Json;
+using System.Text.Json;
 
 namespace YaMiSoFt.OpenData.Api.Tests;
 
 /// <summary>
 /// Covers the generated OpenAPI documents' tag structure: per-topic tags rather than the old
-/// "Turkey"/"Reference" split, English in "v1" and Turkish in "v1-tr", and the "x-tagGroups"
-/// extension that drives Scalar's sidebar sections.
+/// "Turkey"/"Reference" split, English in "v1" and Turkish in "v1-tr", and the document-level
+/// "tags" order that drives Scalar's flat sidebar.
 /// </summary>
 public sealed class OpenApiDocumentTests(OpenDataApiFactory factory) : IClassFixture<OpenDataApiFactory>
 {
@@ -41,8 +41,6 @@ public sealed class OpenApiDocumentTests(OpenDataApiFactory factory) : IClassFix
     [InlineData("/openapi/v1-tr.json", new[] { "Adres", "GSM Operatörleri", "Ülke Kodları", "Para Birimleri", "Diller", "Resmi Tatiller", "Bankalar", "Doğrulama" })]
     public async Task Document_level_tags_match_the_operations_that_use_them(string route, string[] expectedTags)
     {
-        // A document's own "tags" declarations drifting from what operations actually carry
-        // would leave x-tagGroups naming tags the document doesn't otherwise know about.
         var document = await ReadDocumentAsync(route);
 
         var declaredTags = document.GetProperty("tags").EnumerateArray()
@@ -53,47 +51,36 @@ public sealed class OpenApiDocumentTests(OpenDataApiFactory factory) : IClassFix
     }
 
     [Theory]
-    [InlineData("/openapi/v1.json", "Countries", "Mobile Operators")]
-    [InlineData("/openapi/v1-tr.json", "Ülke Kodları", "GSM Operatörleri")]
-    public async Task Country_codes_are_a_top_level_section_of_their_own(
-        string route, string countryTag, string operatorTag)
+    [InlineData("/openapi/v1.json", new[] { "Address", "Mobile Operators", "Countries", "Currencies", "Languages", "Public Holidays", "Banks", "Validation" })]
+    [InlineData("/openapi/v1-tr.json", new[] { "Adres", "GSM Operatörleri", "Ülke Kodları", "Para Birimleri", "Diller", "Resmi Tatiller", "Bankalar", "Doğrulama" })]
+    public async Task Document_tags_are_declared_in_sidebar_order(string route, string[] expectedOrder)
     {
-        // Country codes used to sit under a "Phone"/"Telefon" heading next to the mobile
-        // operators. They are a reference dataset callers reach for on their own, so each of
-        // the two is now its own section rather than one being nested beside the other.
+        // Scalar's flat sidebar follows the document's own "tags" array order (no
+        // x-tagGroups — see TagOrderDocumentTransformer's remarks on why grouping was
+        // dropped). TagOrderDocumentTransformer's whole job is putting that array in this
+        // order rather than whatever order the endpoints happened to be mapped in.
         var document = await ReadDocumentAsync(route);
-        var groups = document.GetProperty("x-tagGroups").EnumerateArray().ToArray();
 
-        var countryGroup = Assert.Single(
-            groups, group => group.GetProperty("name").GetString() == countryTag);
-        Assert.Equal([countryTag], countryGroup.GetProperty("tags").EnumerateArray().Select(static t => t.GetString()));
+        var declaredOrder = document.GetProperty("tags").EnumerateArray()
+            .Select(static tag => tag.GetProperty("name").GetString()!)
+            .ToArray();
 
-        var operatorGroup = Assert.Single(
-            groups, group => group.GetProperty("name").GetString() == operatorTag);
-        Assert.Equal([operatorTag], operatorGroup.GetProperty("tags").EnumerateArray().Select(static t => t.GetString()));
+        Assert.Equal(expectedOrder, declaredOrder);
     }
 
     [Theory]
     [InlineData("/openapi/v1.json")]
     [InlineData("/openapi/v1-tr.json")]
-    public async Task Every_tag_belongs_to_exactly_one_group(string route)
+    public async Task No_tag_groups_extension_is_emitted(string route)
     {
-        // Whether Scalar shows a tag that appears in no x-tagGroups entry at all is
-        // undocumented; every tag is placed in exactly one group (most as a singleton) so
-        // nothing can silently vanish from the sidebar.
+        // Every tag in this API is its own top-level section — none share a parent topic — so
+        // wrapping each one in a singleton x-tagGroups entry only added a redundant nested
+        // menu item with the same label as its parent (confirmed in Scalar's rendered
+        // sidebar). Asserting the extension's absence keeps that regression from creeping
+        // back in.
         var document = await ReadDocumentAsync(route);
 
-        var declaredTags = document.GetProperty("tags").EnumerateArray()
-            .Select(static tag => tag.GetProperty("name").GetString()!)
-            .ToHashSet(StringComparer.Ordinal);
-
-        var groupedTags = document.GetProperty("x-tagGroups").EnumerateArray()
-            .SelectMany(static group => group.GetProperty("tags").EnumerateArray())
-            .Select(static tag => tag.GetString()!)
-            .ToArray();
-
-        Assert.Equal(declaredTags.Count, groupedTags.Length);
-        Assert.Equal(declaredTags, groupedTags.ToHashSet(StringComparer.Ordinal));
+        Assert.False(document.TryGetProperty("x-tagGroups", out _));
     }
 
     private async Task<JsonElement> ReadDocumentAsync(string route)

@@ -119,42 +119,27 @@ builder.Services.AddProblemDetails();
 // (RequestQuery.ResolveLanguage, FR-04). Decision in PLAN.md §6: English primary ("v1", also
 // what WithSummary sets directly), Turkish supplementary ("v1-tr", filled in by
 // TurkishSummaryTransformer from the WithBilingualSummary metadata on each endpoint).
-// x-tagGroups can nest related tags under one sidebar heading in Scalar, but no tag currently
-// earns a shared parent: country codes are a reference dataset in their own right (currency,
-// language and dialling data all hang off them), so burying them under a "Telefon"/"Phone"
-// heading hid them from callers who were not looking for a phone code. Every tag therefore
-// gets its own singleton group and renders as a plain top-level entry (see
-// TagGroupsDocumentTransformer's remarks on why nothing is left ungrouped).
-TagGroup[] englishTagGroups =
+// No two tags share a parent topic in this API — see TagOrderDocumentTransformer's remarks
+// on why that means a flat sidebar, not x-tagGroups, is the right rendering. The order below
+// is still ours rather than whatever order the endpoints happened to be mapped in.
+string[] englishTagOrder =
 [
-    new("Address", "Address"),
-    new("Mobile Operators", "Mobile Operators"),
-    new("Countries", "Countries"),
-    new("Currencies", "Currencies"),
-    new("Languages", "Languages"),
-    new("Public Holidays", "Public Holidays"),
-    new("Banks", "Banks"),
-    new("Validation", "Validation"),
+    "Address", "Mobile Operators", "Countries", "Currencies", "Languages",
+    "Public Holidays", "Banks", "Validation",
 ];
-TagGroup[] turkishTagGroups =
+string[] turkishTagOrder =
 [
-    new("Adres", "Adres"),
-    new("GSM Operatörleri", "GSM Operatörleri"),
-    new("Ülke Kodları", "Ülke Kodları"),
-    new("Para Birimleri", "Para Birimleri"),
-    new("Diller", "Diller"),
-    new("Resmi Tatiller", "Resmi Tatiller"),
-    new("Bankalar", "Bankalar"),
-    new("Doğrulama", "Doğrulama"),
+    "Adres", "GSM Operatörleri", "Ülke Kodları", "Para Birimleri", "Diller",
+    "Resmi Tatiller", "Bankalar", "Doğrulama",
 ];
 
 builder.Services.AddOpenApi(options =>
-    options.AddDocumentTransformer(new TagGroupsDocumentTransformer(englishTagGroups)));
+    options.AddDocumentTransformer(new TagOrderDocumentTransformer(englishTagOrder)));
 builder.Services.AddOpenApi("v1-tr", options =>
 {
     options.AddOperationTransformer<TurkishSummaryTransformer>();
     options.AddOperationTransformer<TurkishTagTransformer>();
-    options.AddDocumentTransformer(new TagGroupsDocumentTransformer(turkishTagGroups, TurkishTagNames.Map));
+    options.AddDocumentTransformer(new TagOrderDocumentTransformer(turkishTagOrder, TurkishTagNames.Map));
 });
 
 builder.Services.AddResponseCompression(options =>
