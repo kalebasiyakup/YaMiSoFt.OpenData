@@ -91,5 +91,6 @@ internal static class TurkishTagNames
         ["Currencies"] = "Para Birimleri",
         ["Languages"] = "Diller",
         ["Public Holidays"] = "Resmi Tatiller",
+        ["Validation"] = "Doğrulama",
     };
 }

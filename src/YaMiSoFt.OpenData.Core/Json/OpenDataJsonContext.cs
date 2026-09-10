@@ -54,4 +54,5 @@ namespace YaMiSoFt.OpenData.Core.Json;
 [JsonSerializable(typeof(IReadOnlyList<Neighborhood>))]
 [JsonSerializable(typeof(PagedResult<Neighborhood>))]
 [JsonSerializable(typeof(DataSet<Neighborhood>))]
+[JsonSerializable(typeof(ValidationResult))]
 public sealed partial class OpenDataJsonContext : JsonSerializerContext;

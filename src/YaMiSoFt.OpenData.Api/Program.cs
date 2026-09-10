@@ -129,6 +129,7 @@ TagGroup[] englishTagGroups =
     new("Currencies", "Currencies"),
     new("Languages", "Languages"),
     new("Public Holidays", "Public Holidays"),
+    new("Validation", "Validation"),
 ];
 TagGroup[] turkishTagGroups =
 [
@@ -137,6 +138,7 @@ TagGroup[] turkishTagGroups =
     new("Para Birimleri", "Para Birimleri"),
     new("Diller", "Diller"),
     new("Resmi Tatiller", "Resmi Tatiller"),
+    new("Doğrulama", "Doğrulama"),
 ];
 
 builder.Services.AddOpenApi(options =>
@@ -272,6 +274,7 @@ v1.MapReferenceEndpoints();
 v1.MapHolidayEndpoints();
 v1.MapPhoneEndpoints();
 v1.MapNeighborhoodEndpoints();
+v1.MapValidationEndpoints();
 
 app.MapHealthChecks("/health/live", new()
 {

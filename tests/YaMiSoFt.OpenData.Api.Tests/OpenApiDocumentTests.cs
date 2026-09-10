@@ -14,10 +14,10 @@ public sealed class OpenApiDocumentTests(OpenDataApiFactory factory) : IClassFix
     [Theory]
     [InlineData(
         "/openapi/v1.json",
-        new[] { "Address", "Mobile Operators", "Countries", "Currencies", "Languages", "Public Holidays" })]
+        new[] { "Address", "Mobile Operators", "Countries", "Currencies", "Languages", "Public Holidays", "Validation" })]
     [InlineData(
         "/openapi/v1-tr.json",
-        new[] { "Adres", "GSM Operatörleri", "Ülke Kodları", "Para Birimleri", "Diller", "Resmi Tatiller" })]
+        new[] { "Adres", "GSM Operatörleri", "Ülke Kodları", "Para Birimleri", "Diller", "Resmi Tatiller", "Doğrulama" })]
     public async Task Every_operation_tag_is_from_the_expected_set(string route, string[] expectedTags)
     {
         var document = await ReadDocumentAsync(route);
@@ -37,8 +37,8 @@ public sealed class OpenApiDocumentTests(OpenDataApiFactory factory) : IClassFix
     }
 
     [Theory]
-    [InlineData("/openapi/v1.json", new[] { "Address", "Mobile Operators", "Countries", "Currencies", "Languages", "Public Holidays" })]
-    [InlineData("/openapi/v1-tr.json", new[] { "Adres", "GSM Operatörleri", "Ülke Kodları", "Para Birimleri", "Diller", "Resmi Tatiller" })]
+    [InlineData("/openapi/v1.json", new[] { "Address", "Mobile Operators", "Countries", "Currencies", "Languages", "Public Holidays", "Validation" })]
+    [InlineData("/openapi/v1-tr.json", new[] { "Adres", "GSM Operatörleri", "Ülke Kodları", "Para Birimleri", "Diller", "Resmi Tatiller", "Doğrulama" })]
     public async Task Document_level_tags_match_the_operations_that_use_them(string route, string[] expectedTags)
     {
         // A document's own "tags" declarations drifting from what operations actually carry

@@ -654,14 +654,40 @@ yeniden markalanması) da bilerek dışarıda bırakıldı — yanlış çıkma 
 
 | # | İş | Not | Durum |
 |---|---|---|---|
-| D1 | IBAN doğrulama | Saf hesaplama, veri yok — en ucuz kazanç | ⬜ |
-| D2 | TC kimlik checksum | Saf hesaplama, KVKK açısından güvenli | ⬜ |
+| D1 | IBAN doğrulama | Saf hesaplama, veri yok — en ucuz kazanç | ✅ (10 Eylül 2026) |
+| D2 | TC kimlik checksum | Saf hesaplama, KVKK açısından güvenli | ✅ (10 Eylül 2026) |
 | D3 | Bankalar (EFT/SWIFT kodları) | TCMB | ⬜ |
 | D4 | Vergi daireleri | GİB | ⬜ |
 | D5 | Üniversiteler | YÖK | ⬜ |
 | D6 | NUTS / İBBS bölgeleri | TÜİK | ⬜ |
 | D7 | Döviz kurları | **Tek dinamik veri** — zamanlanmış görev + farklı cache politikası | ⬜ |
 | D8 | Hicri-Miladi çevrim, dini günler | Diyanet | ⬜ |
+
+#### D1/D2 nasıl yapıldı
+
+**Hiçbiri veri seti değil.** `/api/v1/validate/iban/{iban}` ve `/api/v1/validate/tc-kimlik/{no}`
+başka her uçtan farklı: arkalarında ne bir `IReferenceStore`, ne bir dataset versiyonu, ne de
+`DataResult`/ETag var — girdi doğrudan `Core/Validation` altındaki saf hesaplama fonksiyonlarına
+gidiyor, `Results.Ok(...)` ile düz 200 dönüyor. Geçersiz bir değer de 200 döner (`isValid: false`
++ makine-okunur `reason`) — istek kendisi geçerli, sonucu "hayır" olan bir sorgu; 400 yalnızca
+BRD'nin zaten kapsam dışı bıraktığı gerçekten bozuk bir istek için ayrılıyor.
+
+**IBAN — ISO 7064 MOD-97-10, ülke veri tablosu yok.** Yalnızca Türkiye'nin sabit uzunluğu (26)
+özel olarak kontrol ediliyor — bu projenin asıl kitlesi ve en sık yapılan IBAN yazım hatası tam
+olarak yanlış uzunluk. Diğer ~70 ülke için ayrı bir uzunluk tablosu tutmak "hesaplama servisi,
+veri değil" ilkesine aykırı düşerdi; onlar yalnızca yapısal biçim (2 harf + 2 rakam + alfanumerik)
+ve MOD-97 sağlama toplamıyla doğrulanıyor. `BigInteger` kullanılıyor çünkü tam uzunluklu bir
+IBAN'ın harf-genişletmesi `long`'un taşıdığından çok daha uzun bir sayı üretiyor.
+
+**TC kimlik — sadece sağlama, sorgulama değil.** BRD §3.2 kişi tanımlayabilecek hiçbir veri
+setini kapsam dışı bırakıyor (KVKK); bu uç bir kişiye ait olup olmadığını hiç iddia etmiyor,
+yalnızca 11 hanenin yayımlanmış algoritmaya göre iç tutarlı olup olmadığını söylüyor — aradaki
+fark bu maddenin kapsamda olmasının tek sebebi.
+
+**Doğrulama, gerçek örneklerle test edildi.** BRD'nin kendi IBAN örneği
+(`TR330006100519786457841326`) ve yaygın olarak kanonik kabul edilen Almanya/İngiltere IBAN
+örnekleri (Wikipedia'nın IBAN maddesinde de kullanılan) testlere geçti — algoritmanın hem
+doğru hem de bu üç örneğin gerçekten geçerli olduğu bu şekilde çapraz doğrulandı.
 
 ### E. Teknik borç ve ertelenenler
 

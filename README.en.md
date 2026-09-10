@@ -60,6 +60,10 @@ curl "localhost:5096/api/v1/quarters/1154/neighborhoods"
 # Postal codes are assigned per quarter, so a code resolves to exactly one
 curl localhost:5096/api/v1/postal-codes/34357
 curl localhost:5096/api/v1/postal-codes/34357/neighborhoods
+
+# IBAN and Turkish national ID checksum validation — calculation only, nothing is looked up or stored
+curl localhost:5096/api/v1/validate/iban/TR330006100519786457841326
+curl localhost:5096/api/v1/validate/tc-kimlik/10000000146
 ```
 
 ## Endpoints
@@ -85,6 +89,8 @@ complete dataset in a single response.
 | `/api/v1/districts/{id}/neighborhoods` | The settlements of one district |
 | `/api/v1/postal-codes/{code}` | The quarter a five-digit code is assigned to |
 | `/api/v1/postal-codes/{code}/neighborhoods` | The settlements covered by one code |
+| `/api/v1/validate/iban/{iban}` | Format + checksum; no bank data is looked up |
+| `/api/v1/validate/tc-kimlik/{no}` | Checksum only; does not confirm a real person |
 | `/health/live` · `/health/ready` | Liveness and readiness |
 | `/metrics` | Prometheus scrape endpoint |
 | `/docs` · `/openapi/v1.json` | Scalar UI and OpenAPI document |
