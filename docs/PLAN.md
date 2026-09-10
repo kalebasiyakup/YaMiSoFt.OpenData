@@ -460,10 +460,9 @@ BRD Faz 1 teslimatı "dokümantasyon, açık kaynak yayın" diyor. Kod tarafı b
 değil. GSM operatörü ile posta kodu aynı torbada, para birimi ile ülke kodu ayrı torbadaydı.
 
 **Karar.** Her uç kendi konu etiketine taşındı: `Address` (il/ilçe/semt/mahalle/posta kodu),
-`Mobile Operators`, `Countries`, `Currencies`, `Languages`, `Public Holidays`. `Mobile
-Operators` ve `Countries` ayrıca Redocly kaynaklı `x-tagGroups` uzantısıyla ortak bir "Phone"
-üst başlığı altında iç içe gösteriliyor — Scalar bu uzantıyı okuyup sidebar'da nested grup
-oluşturuyor.
+`Mobile Operators`, `Countries`, `Currencies`, `Languages`, `Public Holidays` — sonradan
+`Validation` ve `Banks` de eklendi. Sidebar'daki bölüm sırası Redocly kaynaklı `x-tagGroups`
+uzantısıyla veriliyor; Scalar bu uzantıyı okuyup sidebar'ı ona göre kuruyor.
 
 **İki dokümanda iki dil, B5'in aynı deseni.** `WithTags` İngilizceyi doğrudan yazıyor (temel
 katman); yeni `TurkishTagTransformer` (`TurkishSummaryTransformer` ile birebir aynı desende)
@@ -483,15 +482,24 @@ unutulamaz.
 
 **Her etiket tam olarak bir grupta.** `x-tagGroups`'ta gruplanmamış bir etiketi Scalar'ın nasıl
 ele aldığı belgelenmemiş; sidebar'dan sessizce bir uç kaybolması, gereksiz tek-elemanlı bir grup
-görmekten çok daha kötü bir arıza. Bu yüzden `Address`, `Currencies`, `Languages`, `Public
-Holidays` de kendi tek-elemanlı gruplarında — görsel olarak düz bir üst-seviye etiketten
-farksız, ama hiçbiri "gruplanmamış" durumda kalmıyor.
+görmekten çok daha kötü bir arıza. Bu yüzden her etiket kendi tek-elemanlı grubunda — görsel
+olarak düz bir üst-seviye etiketten farksız, ama hiçbiri "gruplanmamış" durumda kalmıyor.
+
+**Sonradan geri alındı: "Phone"/"Telefon" iç içe grubu.** İlk halde `Mobile Operators` ve
+`Countries` ortak bir "Phone"/"Telefon" üst başlığı altında iç içe gösteriliyordu — gerekçe,
+"telefon kodu" diyen bir çağıranın ikisine birden uzanmasıydı. Kaldırıldı: ülke kodları kendi
+başına bir referans veri seti (para birimi, dil ve çağrı kodu verisi ona asılı), bir telefon
+başlığının altına gömülünce telefon aramayan çağıranlardan gizlenmiş oluyordu. Artık **hiçbir
+etiketin ortak üst başlığı yok**; `x-tagGroups` yalnızca bölüm sırasını belirliyor. Mekanizma
+(uzantı, çeviri haritası, tek-elemanlı gruplar) olduğu gibi duruyor, ileride bir grup gerçekten
+hak ederse tek satırlık değişiklik.
 
 **Görsel doğrulama sınırı.** Bu ortamda tarayıcı otomasyonu yok; doğrulama `/openapi/v1.json`
 ve `/openapi/v1-tr.json`'un gerçek Kestrel'e karşı `curl` ile çekilip hem operasyon
 etiketlerinin hem `document.tags`'ın hem `x-tagGroups`'un beklenen şekilde olduğunu
-doğrulamakla sınırlı kaldı (bkz. `OpenApiDocumentTests.cs`). Scalar'ın sidebar'ı bunu gerçekten
-iç içe render ettiğinin nihai teyidi `/docs` açılıp gözle kontrol edilmesini gerektiriyor.
+doğrulamakla sınırlı kaldı (bkz. `OpenApiDocumentTests.cs`). Scalar'ın sidebar'ı bu bölümleri
+gerçekten beklenen sırayla render ettiğinin nihai teyidi `/docs` açılıp gözle kontrol edilmesini
+gerektiriyor.
 
 ### C. Faz 2
 

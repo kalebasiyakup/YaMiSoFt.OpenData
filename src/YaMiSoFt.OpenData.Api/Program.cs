@@ -1,4 +1,4 @@
-﻿using System.Globalization;
+using System.Globalization;
 using System.IO.Compression;
 using System.Text.Json;
 using System.Net;
